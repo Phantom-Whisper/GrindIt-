@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34916.146
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrindIt!", "GrindIt!\GrindIt!.csproj", "{DED7DC2C-8B36-484E-A78E-067826AFAA2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DED7DC2C-8B36-484E-A78E-067826AFAA2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED7DC2C-8B36-484E-A78E-067826AFAA2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED7DC2C-8B36-484E-A78E-067826AFAA2E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{DED7DC2C-8B36-484E-A78E-067826AFAA2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED7DC2C-8B36-484E-A78E-067826AFAA2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED7DC2C-8B36-484E-A78E-067826AFAA2E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1FD38093-6D20-486C-9A7C-A37BA56EAE82}
+	EndGlobalSection
+EndGlobal
