@@ -5,7 +5,11 @@ VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrindIt!", "GrindIt!\GrindIt!.csproj", "{DED7DC2C-8B36-484E-A78E-067826AFAA2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrindIt.Lib", "GrindIt.Lib\GrindIt.Lib.csproj", "{1299E3A3-9102-440E-B18B-E0D0EB5E900C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrindIt.NutritionLib", "GrindIt.Lib\GrindIt.NutritionLib.csproj", "{1299E3A3-9102-440E-B18B-E0D0EB5E900C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrindIt.ConsoleApp", "GrindIt.ConsoleApp\GrindIt.ConsoleApp.csproj", "{62008087-5846-4E85-9B62-ED2357FCA49D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrindIt.WorkoutLib", "GrindIt.WorkoutLib\GrindIt.WorkoutLib.csproj", "{FABFDA7B-BFFB-4A48-9456-E944147719C5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +27,14 @@ Global
 		{1299E3A3-9102-440E-B18B-E0D0EB5E900C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1299E3A3-9102-440E-B18B-E0D0EB5E900C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1299E3A3-9102-440E-B18B-E0D0EB5E900C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62008087-5846-4E85-9B62-ED2357FCA49D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62008087-5846-4E85-9B62-ED2357FCA49D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62008087-5846-4E85-9B62-ED2357FCA49D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62008087-5846-4E85-9B62-ED2357FCA49D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FABFDA7B-BFFB-4A48-9456-E944147719C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FABFDA7B-BFFB-4A48-9456-E944147719C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FABFDA7B-BFFB-4A48-9456-E944147719C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FABFDA7B-BFFB-4A48-9456-E944147719C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

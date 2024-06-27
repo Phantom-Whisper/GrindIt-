@@ -1,4 +1,4 @@
-﻿namespace GrindIt.Lib
+﻿namespace GrindIt.NutritionLib
 {
     public enum Category
     {
@@ -10,7 +10,7 @@
         FISH = 5,
         FATS = 6,
         SUGARS = 7,
-        DRINKS = 8,
+        DRINKS = 8
     }
 
     public static class CategoryToString
