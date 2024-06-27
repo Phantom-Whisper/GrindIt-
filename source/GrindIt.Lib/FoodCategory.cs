@@ -1,6 +1,6 @@
 ﻿namespace GrindIt.NutritionLib
 {
-    public enum Category
+    public enum FoodCategory
     {
         CEREALS = 0,
         FRUITS = 1,
@@ -15,6 +15,6 @@
 
     public static class CategoryToString
     {
-        public static string ToString(Category category) => ((int)category).ToString();
+        public static string ToString(FoodCategory category) => ((int)category).ToString();
     }
 }

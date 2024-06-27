@@ -7,7 +7,7 @@ DisplayTargetedMusclesEnum();
 void DisplayCategoryEnum()
 {
     Console.WriteLine("Test Enum food category");
-    foreach (Category category in Enum.GetValues(typeof(Category)))
+    foreach (FoodCategory category in Enum.GetValues(typeof(FoodCategory)))
     {
         string categoryString = CategoryToString.ToString(category);
         Console.WriteLine($"Category: {category}, ToString: {categoryString}");
