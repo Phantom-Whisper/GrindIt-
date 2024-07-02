@@ -9,9 +9,9 @@ namespace GrindIt.NutritionLib
             this.type = type;
         }
 
-        private readonly MealType type;
+        private readonly MealType? type;
 
-        public MealType Type 
+        public MealType? Type 
         {
             get 
             { 
@@ -21,7 +21,7 @@ namespace GrindIt.NutritionLib
 
         private readonly ObservableCollection<Food> foodList;
 
-        public int TotalCalories(ObservableCollection<Food> foodList)
+        public int TotalCalories()
         {
             int sum = 0;
             foreach (Food food in foodList)
@@ -31,7 +31,7 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalProtein(ObservableCollection<Food> foodList)
+        public int TotalProtein()
         {
             int sum = 0;
             foreach(Food food in foodList)
@@ -41,7 +41,7 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalCarbs(ObservableCollection<Food> foodList)
+        public int TotalCarbs()
         {
             int sum = 0;
             foreach (Food food in foodList)
@@ -51,7 +51,7 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalFat(ObservableCollection<Food> foodList)
+        public int TotalFat()
         {
             int sum = 0;
             foreach(Food food in foodList)
@@ -60,7 +60,7 @@ namespace GrindIt.NutritionLib
             }
             return sum;
         }
-        public int TotalSodium(ObservableCollection<Food> foodList)
+        public int TotalSodium()
         {
             int sum = 0;
             foreach (Food food in foodList)
@@ -70,7 +70,7 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalSugar(ObservableCollection<Food> foodList)
+        public int TotalSugar()
         {
             int sum = 0;
             foreach(Food food in foodList)
