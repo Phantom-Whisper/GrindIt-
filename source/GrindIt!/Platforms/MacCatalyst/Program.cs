@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace GrindIt_
+namespace GrindIt_.Platforms.MacCatalyst
 {
     public class Program
     {

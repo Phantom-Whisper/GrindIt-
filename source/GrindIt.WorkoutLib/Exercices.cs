@@ -34,5 +34,10 @@ namespace GrindIt.WorkoutLib
         }
 
         private bool bodyWeight;
+
+        public void AddTargetedMuscles(TargetedMuscles muscles)
+        {
+            targetedMuscles.Add(muscles);
+        }
     }
 }

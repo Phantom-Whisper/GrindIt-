@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GrindIt.Lib\GrindIt.NutritionLib.csproj" />
+    <ProjectReference Include="..\GrindIt.NutritionLib\GrindIt.NutritionLib.csproj" />
     <ProjectReference Include="..\GrindIt.WorkoutLib\GrindIt.WorkoutLib.csproj" />
   </ItemGroup>
 

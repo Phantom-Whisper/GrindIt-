@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace GrindIt_
+namespace GrindIt_.Platforms.iOS
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

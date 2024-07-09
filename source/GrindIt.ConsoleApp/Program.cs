@@ -1,15 +1,13 @@
 ﻿using GrindIt.NutritionLib;
 using GrindIt.WorkoutLib;
-using System.Collections.Specialized;
-using System.Globalization;
 
 
 Menu();
 
 void Menu()
 {
-    bool exit = false;
-    while (!exit)
+    int choice;
+    do
     {
         Console.Clear();
         Console.WriteLine("Menu: ");
@@ -20,50 +18,66 @@ void Menu()
 
         string? input = Console.ReadLine();
 
-        switch (input)
+        while (!int.TryParse(input, out choice) || (choice != 1 && choice != 2 && choice != 9))
         {
-            case "1":
-                NutritionMenu();
-                break;
-            case "2":
-                WorkoutMenu();
-                break;
-            case "9":
-                exit = true;
-                break;
-            default:
-                Console.WriteLine("Invalid option. Please try again");
-                break;
+            Console.Clear();
+            Console.WriteLine("Invalid choice. Please enter 1 or 2.");
+            Console.WriteLine("Menu: ");
+            Console.WriteLine("1. GrindIt! - Nutrition");
+            Console.WriteLine("2. GrindIt! - Workout");
+            Console.WriteLine("9. Exit");
+            Console.Write("Your choice: ");
+            input = Console.ReadLine();
+        }
+
+        if (choice == 1)
+        {
+            NutritionMenu();
+        }
+        else if (choice == 2)
+        {
+            WorkoutMenu();
         }
     }
+    while (choice != 9);
 }
 
 void WorkoutMenu()
 {
-    bool exit = false;
-    while (!exit)
+    int choice;
+    do
     {
         Console.Clear();
         Console.WriteLine("Menu: ");
         Console.WriteLine("1. Test series");
+        Console.WriteLine("2. Create exercice");
         Console.WriteLine("9. Exit");
         Console.Write("Your choice: ");
 
         string? input = Console.ReadLine();
 
-        switch (input)
+        while (!int.TryParse(input, out choice) || (choice != 1 && choice != 2 && choice != 9))
         {
-            case "1":
-                SeriesTest();
-                break;
-            case "9":
-                exit = true;
-                break;
-            default:
-                Console.WriteLine("Invalid option.Please try again");
-                break;
+            Console.Clear();
+            Console.WriteLine("Invalid choice. Please enter 1 or 2.");
+            Console.WriteLine("Menu: ");
+            Console.WriteLine("1. Test series");
+            Console.WriteLine("2. Create exercice");
+            Console.WriteLine("9. Exit");
+            Console.Write("Your choice: ");
+            input = Console.ReadLine();
+        }
+
+        if (choice == 1)
+        {
+            SeriesTest();
+        }
+        else if (choice == 2)
+        {
+            CreateExercice();
         }
     }
+    while (choice != 9);
 }
 
 void NutritionMenu()
@@ -75,6 +89,8 @@ void SeriesTest()
 {
     Series reps1 = new Series();
     bool exit = false;
+
+    
     while (!exit)
     {
         Console.Clear();
@@ -90,8 +106,8 @@ void SeriesTest()
         Console.WriteLine(reps1.Weight);
         Console.Write("Reps: ");
         Console.WriteLine(reps1.Reps);
-        int test = reps1.TotalWeight();
         Console.Write("Test total weight of the series: ");
+        int test = reps1.TotalWeight();
         Console.WriteLine(test);
 
         Console.Write("Your choice: ");
@@ -135,6 +151,48 @@ void SeriesTest()
     }
 }
 
+void CreateExercice()
+{
+    Console.Clear();
+    Console.Write("Enter a name: ");
+    string? name = Console.ReadLine();
+    bool bodyWeightBool;
+    while (string.IsNullOrWhiteSpace(name))
+    {
+        Console.WriteLine("Please enter a name: ");
+        name = Console.ReadLine();
+    }
+    Console.WriteLine("Does it's a bodyweight exercice ? YES or NO ");
+    string? bodyWeight = Console.ReadLine();
+    while (string.IsNullOrWhiteSpace(bodyWeight))
+    {
+        while (bodyWeight.ToUpper() != "YES" ||  bodyWeight.ToUpper() != "NO")
+        {
+            Console.WriteLine("Please enter 'YES' or 'NO' only");
+            bodyWeight = Console.ReadLine();
+        }
+        if (bodyWeight.ToUpper() == "YES")
+        {
+            bodyWeightBool = true;
+        }
+        else { bodyWeightBool = false; }
+        
+        DisplayTargetedMusclesEnum();
+        Console.WriteLine("Choose a targeted muscles (enter the number)");
+        string? muscles = Console.ReadLine();
+        while (string.IsNullOrWhiteSpace(muscles))
+        {
+            Console.WriteLine("Please select a muscle group");
+            muscles = Console.ReadLine();
+        }
+        /*
+        ObservableCollection<TargetedMuscles> musclesList = null;
+        musclesList.Add(muscles);
+        Exercices exercices = new Exercices(name, musclesList, bodyWeightBool);
+        */
+    }
+}
+
 
 void DisplayCategoryEnum()
 {
@@ -143,5 +201,14 @@ void DisplayCategoryEnum()
     {
         string categoryString = CategoryToString.ToString(category);
         Console.WriteLine($"Category: {category}, ToString: {categoryString}");
+    }
+}
+
+void DisplayTargetedMusclesEnum()
+{
+    foreach(TargetedMuscles targetedMuscles in Enum.GetValues(typeof(TargetedMuscles)))
+    {
+        string musclesString = TargetedMusclesToString.ToString(targetedMuscles);
+        Console.WriteLine($"Targeted muscles: {targetedMuscles}, No.: {musclesString}");
     }
 }
