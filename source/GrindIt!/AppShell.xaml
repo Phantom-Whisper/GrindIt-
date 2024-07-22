@@ -3,13 +3,36 @@
     x:Class="GrindIt_.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:GrindIt_"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:pages="clr-namespace:GrindIt_.Views.Pages"
+    Shell.FlyoutBehavior="Flyout"
     Title="GrindIt_">
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
+        ContentTemplate="{DataTemplate pages:Home}"
         Route="MainPage" />
+    
+    
+    <!-- Annexe pages-->
+
+    <ShellContent
+        Title="Water"
+        ContentTemplate="{DataTemplate pages:Water}"
+        Route="Water"/>
+
+    <ShellContent
+        Title="Exercises"
+        ContentTemplate="{DataTemplate pages:Exercises}"
+        Route="Exercises"/>
+
+    <ShellContent
+        Title="Exercise"
+        ContentTemplate="{DataTemplate pages:Exercise}"
+        Route="Exercise"/>
+    
+    <ShellContent
+        Title="Create exercise"
+        ContentTemplate="{DataTemplate pages:CreateExercise}"
+        Route="CreateExercice"/>
 
 </Shell>
