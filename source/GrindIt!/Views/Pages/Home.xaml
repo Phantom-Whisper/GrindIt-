@@ -1,21 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GrindIt_.Views.Pages.Home">
+             x:Class="GrindIt_.Views.Pages.Home"
+             Title="">
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
             
-            <Label
-                Text="Grind It!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+            <Image Source="logo.png" />
+
 
             <!-- Bind a motivation quote here -->
             <Label
-                Text="Welcome to &#10;.NET Multi-platform App UI"
+                Text="Motivation Quote"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
@@ -26,27 +25,6 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
-            
-            <Grid
-                ColumnDefinitions="25*,25*,25*,25"
-                ColumnSpacing="10">
-                <Image Source="dotnet_bot.png"
-                       WidthRequest="64"
-                       HeightRequest="64"
-                       Grid.Column="0"/>
-                <Image Source="dotnet_bot.png"
-                       WidthRequest="64"
-                       HeightRequest="64"
-                       Grid.Column="1"/>
-                <Image Source="dotnet_bot.png"
-                       WidthRequest="64"
-                       HeightRequest="64"
-                       Grid.Column="2"/>
-                <Image Source="dotnet_bot.png"
-                       WidthRequest="64"
-                       HeightRequest="64"
-                       Grid.Column="3"/>
-            </Grid>
 
         </VerticalStackLayout>
     </ScrollView>

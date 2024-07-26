@@ -40,9 +40,14 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
         
-        <!--Change the source with a "+" sign-->
-        <ImageButton
-            Source="dotnet_bot.png"/>
-        
+        <!--Modify the button to be more elegant-->
+        <ImageButton 
+            CornerRadius="5"
+            BackgroundColor="DarkSalmon"
+            Aspect="AspectFit"
+            HeightRequest="30"
+            WidthRequest="30"
+            Source="plus_sign.png" />
+
     </VerticalStackLayout>
 </ContentPage>

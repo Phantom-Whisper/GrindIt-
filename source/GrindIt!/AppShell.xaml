@@ -4,22 +4,42 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:GrindIt_.Views.Pages"
-    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBehavior="Disabled"
     Title="GrindIt_">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate pages:Home}"
-        Route="MainPage" />
-    
-    
-    <!-- Annexe pages-->
+    <!-- Bottom Tab Bar -->
+    <TabBar>
+        <Tab Icon="home.png" Route="MainPage">
+            <ShellContent
+                Title="Home"
+                ContentTemplate="{DataTemplate pages:Home}"
+                Route="MainPage" />
+        </Tab>
 
-    <ShellContent
-        Title="Water"
-        ContentTemplate="{DataTemplate pages:Water}"
-        Route="Water"/>
+        <Tab Icon="food.png" Route="NutritionPage">
+            <ShellContent
+                Title="Nutrition"
+                ContentTemplate="{DataTemplate pages:NutritionPage}"
+                Route="NutritionPage"/>
+        </Tab>
 
+        <Tab Icon="dumbbell.png" Route="WorkoutPage">
+            <ShellContent
+                Title="Workout"
+                ContentTemplate="{DataTemplate pages:WorkoutPage}"
+                Route="WorkoutPage"/>
+        </Tab>
+
+        <Tab Icon="account.png" Route="AccountPage">
+            <ShellContent
+                Title="Account"
+                ContentTemplate="{DataTemplate pages:AccountPage}"
+                Route="AccountPage"/>
+        </Tab>
+    </TabBar>
+
+    <!-- Additional pages not in the Tab Bar -->
+    <!--
     <ShellContent
         Title="Exercises"
         ContentTemplate="{DataTemplate pages:Exercises}"
@@ -29,10 +49,17 @@
         Title="Exercise"
         ContentTemplate="{DataTemplate pages:Exercise}"
         Route="Exercise"/>
-    
+
     <ShellContent
         Title="Create exercise"
         ContentTemplate="{DataTemplate pages:CreateExercise}"
         Route="CreateExercice"/>
+
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage"/>
+    -->
+
 
 </Shell>
