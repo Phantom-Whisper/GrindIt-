@@ -4,7 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:GrindIt_.Views.Pages"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="GrindIt_">
 
     <!-- Bottom Tab Bar -->
@@ -39,7 +39,7 @@
     </TabBar>
 
     <!-- Additional pages not in the Tab Bar -->
-    <!--
+    
     <ShellContent
         Title="Exercises"
         ContentTemplate="{DataTemplate pages:Exercises}"
@@ -59,7 +59,6 @@
         Title="Login"
         ContentTemplate="{DataTemplate pages:LoginPage}"
         Route="LoginPage"/>
-    -->
-
+    
 
 </Shell>

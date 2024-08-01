@@ -4,8 +4,83 @@
              x:Class="GrindIt_.Views.Pages.LoginPage"
              Title="LoginPage">
 
-    <Grid
-        RowDefinitions=".3*, .7*">
-        <Image Aspect="AspectFit" Source="dotnet_bot.png"/>
+    <Grid RowDefinitions=".3*, .7*">
+        <Image Aspect="AspectFill" Source="gym_background.jpg" />
+        <Grid BackgroundColor="DarkGrey" Opacity=".9"/>
+        <Grid ColumnDefinitions="*,*,*">
+            <Image Grid.Column="1"
+                   Aspect="AspectFit"
+                   HeightRequest="300"
+                   Source="logo.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle 
+                Margin="-5,-30,-5,-2"
+                CornerRadius="30,30,0,0"
+                Fill="AliceBlue"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label 
+                    FontAttributes="Bold"
+                    FontFamily="bold"
+                    FontSize="Medium"
+                    Text="Welcome!"
+                    TextColor="#2D2D2D"/>
+                <Label 
+                    FontFamily="medium"
+                    Text="Log in to continue"
+                    TextColor="#A3A3A4"/>
+                <Grid 
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf0e0;"
+                                Size="44"
+                                Color="#4F3F9b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        Placeholder="Email"/>
+                </Grid>
+                <Grid 
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf084;"
+                                Size="44"
+                                Color="#4F3F9b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        IsPassword="True"
+                        Placeholder="Password"/>
+                </Grid>
+                <Button
+                    Margin="0,30,0,0"
+                    BackgroundColor="#4F3F9b"
+                    HeightRequest="60"                    
+                    Text="Login"
+                    TextColor="AntiqueWhite"/>
+                <Label
+                    Margin="0,25,0,0"
+                    Text="Forgot your password?"
+                    TextColor="Blue"
+                    TextDecorations="Underline"
+                    HorizontalOptions="Center"/>
+                <Button
+                    Margin="0,25,0,0"
+                    BackgroundColor="LightGrey"
+                    HeightRequest="60"
+                    Text="Create your account"
+                    TextColor="#4F3F9b"/>
+            </VerticalStackLayout>
+        </Grid>
     </Grid>
 </ContentPage>
