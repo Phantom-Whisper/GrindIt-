@@ -7,39 +7,40 @@
     Shell.FlyoutBehavior="Flyout"
     Title="GrindIt_">
 
+
     <!-- Bottom Tab Bar -->
     <TabBar>
-        <Tab Icon="home.png" Route="MainPage">
+        <Tab Icon="home.png" Route="Home">
             <ShellContent
                 Title="Home"
                 ContentTemplate="{DataTemplate pages:Home}"
-                Route="MainPage" />
+                Route="Home" />
         </Tab>
 
-        <Tab Icon="food.png" Route="NutritionPage">
+        <Tab Icon="food.png" Route="NutritionView">
             <ShellContent
                 Title="Nutrition"
-                ContentTemplate="{DataTemplate pages:NutritionPage}"
-                Route="NutritionPage"/>
+                ContentTemplate="{DataTemplate pages:NutritionView}"
+                Route="NutritionView"/>
         </Tab>
 
-        <Tab Icon="dumbbell.png" Route="WorkoutPage">
+        <Tab Icon="dumbbell.png" Route="WorkoutView">
             <ShellContent
                 Title="Workout"
-                ContentTemplate="{DataTemplate pages:WorkoutPage}"
-                Route="WorkoutPage"/>
+                ContentTemplate="{DataTemplate pages:WorkoutView}"
+                Route="WorkoutView"/>
         </Tab>
 
-        <Tab Icon="account.png" Route="AccountPage">
+        <Tab Icon="account.png" Route="AccountView">
             <ShellContent
                 Title="Account"
-                ContentTemplate="{DataTemplate pages:AccountPage}"
-                Route="AccountPage"/>
+                ContentTemplate="{DataTemplate pages:AccountView}"
+                Route="AccountView"/>
         </Tab>
     </TabBar>
-
-    <!-- Additional pages not in the Tab Bar -->
     
+    <!-- Additional pages not in the Tab Bar -->
+    <!--
     <ShellContent
         Title="Exercises"
         ContentTemplate="{DataTemplate pages:Exercises}"
@@ -54,11 +55,12 @@
         Title="Create exercise"
         ContentTemplate="{DataTemplate pages:CreateExercise}"
         Route="CreateExercice"/>
-
-    <ShellContent
-        Title="Login"
-        ContentTemplate="{DataTemplate pages:LoginPage}"
-        Route="LoginPage"/>
     
+    <ShellContent
+    Title="LoginView"
+    ContentTemplate="{DataTemplate pages:LoginView}"
+    Route="LoginView"/>
+    
+    -->
 
 </Shell>

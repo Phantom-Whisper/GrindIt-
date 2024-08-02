@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GrindIt_.Views.Pages.LoginPage"
-             Title="LoginPage">
+             x:Class="GrindIt_.Views.Pages.LoginView"
+             Title="">
 
     <Grid RowDefinitions=".3*, .7*">
         <Image Aspect="AspectFill" Source="gym_background.jpg" />
@@ -38,7 +38,7 @@
                                 FontFamily="AwesomeSolid"
                                 Glyph="&#xf0e0;"
                                 Size="44"
-                                Color="#4F3F9b"/>
+                                Color="#ffbe0b"/>
                         </Image.Source>
                     </Image>
                     <Entry 
@@ -54,7 +54,7 @@
                                 FontFamily="AwesomeSolid"
                                 Glyph="&#xf084;"
                                 Size="44"
-                                Color="#4F3F9b"/>
+                                Color="#ffbe0b"/>
                         </Image.Source>
                     </Image>
                     <Entry 
@@ -64,7 +64,7 @@
                 </Grid>
                 <Button
                     Margin="0,30,0,0"
-                    BackgroundColor="#4F3F9b"
+                    BackgroundColor="#ffbe0b"
                     HeightRequest="60"                    
                     Text="Login"
                     TextColor="AntiqueWhite"/>

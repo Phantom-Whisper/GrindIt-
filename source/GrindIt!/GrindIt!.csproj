@@ -64,13 +64,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\Pages\AccountView.xaml.cs">
+	    <DependentUpon>AccountView.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\Pages\Home.xaml.cs">
 	    <DependentUpon>Home.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Pages\LoginView.xaml.cs">
+	    <DependentUpon>LoginView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Pages\NutritionView.xaml.cs">
+	    <DependentUpon>NutritionView.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Pages\WorkoutView.xaml.cs">
+	    <DependentUpon>WorkoutView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\Pages\AccountPage.xaml">
+	  <MauiXaml Update="Views\Pages\AccountView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\CreateExercise.xaml">
@@ -82,16 +94,19 @@
 	  <MauiXaml Update="Views\Pages\Exercises.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\LoginPage.xaml">
+	  <MauiXaml Update="Views\Pages\LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\NutritionPage.xaml">
+	  <MauiXaml Update="Views\Pages\NutritionView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\RegistrationView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\Water.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\WorkoutPage.xaml">
+	  <MauiXaml Update="Views\Pages\WorkoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

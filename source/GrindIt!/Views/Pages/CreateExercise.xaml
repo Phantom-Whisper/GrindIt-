@@ -7,6 +7,8 @@
         
         <!--Place the button in the far right corner-->
         <Button
+            HorizontalOptions="End"
+            Margin="0,0,20,20"
             Text="Create "
             HeightRequest="40"
             WidthRequest="100"/>
@@ -17,6 +19,7 @@
             HorizontalOptions="Center" />
 
         <Entry
+            Margin="40,20,40,20"
             Placeholder="Name of the exercise"/>
 
         <Grid

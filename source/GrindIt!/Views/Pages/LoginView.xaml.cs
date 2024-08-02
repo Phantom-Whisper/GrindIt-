@@ -1,8 +1,8 @@
 namespace GrindIt_.Views.Pages;
 
-public partial class LoginPage : ContentPage
+public partial class LoginView : ContentPage
 {
-	public LoginPage()
+	public LoginView()
 	{
 		InitializeComponent();
 	}
