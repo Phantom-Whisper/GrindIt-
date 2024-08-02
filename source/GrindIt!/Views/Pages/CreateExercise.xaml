@@ -28,7 +28,7 @@
             ColumnSpacing="20">
 
             <Label
-                Text="Bodyweight exercise: "
+                Text="Bodyweight exercise "
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Grid.Column="0"/>
