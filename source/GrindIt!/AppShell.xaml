@@ -9,6 +9,7 @@
 
 
     <!-- Bottom Tab Bar -->
+    <!--
     <TabBar>
         <Tab Icon="home.png" Route="Home">
             <ShellContent
@@ -38,9 +39,10 @@
                 Route="AccountView"/>
         </Tab>
     </TabBar>
+    -->
     
     <!-- Additional pages not in the Tab Bar -->
-    <!--
+   
     <ShellContent
         Title="Exercises"
         ContentTemplate="{DataTemplate pages:Exercises}"
@@ -57,10 +59,13 @@
         Route="CreateExercice"/>
     
     <ShellContent
-    Title="LoginView"
-    ContentTemplate="{DataTemplate pages:LoginView}"
-    Route="LoginView"/>
-    
-    -->
+        Title="LoginView"
+        ContentTemplate="{DataTemplate pages:LoginView}"
+        Route="LoginView"/>
+
+    <ShellContent
+        Title="RegistrationView"
+        ContentTemplate="{DataTemplate pages:RegistrationView}"
+        Route="RegistrationView"/>
 
 </Shell>

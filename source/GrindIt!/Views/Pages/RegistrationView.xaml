@@ -3,10 +3,84 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrindIt_.Views.Pages.RegistrationView"
              Title="RegistrationView">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    
+    <Grid RowDefinitions=".3*, .7*">
+        <Image Aspect="AspectFill" Source="gym_background.jpg" />
+        <Grid BackgroundColor="DarkGrey" Opacity=".9"/>
+        <Grid ColumnDefinitions="*,*,*">
+            <Image Grid.Column="1"
+               Aspect="AspectFit"
+               HeightRequest="300"
+               Source="logo.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle 
+            Margin="-5,-30,-5,-2"
+            CornerRadius="30,30,0,0"
+            Fill="AliceBlue"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label 
+                FontAttributes="Bold"
+                FontFamily="bold"
+                FontSize="Medium"
+                Text="Create your account!"
+                TextColor="#2D2D2D"/>
+                <Grid 
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf007;"
+                                Size="44"
+                                Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        Placeholder="Name"/>
+                </Grid>
+                <Grid 
+                Margin="0,30,0,0"
+                ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                            FontFamily="AwesomeSolid"
+                            Glyph="&#xf0e0;"
+                            Size="44"
+                            Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                    Grid.Column="1"
+                    Placeholder="Email"/>
+                </Grid>
+                <Grid 
+                Margin="0,30,0,0"
+                ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                            FontFamily="AwesomeSolid"
+                            Glyph="&#xf084;"
+                            Size="44"
+                            Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                    Grid.Column="1"
+                    IsPassword="True"
+                    Placeholder="Password"/>
+                </Grid>
+                <Button
+                Margin="0,25,0,0"
+                BackgroundColor="LightGrey"
+                HeightRequest="60"
+                Text="Create account"
+                TextColor="#4F3F9b"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
 </ContentPage>
