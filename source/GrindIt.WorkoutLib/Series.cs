@@ -30,6 +30,7 @@
         {
             this.reps = reps;
         }
+
         public void AddReps()
         {
             reps++;
@@ -37,7 +38,10 @@
 
         public void RemoveReps()
         {
-            reps--;
+            if (reps > 0)
+            {
+                reps--;
+            }
         }
 
         public void AddWeight(int weight)
@@ -52,7 +56,10 @@
 
         public void RemoveWeigth()
         {
-            weight--;
+            if (weight > 0)
+            {
+                weight--;
+            }
         }
 
         public int TotalWeight()
