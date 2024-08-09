@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrindIt_.Views.Pages.ThemeView"
+             Title="ThemeView">
+    <VerticalStackLayout>
+        <Label
+            Text="Theme Preferences"
+            Style="{StaticResource SubHeadline}"/>
+        <Grid
+            ColumnDefinitions="*,*"
+            Margin="20,10,20,0">
+            <Label
+                Text="Dark mode"
+                VerticalOptions="Center"
+                HorizontalOptions="End"/>
+            <Switch
+                Grid.Column="1"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Toggled="Switch_Toggled"/>
+        </Grid>
+        <Grid
+            ColumnDefinitions="*,*"
+            Margin="20,10,20,0">
+            <Label
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Text="App banner"/>
+            <ImageButton
+                Grid.Column="1"
+                HeightRequest="44"
+                Source="gym_background.png"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

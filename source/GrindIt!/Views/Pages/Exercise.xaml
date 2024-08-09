@@ -4,7 +4,31 @@
              x:Class="GrindIt_.Views.Pages.Exercise">
     
     <VerticalStackLayout>
+        <Button
+            Text="Transfer stats"
+            WidthRequest="120"
+            Margin="0,0,5,20"
+            HorizontalOptions="End"/>
         
+        <!--Circle with a picture maybe?-->
+        <!--or at least the first letter of the exercise name-->
+        
+        <!--Will have to bind the name-->
+        <Label
+            Text="Exercise name"
+            Margin="10,0,0,0"/>
 
+        <Grid
+            ColumnDefinitions="*,*"
+            Margin="0,10,0,0">
+            <!--Shows stats-->
+            <Label
+                Text="History"
+                HorizontalOptions="Center"/>
+            <Label
+                Text="Stats"
+                HorizontalOptions="Center"
+                Grid.Column="1"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>

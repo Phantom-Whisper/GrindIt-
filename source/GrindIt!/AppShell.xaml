@@ -42,7 +42,26 @@
     -->
     
     <!-- Additional pages not in the Tab Bar -->
-   
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate pages:Home}"
+        Route="Home" />
+
+    <ShellContent
+        Title="Nutrition"
+        ContentTemplate="{DataTemplate pages:NutritionView}"
+        Route="NutritionView"/>
+
+    <ShellContent
+        Title="Workout"
+        ContentTemplate="{DataTemplate pages:WorkoutView}"
+        Route="WorkoutView"/>
+
+    <ShellContent
+        Title="Account"
+        ContentTemplate="{DataTemplate pages:AccountView}"
+        Route="AccountView"/>
+
     <ShellContent
         Title="Exercises"
         ContentTemplate="{DataTemplate pages:Exercises}"
@@ -67,5 +86,10 @@
         Title="RegistrationView"
         ContentTemplate="{DataTemplate pages:RegistrationView}"
         Route="RegistrationView"/>
+
+    <ShellContent
+    Title="ThemeView"
+    ContentTemplate="{DataTemplate pages:ThemeView}"
+    Route="ThemeView"/>
 
 </Shell>

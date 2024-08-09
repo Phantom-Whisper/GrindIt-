@@ -6,4 +6,5 @@ public partial class CreateExercise : ContentPage
 	{
 		InitializeComponent();
 	}
+
 }

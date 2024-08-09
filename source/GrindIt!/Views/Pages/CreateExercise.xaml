@@ -43,14 +43,16 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
         
-        <!--Modify the button to be more elegant-->
         <ImageButton 
-            CornerRadius="5"
             BackgroundColor="DarkSalmon"
-            Aspect="AspectFit"
-            HeightRequest="30"
             WidthRequest="30"
-            Source="plus_sign.png" />
+            HeightRequest="30"
+            CornerRadius="50"
+            Padding="8,8,8,8"
+            Margin="5"
+            Source="plus_sign.png"/>
+        <!--eventHandler-->
+        <!--When toggled show a list of the muscles-->
 
     </VerticalStackLayout>
 </ContentPage>
