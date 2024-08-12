@@ -4,9 +4,27 @@
              x:Class="GrindIt_.Views.Pages.AccountView"
              Title="">
     <VerticalStackLayout>
+        <ImageButton
+            Source="menu_burger.png"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Margin="0,0,10,0"
+            HeightRequest="32"/>
+        <Border
+            HeightRequest="100"
+            WidthRequest="100"
+            HorizontalOptions="Start"
+            Margin="10,0,0,10">
+            <Border.StrokeShape>
+                <Ellipse/>
+            </Border.StrokeShape>
+            <Image
+                Source="gym_background.jpg"
+                Aspect="AspectFill"/>
+        </Border>
         <Label 
-            Text="Welcome to your account profile"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="Name"
+            HorizontalOptions="Start"
+            Margin="10,0,10,0"/>
     </VerticalStackLayout>
 </ContentPage>

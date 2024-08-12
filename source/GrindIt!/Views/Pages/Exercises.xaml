@@ -11,15 +11,17 @@
             HorizontalOptions="Center"/>
 
         <Button
-            Margin="20,20,30,20"
             Text="Create Exercise"
-            HorizontalOptions="End"
-            WidthRequest="100"/>
+            Margin="20,20,30,0"
+            HeightRequest="40"
+            CornerRadius="30"
+            HorizontalOptions="End"/>
 
         <SearchBar
             Placeholder="Name of the exercise"
             Margin="10,0,30,0"/>
 
         <!--List of all the targeted muscle and their exercise-->
+        
     </VerticalStackLayout>
 </ContentPage>

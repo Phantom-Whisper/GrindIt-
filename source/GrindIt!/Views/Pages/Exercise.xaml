@@ -6,13 +6,27 @@
     <VerticalStackLayout>
         <Button
             Text="Transfer stats"
+            HeightRequest="40"
+            CornerRadius="30"
             WidthRequest="120"
-            Margin="0,0,5,20"
+            Margin="0,0,10,0"
             HorizontalOptions="End"/>
         
         <!--Circle with a picture maybe?-->
         <!--or at least the first letter of the exercise name-->
-        
+        <Border
+            HeightRequest="75"
+            WidthRequest="75"
+            StrokeThickness="2"
+            HorizontalOptions="Start"
+            Margin="10,0,0,10">
+            <Border.StrokeShape>
+                <Ellipse/>
+            </Border.StrokeShape>
+            <Image
+                Source="gym_background.png"
+                Aspect="AspectFill"/>
+        </Border>
         <!--Will have to bind the name-->
         <Label
             Text="Exercise name"

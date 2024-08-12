@@ -9,15 +9,14 @@
             Padding="30,0"
             Spacing="25">
             
-            <Image Source="logo.png" />
+            <Image 
+                Source="{AppThemeBinding Light=logo.png, Dark=logo_white.png}" />
 
 
             <!-- Bind a motivation quote here -->
             <Label
                 Text="Motivation Quote"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+                Style="{StaticResource SubHeadline}"/>
 
             <Button
                 x:Name="CounterBtn"

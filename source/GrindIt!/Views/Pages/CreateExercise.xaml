@@ -5,16 +5,15 @@
              Title="Create Exercise">
     <VerticalStackLayout>
         
-        <!--Place the button in the far right corner-->
         <Button
             HorizontalOptions="End"
             Margin="0,0,20,20"
-            Text="Create "
+            Text="Create"
             HeightRequest="40"
             WidthRequest="100"/>
         
         <Label 
-            Text="Name of the exercise"
+            Text="Name the exercise"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
