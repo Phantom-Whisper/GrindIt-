@@ -44,8 +44,10 @@
         
         <ImageButton 
             BackgroundColor="DarkSalmon"
-            WidthRequest="30"
-            HeightRequest="30"
+            BorderColor="Salmon"
+            BorderWidth="1"
+            WidthRequest="35"
+            HeightRequest="35"
             CornerRadius="50"
             Padding="8,8,8,8"
             Margin="5"

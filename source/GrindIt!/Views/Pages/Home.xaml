@@ -25,6 +25,56 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
 
+            <Border
+                WidthRequest="350"
+                HeightRequest="110"
+                Stroke="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
+                BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
+                StrokeShape="RoundRectangle 30">
+                <Grid
+                    BackgroundColor="Red"
+                    ColumnDefinitions="*,*">
+                    <Grid
+                        BackgroundColor="Orange"
+                        Margin="10,0,10,10"
+                        RowDefinitions="50,50">
+                        <Grid
+                            BackgroundColor="Violet"
+                            ColumnDefinitions="50,50">
+                            <Border
+                                WidthRequest="30"
+                                HeightRequest="30"
+                                StrokeShape="RoundRectangle 50"
+                                BackgroundColor="Grey"
+                                HorizontalOptions="Start">
+                                <Image Source="dotnet_bot.png" />
+                            </Border>
+                            <Label
+                                Text="TTTTT"
+                                VerticalOptions="Center"
+                                Grid.Column="1"/>
+                        </Grid>
+                        <Border
+                            WidthRequest="100"
+                            HeightRequest="40"
+                            StrokeShape="RoundRectangle 50"
+                            HorizontalOptions="Start"
+                            Background="Grey"
+                            Grid.Row="1">
+                        </Border>
+                    </Grid>
+                    <Border
+                        HeightRequest="50"
+                        WidthRequest="50"
+                        Background="DarkSalmon"
+                        HorizontalOptions="End"
+                        Margin="10,0,10,0"
+                        Grid.Column="1">      
+                    </Border>
+                </Grid>
+                
+            </Border>
+
         </VerticalStackLayout>
     </ScrollView>
 

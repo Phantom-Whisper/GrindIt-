@@ -5,7 +5,7 @@
              Title="">
     <VerticalStackLayout>
         <ImageButton
-            Source="menu_burger.png"
+            Source="{AppThemeBinding Light=menu_burger.png, Dark=menu_burger_white.png}"
             HorizontalOptions="End"
             VerticalOptions="Start"
             Margin="0,0,10,0"
