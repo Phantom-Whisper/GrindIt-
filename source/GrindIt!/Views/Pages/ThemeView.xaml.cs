@@ -4,7 +4,7 @@ public partial class ThemeView : ContentPage
 {
 	public ThemeView()
 	{
-		InitializeComponent();
+        InitializeComponent();
 	}
 
     private void Switch_Toggled(object sender, ToggledEventArgs e)

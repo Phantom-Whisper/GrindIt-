@@ -28,29 +28,26 @@
             <Border
                 WidthRequest="350"
                 HeightRequest="110"
-                Stroke="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
-                BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
+                Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+                BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
                 StrokeShape="RoundRectangle 30">
                 <Grid
-                    BackgroundColor="Red"
                     ColumnDefinitions="*,*">
                     <Grid
-                        BackgroundColor="Orange"
                         Margin="10,0,10,10"
                         RowDefinitions="50,50">
                         <Grid
-                            BackgroundColor="Violet"
                             ColumnDefinitions="50,50">
                             <Border
                                 WidthRequest="30"
                                 HeightRequest="30"
                                 StrokeShape="RoundRectangle 50"
-                                BackgroundColor="Grey"
+                                BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
                                 HorizontalOptions="Start">
-                                <Image Source="dotnet_bot.png" />
+                                <Image />
                             </Border>
                             <Label
-                                Text="TTTTT"
+                                Text=""
                                 VerticalOptions="Center"
                                 Grid.Column="1"/>
                         </Grid>
@@ -59,17 +56,20 @@
                             HeightRequest="40"
                             StrokeShape="RoundRectangle 50"
                             HorizontalOptions="Start"
-                            Background="Grey"
                             Grid.Row="1">
+                            <Button
+                                Text=""
+                                BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"/>
                         </Border>
                     </Grid>
                     <Border
-                        HeightRequest="50"
-                        WidthRequest="50"
-                        Background="DarkSalmon"
+                        HeightRequest="100"
+                        WidthRequest="100"
+                        Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
                         HorizontalOptions="End"
-                        Margin="10,0,10,0"
-                        Grid.Column="1">      
+                        Margin="10,0,20,0"
+                        Grid.Column="1">
+                        <Image />
                     </Border>
                 </Grid>
                 
