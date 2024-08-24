@@ -1,8 +1,8 @@
 ﻿namespace GrindIt.WorkoutLib
 {
-    public class Series
+    public class Set
     {
-        public Series() { }
+        public Set() { }
 
         /*
         public Series(int weight, int nbReps)

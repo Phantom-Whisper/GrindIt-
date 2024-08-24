@@ -2,7 +2,8 @@
 {
     public class Food
     {
-        public Food(string name, int calories, int carbohydrate, int fat, int protein, int saturedFat, int transFat, int cholesterol, int sodium, int potassium, int dietaryFiber, int sugar)
+        public Food(string name, int calories, int carbohydrate, int fat, int protein, int saturedFat, int transFat, 
+            int cholesterol, int sodium, int potassium, int dietaryFiber, int sugar, FoodCategory category)
         {
             if (name == null)
             {
@@ -20,6 +21,7 @@
             this.potassium = potassium;
             this.dietaryFiber = dietaryFiber;
             this.sugar = sugar;
+            this.category = category;
         }
         private string? name;
 
@@ -142,6 +144,24 @@
             {
                 return sugar;
             }
+        }
+
+        public void ShowFood()
+        {
+            Console.WriteLine("Food Information:");
+            Console.WriteLine($"Name: {Name}");
+            Console.WriteLine($"Category: {Category?.ToString() ?? "Unknown"}");
+            Console.WriteLine($"Calories: {Calories} kcal");
+            Console.WriteLine($"Carbohydrate: {Cabohydrate} g");
+            Console.WriteLine($"Fat: {Fat} g");
+            Console.WriteLine($"Protein: {Protein} g");
+            Console.WriteLine($"Saturated Fat: {SaturedFat} g");
+            Console.WriteLine($"Trans Fat: {TransFat} g");
+            Console.WriteLine($"Cholesterol: {Cholesterol} mg");
+            Console.WriteLine($"Sodium: {Sodium} mg");
+            Console.WriteLine($"Potassium: {Potassium} mg");
+            Console.WriteLine($"Dietary Fiber: {DietaryFiber} g");
+            Console.WriteLine($"Sugar: {Sugar} g");
         }
     }
 }

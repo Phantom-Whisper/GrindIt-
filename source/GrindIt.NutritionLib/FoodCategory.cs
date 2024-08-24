@@ -17,4 +17,19 @@
     {
         public static string ToString(FoodCategory category) => ((int)category).ToString();
     }
+
+    public static class StringToCategory
+    {
+        public static FoodCategory? FromInt(int value)
+        {
+            if (Enum.IsDefined(typeof(FoodCategory), value))
+            {
+                return (FoodCategory)value;
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
 }

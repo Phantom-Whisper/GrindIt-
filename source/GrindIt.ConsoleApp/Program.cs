@@ -1,95 +1,16 @@
 ﻿using GrindIt.NutritionLib;
 using GrindIt.WorkoutLib;
 
+//SetTest();
+//DisplayCategoryEnum();
+//DisplayTargetedMusclesEnum();
+CreateFood();
 
-Menu();
 
-void Menu()
+void SetTest()
 {
-    int choice;
-    do
-    {
-        Console.Clear();
-        Console.WriteLine("Menu: ");
-        Console.WriteLine("1. GrindIt! - Nutrition");
-        Console.WriteLine("2. GrindIt! - Workout");
-        Console.WriteLine("9. Exit");
-        Console.Write("Your choice: ");
-
-        string? input = Console.ReadLine();
-
-        while (!int.TryParse(input, out choice) || (choice != 1 && choice != 2 && choice != 9))
-        {
-            Console.Clear();
-            Console.WriteLine("Invalid choice. Please enter 1 or 2.");
-            Console.WriteLine("Menu: ");
-            Console.WriteLine("1. GrindIt! - Nutrition");
-            Console.WriteLine("2. GrindIt! - Workout");
-            Console.WriteLine("9. Exit");
-            Console.Write("Your choice: ");
-            input = Console.ReadLine();
-        }
-
-        if (choice == 1)
-        {
-            NutritionMenu();
-        }
-        else if (choice == 2)
-        {
-            WorkoutMenu();
-        }
-    }
-    while (choice != 9);
-}
-
-void WorkoutMenu()
-{
-    int choice;
-    do
-    {
-        Console.Clear();
-        Console.WriteLine("Menu: ");
-        Console.WriteLine("1. Test series");
-        Console.WriteLine("2. Create exercice");
-        Console.WriteLine("9. Exit");
-        Console.Write("Your choice: ");
-
-        string? input = Console.ReadLine();
-
-        while (!int.TryParse(input, out choice) || (choice != 1 && choice != 2 && choice != 9))
-        {
-            Console.Clear();
-            Console.WriteLine("Invalid choice. Please enter 1 or 2.");
-            Console.WriteLine("Menu: ");
-            Console.WriteLine("1. Test series");
-            Console.WriteLine("2. Create exercice");
-            Console.WriteLine("9. Exit");
-            Console.Write("Your choice: ");
-            input = Console.ReadLine();
-        }
-
-        if (choice == 1)
-        {
-            SeriesTest();
-        }
-        else if (choice == 2)
-        {
-            CreateExercice();
-        }
-    }
-    while (choice != 9);
-}
-
-void NutritionMenu()
-{
-    DisplayCategoryEnum();
-}
-
-void SeriesTest()
-{
-    Series reps1 = new Series();
+    Set reps1 = new Set();
     bool exit = false;
-
     
     while (!exit)
     {
@@ -151,49 +72,66 @@ void SeriesTest()
     }
 }
 
-void CreateExercice()
+void CreateFood()
 {
-    Console.Clear();
-    Console.Write("Enter a name: ");
-    string? name = Console.ReadLine();
-    bool bodyWeightBool;
-    while (string.IsNullOrWhiteSpace(name))
+    string name;
+    do
     {
-        Console.WriteLine("Please enter a name: ");
+        Console.WriteLine("Enter a name (cannot be empty): ");
         name = Console.ReadLine();
-    }
-    Console.WriteLine("Does it's a bodyweight exercice ? YES or NO ");
-    string? bodyWeight = Console.ReadLine();
-    while (string.IsNullOrWhiteSpace(bodyWeight))
+    } while (string.IsNullOrWhiteSpace(name));
+
+    int GetValidIntInput(string prompt)
     {
-        while (bodyWeight.ToUpper() != "YES" ||  bodyWeight.ToUpper() != "NO")
+        int value;
+        while (true)
         {
-            Console.WriteLine("Please enter 'YES' or 'NO' only");
-            bodyWeight = Console.ReadLine();
+            Console.WriteLine(prompt);
+            if (int.TryParse(Console.ReadLine(), out value))
+            {
+                return value;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Please enter an integer value.");
+            }
         }
-        if (bodyWeight.ToUpper() == "YES")
-        {
-            bodyWeightBool = true;
-        }
-        else { bodyWeightBool = false; }
-        
-        DisplayTargetedMusclesEnum();
-        Console.WriteLine("Choose a targeted muscles (enter the number)");
-        string? muscles = Console.ReadLine();
-        while (string.IsNullOrWhiteSpace(muscles))
-        {
-            Console.WriteLine("Please select a muscle group");
-            muscles = Console.ReadLine();
-        }
-        /*
-        ObservableCollection<TargetedMuscles> musclesList = null;
-        musclesList.Add(muscles);
-        Exercices exercices = new Exercices(name, musclesList, bodyWeightBool);
-        */
     }
+
+    int cal = GetValidIntInput("Enter the amount of calories for 100g: ");
+    int carbs = GetValidIntInput("Enter the amount of carbohydrate for 100g: ");
+    int fat = GetValidIntInput("Enter the amount of fat for 100g: ");
+    int prot = GetValidIntInput("Enter the amount of protein for 100g: ");
+    int satFat = GetValidIntInput("Enter the amount of saturated fat for 100g: ");
+    int transFat = GetValidIntInput("Enter the amount of trans fat for 100g: ");
+    int chol = GetValidIntInput("Enter the amount of cholesterol for 100g: ");
+    int sodium = GetValidIntInput("Enter the amount of sodium for 100g: ");
+    int pot = GetValidIntInput("Enter the amount of potassium for 100g: ");
+    int diet = GetValidIntInput("Enter the amount of dietary fiber for 100g: ");
+    int sugar = GetValidIntInput("Enter the amount of sugar for 100g: ");
+
+    Console.Clear();
+    DisplayCategoryEnum();
+
+    FoodCategory category;
+    while (true)
+    {
+        Console.WriteLine("Choose a food category: ");
+        if (int.TryParse(Console.ReadLine(), out int res) && Enum.IsDefined(typeof(FoodCategory), res))
+        {
+            category = (FoodCategory)res; //Convert int to FoodCategory
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid category. Please select a valid category number.");
+        }
+    }
+
+    Food food = new Food(name, cal, carbs, fat, prot, satFat, transFat, chol, sodium, pot, diet, sugar, category);
+
+    food.ShowFood();
 }
-
-
 void DisplayCategoryEnum()
 {
     Console.WriteLine("Test Enum food category");
@@ -209,6 +147,6 @@ void DisplayTargetedMusclesEnum()
     foreach(TargetedMuscles targetedMuscles in Enum.GetValues(typeof(TargetedMuscles)))
     {
         string musclesString = TargetedMusclesToString.ToString(targetedMuscles);
-        Console.WriteLine($"Targeted muscles: {targetedMuscles}, No.: {musclesString}");
+        Console.WriteLine($"Targeted muscles: {targetedMuscles}, ToString: {musclesString}");
     }
 }
