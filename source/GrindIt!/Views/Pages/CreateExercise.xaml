@@ -10,7 +10,8 @@
             Margin="0,0,20,20"
             Text="Create"
             HeightRequest="40"
-            WidthRequest="100"/>
+            WidthRequest="100"
+            CornerRadius="50"/>
         
         <Label 
             Text="Name the exercise"

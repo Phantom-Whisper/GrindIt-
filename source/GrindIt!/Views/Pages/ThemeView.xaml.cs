@@ -2,10 +2,10 @@ namespace GrindIt_.Views.Pages;
 
 public partial class ThemeView : ContentPage
 {
-	public ThemeView()
-	{
+    public ThemeView()
+    {
         InitializeComponent();
-	}
+    }
 
     private void Switch_Toggled(object sender, ToggledEventArgs e)
     {
