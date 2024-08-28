@@ -2,13 +2,12 @@
 
 namespace GrindIt.WorkoutLib
 {
-    public class Exercices
+    public class Exercise
     {
-        public Exercices(string name, ObservableCollection<TargetedMuscles> muscles, bool bodyWeight)
+        public Exercise(string name,  bool bodyWeight)
         {
-            if (muscles == null || muscles.Count == 0) throw new ArgumentNullException("The list of targeted muscles must contain at least one muscle.");
-            this.name = name;
-            this.targetedMuscles = muscles;
+            this.Name = name;
+            this.targetedMuscles = new ObservableCollection<TargetedMuscles>();
             this.BodyWeight = bodyWeight;
         }
 
@@ -38,6 +37,16 @@ namespace GrindIt.WorkoutLib
         public void AddTargetedMuscles(TargetedMuscles muscles)
         {
             targetedMuscles.Add(muscles);
+        }
+
+        public void ShowExercise()
+        {
+            Console.WriteLine("Exercise Information:");
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine("Muscles targeted: " + (targetedMuscles.Count > 0
+                            ? string.Join(", ", targetedMuscles)
+                            : "None"));
+            Console.WriteLine($"BodyWheight: {bodyWeight}");
         }
     }
 }

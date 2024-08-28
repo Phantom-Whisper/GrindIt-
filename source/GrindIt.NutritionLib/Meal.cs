@@ -21,9 +21,9 @@ namespace GrindIt.NutritionLib
 
         private readonly ObservableCollection<Food> foodList;
 
-        public int TotalCalories()
+        public float TotalCalories()
         {
-            int sum = 0;
+            float sum = 0;
             foreach (Food food in foodList)
             {
                 sum += food.Calories;
@@ -31,9 +31,9 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalProtein()
+        public float TotalProtein()
         {
-            int sum = 0;
+            float sum = 0;
             foreach(Food food in foodList)
             {
                 sum += food.Protein;
@@ -41,9 +41,9 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalCarbs()
+        public float TotalCarbs()
         {
-            int sum = 0;
+            float sum = 0;
             foreach (Food food in foodList)
             {
                 sum += food.Cabohydrate;
@@ -51,18 +51,18 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalFat()
+        public float TotalFat()
         {
-            int sum = 0;
+            float sum = 0;
             foreach(Food food in foodList)
             {
                 sum += food.Fat;
             }
             return sum;
         }
-        public int TotalSodium()
+        public float TotalSodium()
         {
-            int sum = 0;
+            float sum = 0;
             foreach (Food food in foodList)
             {
                 sum += food.Sodium;
@@ -70,9 +70,9 @@ namespace GrindIt.NutritionLib
             return sum;
         }
 
-        public int TotalSugar()
+        public float TotalSugar()
         {
-            int sum = 0;
+            float sum = 0;
             foreach(Food food in foodList)
             {
                 sum += food.Sugar;

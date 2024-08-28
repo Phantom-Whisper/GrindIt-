@@ -2,8 +2,8 @@
 {
     public class Food
     {
-        public Food(string name, int calories, int carbohydrate, int fat, int protein, int saturedFat, int transFat, 
-            int cholesterol, int sodium, int potassium, int dietaryFiber, int sugar, FoodCategory category)
+        public Food(string name, float calories, float carbohydrate, float fat, float protein, float saturedFat, float transFat, 
+            float cholesterol, float sodium, float potassium, float dietaryFiber, float sugar, FoodCategory category)
         {
             if (name == null)
             {
@@ -43,8 +43,8 @@
             }
         }
 
-        private int calories;
-        public int Calories
+        private float calories;
+        public float Calories
         {
             get
             {
@@ -52,8 +52,8 @@
             }
         }
 
-        private int cabohydrate;
-        public int Cabohydrate
+        private float cabohydrate;
+        public float Cabohydrate
         {
             get
             {
@@ -61,9 +61,9 @@
             }
         }
 
-        private int fat;
+        private float fat;
 
-        public int Fat
+        public float Fat
         {
             get
             {
@@ -71,9 +71,9 @@
             }
         }
 
-        private int protein;
+        private float protein;
 
-        public int Protein
+        public float Protein
         {
             get
             {
@@ -81,9 +81,9 @@
             }
         }
 
-        private int saturedFat;
+        private float saturedFat;
 
-        public int SaturedFat
+        public float SaturedFat
         {
             get
             {
@@ -91,8 +91,8 @@
             }
         }
 
-        private int transFat;
-        public int TransFat
+        private float transFat;
+        public float TransFat
         {
             get
             {
@@ -100,8 +100,8 @@
             }
         }
 
-        private int cholesterol;
-        public int Cholesterol
+        private float cholesterol;
+        public float Cholesterol
         {
             get
             {
@@ -109,8 +109,8 @@
             }
         }
 
-        private int sodium;
-        public int Sodium
+        private float sodium;
+        public float Sodium
         {
             get
             {
@@ -118,8 +118,8 @@
             }
         }
 
-        private int potassium;
-        public int Potassium
+        private float potassium;
+        public float Potassium
         {
             get
             {
@@ -127,8 +127,8 @@
             }
         }
 
-        private int dietaryFiber;
-        public int DietaryFiber
+        private float dietaryFiber;
+        public float DietaryFiber
         {
             get
             {
@@ -136,9 +136,9 @@
             }
         }
 
-        private int sugar;
+        private float sugar;
 
-        public int Sugar
+        public float Sugar
         {
             get
             {
