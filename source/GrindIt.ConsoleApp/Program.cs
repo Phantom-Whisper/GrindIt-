@@ -7,7 +7,8 @@ using System.Xml.Linq;
 //DisplayCategoryEnum();
 //DisplayTargetedMusclesEnum();
 //CreateFood();
-CreateExercise();
+//CreateExercise();
+CreateMeal();
 
 
 void SetTest()
@@ -204,6 +205,39 @@ void CreateExercise()
     exercise.ShowExercise();
 }
 
+void CreateMeal()
+{
+    DisplayMealTypeEnum();
+    MealType mealType;
+
+    while (true)
+    {
+        Console.Write("Choose a type of meal: ");
+        if (int.TryParse(Console.ReadLine(), out int res) && Enum.IsDefined(typeof(MealType), res))
+        {
+            mealType = (MealType)res; //Convert int to FoodCategory
+            break;
+        }
+        else
+        {
+            Console.WriteLine("Invalid category. Please select a valid category number.");
+        }
+    }
+
+    Meal meal = new(mealType);
+    Food food1 = new("Grilled Chicken Breast", 165, 0, 3.6f, 31f, 1f, 0f, 85f, 70f, 256f, 0f, 0f, FoodCategory.MEATS);
+    Food food2 = new("Apple", 52f, 14f, 0.2f, 0.3f, 0f, 0f, 0f, 1f, 107f, 2.4f, 10f, FoodCategory.FRUITS);
+    Food food3 = new("Avocado", 160f, 9f, 15f, 2f, 2.1f, 0f, 0f, 7f, 485f, 7f, 0.7f, FoodCategory.FRUITS);
+    Food food4 = new("Chocolate Cake", 352f, 50f, 15f, 5f, 3.8f, 0.1f, 50f, 210f, 160f, 2f, 36f, FoodCategory.SUGARS);
+    Food food5 = new("Salmon Fillet", 206f, 0f, 13f, 22f, 3.1f, 0f, 63f, 55f, 384f, 0f, 0f, FoodCategory.FISH);
+    meal.AddFood(food1);
+    meal.AddFood(food2);
+    meal.AddFood(food3);
+    meal.AddFood(food4);
+    meal.AddFood(food5);
+    Console.Clear();
+    meal.ShowMeal();
+}
 void DisplayCategoryEnum()
 {
     Console.WriteLine("Test Enum food category");
@@ -220,5 +254,15 @@ void DisplayTargetedMusclesEnum()
     {
         string musclesString = TargetedMusclesToString.ToString(targetedMuscles);
         Console.WriteLine($"Targeted muscles: {targetedMuscles}, ToString: {musclesString}");
+    }
+}
+
+void DisplayMealTypeEnum()
+{
+    Console.WriteLine("Test Enum MealType");
+    foreach (MealType meal in Enum.GetValues(typeof(MealType)))
+    {
+        string MealString = MealTypeToString.ToString(meal);
+        Console.WriteLine($"Meal type: {meal}, ToString: {MealString}");
     }
 }
