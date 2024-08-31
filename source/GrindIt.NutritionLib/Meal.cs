@@ -140,6 +140,11 @@ namespace GrindIt.NutritionLib
         public void ShowMeal()
         {
             Console.WriteLine("Meal Information");
+            foreach (Food food in foodList)
+            {
+                Console.WriteLine($"{food.Name}");
+            }
+            Console.WriteLine("-------------------------------------------");
             Console.WriteLine($"Meal type: {type}");
             Console.WriteLine($"- Total Calories: {TotalCalories()} kcal");
             Console.WriteLine($"- Total Carbs: {TotalCarbs()} g");
