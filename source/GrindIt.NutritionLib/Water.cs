@@ -2,6 +2,11 @@
 {
     public class Water
     {
+        public Water(int target)
+        {
+            WaterTarget = target;
+        }
+
         private int waterTarget;
         public int WaterTarget
         {
@@ -28,6 +33,11 @@
         public void AddWater(int water)
         {
             waterDrank += water;
+        }
+
+        public void ShowWater()
+        {
+            Console.WriteLine($"{waterDrank}/{waterTarget}");
         }
     }
 }

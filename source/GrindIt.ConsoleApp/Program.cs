@@ -51,9 +51,8 @@ void ShowKnownFood()
 //DisplayTargetedMusclesEnum();
 //CreateFood();
 //CreateExercise();
-CreateMeal();
-
-
+//CreateMeal();
+WaterManagement();
 
 void SetTest()
 {
@@ -213,7 +212,7 @@ void CreateExercise()
         Console.Write("Choose one or more muscle groups (comma-separated): ");
         string[] inputs = Console.ReadLine().Split(',');
 
-        List<TargetedMuscles> selectedMuscles = new List<TargetedMuscles>();
+        List<TargetedMuscles> selectedMuscles = new();
         bool allValid = true;
 
         foreach (string item in inputs)
@@ -291,6 +290,46 @@ void CreateMeal()
     Console.Clear();
     meal.ShowMeal();
 }
+
+void WaterManagement()
+{
+    bool exit = false;
+
+    Console.Write("Enter a cup size (it will be used to add a certain quantity of water to your daily track): ");
+    int.TryParse(Console.ReadLine(), out int cupSize);
+    Cup cup = new(cupSize);
+
+    Console.Clear();
+
+    Console.Write("Enter a daily target: ");
+    int.TryParse(Console.ReadLine(), out int dailyTarget);
+    Water water = new(dailyTarget);
+
+    while (!exit)
+    {
+        Console.Clear();
+        Console.WriteLine("1. Add");
+        Console.WriteLine("2. Exit");
+        water.ShowWater();
+
+        int.TryParse(Console.ReadLine(), out int choice);
+
+        if (choice == 1)
+        {
+            Console.Clear();
+            water.AddWater(cup.CupSize);
+        }
+        else if (choice == 2)
+        {
+            exit = true;
+        }
+        else
+        {
+            Console.WriteLine("Invalid option. Please try again.");
+        }
+    }
+}
+
 
 void DisplayCategoryEnum()
 {
