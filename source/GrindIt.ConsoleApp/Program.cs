@@ -52,7 +52,8 @@ void ShowKnownFood()
 //CreateFood();
 //CreateExercise();
 //CreateMeal();
-WaterManagement();
+//WaterManagement();
+BMITest();
 
 void SetTest()
 {
@@ -330,6 +331,19 @@ void WaterManagement()
     }
 }
 
+void BMITest()
+{
+    Console.Write("Enter your weight (in kg): ");
+    double.TryParse(Console.ReadLine(), out double weight);
+
+    Console.Write("Enter your height (in m): ");
+    double.TryParse(Console.ReadLine(), out double height);
+
+    BMI bmi = new(weight, height);
+    //Console.WriteLine($"Height: {height} | Weight: {weight} | BMI: {bmi.BMIResult}");
+    var category = bmi.GetBMICategory();
+    Console.WriteLine($"You are {category}");
+}
 
 void DisplayCategoryEnum()
 {
