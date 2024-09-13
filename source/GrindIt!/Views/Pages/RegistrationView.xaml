@@ -14,17 +14,17 @@
                Source="logo.png"/>
         </Grid>
         <Grid Grid.Row="1">
-            <RoundRectangle 
-            Margin="-5,-30,-5,-2"
-            CornerRadius="30,30,0,0"
-            Fill="AliceBlue"/>
+            <RoundRectangle
+                Margin="-5,-30,-5,-2"
+                CornerRadius="30,30,0,0"
+                Fill="AliceBlue"/>
             <VerticalStackLayout Margin="30,0,30,0">
                 <Label 
-                FontAttributes="Bold"
-                FontFamily="bold"
-                FontSize="Medium"
-                Text="Create your account!"
-                TextColor="#2D2D2D"/>
+                    FontAttributes="Bold"
+                    FontFamily="bold"
+                    FontSize="Medium"
+                    Text="Create your account!"
+                    TextColor="#2D2D2D"/>
                 <Grid 
                     Margin="0,30,0,0"
                     ColumnDefinitions=".2*,.8*">
@@ -42,44 +42,62 @@
                         Placeholder="Name"/>
                 </Grid>
                 <Grid 
-                Margin="0,30,0,0"
-                ColumnDefinitions=".2*,.8*">
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
                     <Image HorizontalOptions="Center">
                         <Image.Source>
                             <FontImageSource
-                            FontFamily="AwesomeSolid"
-                            Glyph="&#xf0e0;"
-                            Size="44"
-                            Color="#ffbe0b"/>
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf0e0;"
+                                Size="44"
+                                Color="#ffbe0b"/>
                         </Image.Source>
                     </Image>
                     <Entry 
-                    Grid.Column="1"
-                    Placeholder="Email"/>
+                        Grid.Column="1"
+                        Placeholder="Email"/>
                 </Grid>
-                <Grid 
-                Margin="0,30,0,0"
-                ColumnDefinitions=".2*,.8*">
+                <Grid
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
                     <Image HorizontalOptions="Center">
                         <Image.Source>
                             <FontImageSource
-                            FontFamily="AwesomeSolid"
-                            Glyph="&#xf084;"
-                            Size="44"
-                            Color="#ffbe0b"/>
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf084;"
+                                Size="44"
+                                Color="#ffbe0b"/>
                         </Image.Source>
                     </Image>
                     <Entry 
-                    Grid.Column="1"
-                    IsPassword="True"
-                    Placeholder="Password"/>
+                        Grid.Column="1"
+                        IsPassword="True"
+                        Placeholder="Password"/>
+                </Grid>
+                <Grid
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf084;"
+                                Size="44"
+                                Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        IsPassword="True"
+                        Placeholder="Confirm password"/>
                 </Grid>
                 <Button
-                Margin="0,25,0,0"
-                BackgroundColor="LightGrey"
-                HeightRequest="60"
-                Text="Create account"
-                TextColor="#4F3F9b"/>
+                    Margin="0,25,0,0"
+                    BackgroundColor="LightGrey"
+                    HeightRequest="60"
+                    Text="Create account"
+                    TextColor="#4F3F9b"
+                    Clicked="Button_Clicked"/>
             </VerticalStackLayout>
         </Grid>
     </Grid>

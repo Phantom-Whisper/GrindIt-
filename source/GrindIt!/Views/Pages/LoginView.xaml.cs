@@ -6,4 +6,14 @@ public partial class LoginView : ContentPage
     {
         InitializeComponent();
     }
+
+    private void Button_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//RegistrationView");
+    }
+
+    private void Login_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Home");
+    }
 }

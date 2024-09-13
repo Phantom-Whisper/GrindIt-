@@ -18,4 +18,9 @@ public partial class ThemeView : ContentPage
             App.Current.UserAppTheme = AppTheme.Light;
         }
     }
+
+    private void Exit_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Menu");
+    }
 }

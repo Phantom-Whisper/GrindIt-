@@ -4,13 +4,25 @@
              x:Class="GrindIt_.Views.Pages.Exercise">
     
     <VerticalStackLayout>
-        <Button
-            Text="Transfer stats"
-            HeightRequest="40"
-            CornerRadius="30"
-            WidthRequest="120"
-            Margin="0,0,10,0"
-            HorizontalOptions="End"/>
+        <Grid
+            ColumnDefinitions="*,*">
+            <ImageButton
+                HorizontalOptions="Start"
+                Margin="0,0,0,20"
+                Source="back.png"
+                HeightRequest="40"
+                WidthRequest="100"
+                CornerRadius="50"
+                Clicked="Return_Clicked"/>
+            <Button
+                Grid.Column="1"
+                Text="Transfer stats"
+                HeightRequest="40"
+                CornerRadius="30"
+                WidthRequest="120"
+                Margin="0,0,20,20"
+                HorizontalOptions="End"/>
+        </Grid>
         
         <!--Circle with a picture maybe?-->
         <!--or at least the first letter of the exercise name-->
@@ -19,7 +31,7 @@
             WidthRequest="75"
             StrokeThickness="2"
             HorizontalOptions="Start"
-            Margin="10,0,0,10">
+            Margin="20,0,0,10">
             <Border.StrokeShape>
                 <Ellipse/>
             </Border.StrokeShape>
@@ -30,7 +42,7 @@
         <!--Will have to bind the name-->
         <Label
             Text="Exercise name"
-            Margin="10,0,0,0"/>
+            Margin="30,0,0,10"/>
 
         <Grid
             ColumnDefinitions="*,*"

@@ -4,12 +4,15 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:GrindIt_.Views.Pages"
-    Shell.FlyoutBehavior="Flyout"
+    Shell.FlyoutBehavior="Disabled"
     Title="GrindIt_">
-
+    
+    <ShellContent
+        Title="LoginView"
+        ContentTemplate="{DataTemplate pages:LoginView}"
+        Route="LoginView"/>
 
     <!-- Bottom Tab Bar -->
-    <!--
     <TabBar>
         <Tab Icon="home.png" Route="Home">
             <ShellContent
@@ -39,29 +42,8 @@
                 Route="AccountView"/>
         </Tab>
     </TabBar>
-    -->
-    
+
     <!-- Additional pages not in the Tab Bar -->
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate pages:Home}"
-        Route="Home" />
-
-    <ShellContent
-        Title="Nutrition"
-        ContentTemplate="{DataTemplate pages:NutritionView}"
-        Route="NutritionView"/>
-
-    <ShellContent
-        Title="Workout"
-        ContentTemplate="{DataTemplate pages:WorkoutView}"
-        Route="WorkoutView"/>
-
-    <ShellContent
-        Title="Account"
-        ContentTemplate="{DataTemplate pages:AccountView}"
-        Route="AccountView"/>
-
     <ShellContent
         Title="Exercises"
         ContentTemplate="{DataTemplate pages:Exercises}"
@@ -73,14 +55,10 @@
         Route="Exercise"/>
 
     <ShellContent
-        Title="Create exercise"
+        Title="Create Exercise"
         ContentTemplate="{DataTemplate pages:CreateExercise}"
-        Route="CreateExercice"/>
-    
-    <ShellContent
-        Title="LoginView"
-        ContentTemplate="{DataTemplate pages:LoginView}"
-        Route="LoginView"/>
+        Route="CreateExercise"/>
+
 
     <ShellContent
         Title="RegistrationView"
@@ -88,8 +66,18 @@
         Route="RegistrationView"/>
 
     <ShellContent
-    Title="ThemeView"
-    ContentTemplate="{DataTemplate pages:ThemeView}"
-    Route="ThemeView"/>
+        Title="ThemeView"
+        ContentTemplate="{DataTemplate pages:ThemeView}"
+        Route="ThemeView"/>
+
+    <ShellContent
+        Title="Water"
+        ContentTemplate="{DataTemplate pages:Water}"
+        Route="Water"/>
+
+    <ShellContent
+        Title="Menu"
+        ContentTemplate="{DataTemplate pages:Menu}"
+        Route="Menu"/>
 
 </Shell>

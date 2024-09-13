@@ -8,5 +8,8 @@
             Text="Welcome to your personnal nutrition space !"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button
+            Text="Water"
+            Clicked="Water_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

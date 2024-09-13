@@ -8,5 +8,8 @@
             Text="Welcome to your personnal workout space !"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Button
+            Text="Exercises"
+            Clicked="Exercises_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

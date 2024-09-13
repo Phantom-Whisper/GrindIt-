@@ -6,4 +6,9 @@ public partial class NutritionView : ContentPage
     {
         InitializeComponent();
     }
+
+    private void Water_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Water");
+    }
 }

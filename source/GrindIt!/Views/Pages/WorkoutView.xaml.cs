@@ -6,4 +6,9 @@ public partial class WorkoutView : ContentPage
     {
         InitializeComponent();
     }
+
+    private void Exercises_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Exercises");
+    }
 }

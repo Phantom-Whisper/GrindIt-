@@ -6,4 +6,9 @@ public partial class AccountView : ContentPage
     {
         InitializeComponent();
     }
+
+    private void Menu_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Menu");
+    }
 }

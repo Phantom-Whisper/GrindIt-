@@ -10,18 +10,34 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center"/>
 
-        <Button
-            Text="Create Exercise"
-            Margin="20,20,30,0"
-            HeightRequest="40"
-            CornerRadius="30"
-            HorizontalOptions="End"/>
+        <Grid
+            ColumnDefinitions="*,*">
+            <ImageButton
+                HorizontalOptions="Start"
+                Margin="0,0,0,20"
+                Source="back.png"
+                HeightRequest="40"
+                WidthRequest="100"
+                CornerRadius="50"
+                Clicked="Return_Clicked"/>
+            <Button
+                Grid.Column="1"
+                Text="Create Exercise"
+                Margin="0,0,20,20"
+                HeightRequest="40"
+                CornerRadius="30"
+                HorizontalOptions="End"
+                Clicked="Button_Clicked"/>
+        </Grid>
+
 
         <SearchBar
             Placeholder="Name of the exercise"
             Margin="10,0,30,0"/>
 
         <!--List of all the targeted muscle and their exercise-->
-        
+        <Button
+            Text="Exercise"
+            Clicked="Exercise_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

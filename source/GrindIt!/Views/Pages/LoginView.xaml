@@ -67,7 +67,8 @@
                     BackgroundColor="#ffbe0b"
                     HeightRequest="60"                    
                     Text="Login"
-                    TextColor="AntiqueWhite"/>
+                    TextColor="AntiqueWhite"
+                    Clicked="Login_Clicked"/>
                 <Label
                     Margin="0,25,0,0"
                     Text="Forgot your password?"
@@ -79,7 +80,8 @@
                     BackgroundColor="LightGrey"
                     HeightRequest="60"
                     Text="Create your account"
-                    TextColor="#4F3F9b"/>
+                    TextColor="#4F3F9b"
+                    Clicked="Button_Clicked"/>
             </VerticalStackLayout>
         </Grid>
     </Grid>

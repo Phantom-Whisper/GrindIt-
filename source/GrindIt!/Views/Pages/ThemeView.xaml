@@ -33,5 +33,9 @@
                 Source="gym_background.png"/>
         </Grid>
         <!--Add grid with all the colors you can use for the app theme-->
+
+        <Button
+            Text="Exit"
+            Clicked="Exit_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

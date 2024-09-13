@@ -8,8 +8,9 @@
             Source="{AppThemeBinding Light=menu_burger.png, Dark=menu_burger_white.png}"
             HorizontalOptions="End"
             VerticalOptions="Start"
-            Margin="0,0,10,0"
-            HeightRequest="32"/>
+            Margin="0,10,10,0"
+            HeightRequest="32"
+            Clicked="Menu_Clicked"/>
         <Border
             HeightRequest="100"
             WidthRequest="100"

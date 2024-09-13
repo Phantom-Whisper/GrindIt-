@@ -4,14 +4,27 @@
              x:Class="GrindIt_.Views.Pages.CreateExercise"
              Title="Create Exercise">
     <VerticalStackLayout>
-        
-        <Button
-            HorizontalOptions="End"
-            Margin="0,0,20,20"
-            Text="Create"
-            HeightRequest="40"
-            WidthRequest="100"
-            CornerRadius="50"/>
+        <Grid
+            ColumnDefinitions="*,*">
+            <ImageButton
+                HorizontalOptions="Start"
+                Margin="0,0,0,20"
+                Source="back.png"
+                HeightRequest="40"
+                WidthRequest="100"
+                CornerRadius="50"
+                Clicked="Return_Clicked"
+                />
+            <Button
+                Grid.Column="1"
+                HorizontalOptions="End"
+                Margin="0,0,20,20"
+                Text="Create"
+                HeightRequest="40"
+                WidthRequest="100"
+                CornerRadius="50"/>
+
+        </Grid>
         
         <Label 
             Text="Name the exercise"
@@ -44,8 +57,8 @@
             VerticalOptions="Center"/>
         
         <ImageButton 
-            BackgroundColor="DarkSalmon"
-            BorderColor="Salmon"
+            BackgroundColor= "{StaticResource Primary}"
+            BorderColor="{StaticResource Primary}"
             BorderWidth="1"
             WidthRequest="35"
             HeightRequest="35"

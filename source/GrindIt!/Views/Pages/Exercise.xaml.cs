@@ -6,4 +6,9 @@ public partial class Exercise : ContentPage
     {
         InitializeComponent();
     }
+
+    private void Return_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//Exercises");
+    }
 }
