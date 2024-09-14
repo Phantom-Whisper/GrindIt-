@@ -1,5 +1,7 @@
-﻿using GrindIt.NutritionLib;
+﻿using Core;
+using GrindIt.NutritionLib;
 using GrindIt.WorkoutLib;
+using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
 using System.Xml.Linq;
 
@@ -36,15 +38,8 @@ list.Add(food13);
 list.Add(food14);
 list.Add(food15);
 
-void ShowKnownFood()
-{
-    int count = 1;
-    foreach(Food food in list)
-    {
-        Console.WriteLine($"{count}. " + food.Name);
-        count++;
-    }
-}
+
+
 
 //SetTest();
 //DisplayCategoryEnum();
@@ -53,7 +48,43 @@ void ShowKnownFood()
 //CreateExercise();
 //CreateMeal();
 //WaterManagement();
-BMITest();
+CreateUser();
+
+void CreateUser()
+{
+    string name;
+    int age;
+    double weight, height;
+    do
+    {
+        Console.Write("Enter your name (cannot be empty): ");
+        name = Console.ReadLine();
+    } while (string.IsNullOrWhiteSpace(name));
+
+    Console.Write("Enter your age: ");
+    int.TryParse(Console.ReadLine(), out age);
+
+    Console.Write("Enter your weight: ");
+    double.TryParse(Console.ReadLine(), out weight);
+
+    Console.Write("Enter your height: ");
+    double.TryParse(Console.ReadLine(), out height);
+
+    User user = new(name, age, weight, height);
+
+    Console.Clear();
+    user.CalculateBMI();
+    Console.WriteLine($"You are {user.GetBMICategory()}.");
+}
+void ShowKnownFood()
+{
+    int count = 1;
+    foreach (Food food in list)
+    {
+        Console.WriteLine($"{count}. " + food.Name);
+        count++;
+    }
+}
 
 void SetTest()
 {
@@ -329,20 +360,6 @@ void WaterManagement()
             Console.WriteLine("Invalid option. Please try again.");
         }
     }
-}
-
-void BMITest()
-{
-    Console.Write("Enter your weight (in kg): ");
-    double.TryParse(Console.ReadLine(), out double weight);
-
-    Console.Write("Enter your height (in m): ");
-    double.TryParse(Console.ReadLine(), out double height);
-
-    BMI bmi = new(weight, height);
-    //Console.WriteLine($"Height: {height} | Weight: {weight} | BMI: {bmi.BMIResult}");
-    var category = bmi.GetBMICategory();
-    Console.WriteLine($"You are {category}");
 }
 
 void DisplayCategoryEnum()
