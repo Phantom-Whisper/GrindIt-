@@ -2,14 +2,19 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrindIt_.Views.Pages.NutritionView"
+             xmlns:local="clr-namespace:GrindIt_.Components"
              Title="">
     <VerticalStackLayout>
         <Label 
             Text="Welcome to your personnal nutrition space !"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button
-            Text="Water"
-            Clicked="Water_Clicked"/>
+
+        <local:Card Text="Water">
+            
+            <local:Card.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBorderTapped" />
+            </local:Card.GestureRecognizers>
+        </local:Card>
     </VerticalStackLayout>
 </ContentPage>

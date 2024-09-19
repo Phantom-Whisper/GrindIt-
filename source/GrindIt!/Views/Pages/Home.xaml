@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Components"
              x:Class="GrindIt_.Views.Pages.Home"
              Title="">
 
@@ -25,56 +26,11 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
 
-            <Border
-                WidthRequest="350"
-                HeightRequest="110"
-                Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-                BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-                StrokeShape="RoundRectangle 30">
-                <Grid
-                    ColumnDefinitions="*,*">
-                    <Grid
-                        Margin="10,0,10,10"
-                        RowDefinitions="50,50">
-                        <Grid
-                            ColumnDefinitions="50,50">
-                            <Border
-                                WidthRequest="30"
-                                HeightRequest="30"
-                                StrokeShape="RoundRectangle 50"
-                                BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
-                                HorizontalOptions="Start">
-                                <Image />
-                            </Border>
-                            <Label
-                                Text=""
-                                VerticalOptions="Center"
-                                Grid.Column="1"/>
-                        </Grid>
-                        <Border
-                            WidthRequest="100"
-                            HeightRequest="40"
-                            StrokeShape="RoundRectangle 50"
-                            HorizontalOptions="Start"
-                            Grid.Row="1">
-                            <Button
-                                Text=""
-                                BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"/>
-                        </Border>
-                    </Grid>
-                    <Border
-                        HeightRequest="100"
-                        WidthRequest="100"
-                        Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-                        HorizontalOptions="End"
-                        Margin="10,0,20,0"
-                        Grid.Column="1">
-                        <Image />
-                    </Border>
-                </Grid>
-                
-            </Border>
-
+            <local:Card>
+                <local:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBorderTapped" />
+                </local:Card.GestureRecognizers>
+            </local:Card>
         </VerticalStackLayout>
     </ScrollView>
 

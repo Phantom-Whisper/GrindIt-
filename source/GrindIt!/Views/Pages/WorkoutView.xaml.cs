@@ -11,4 +11,9 @@ public partial class WorkoutView : ContentPage
     {
         Shell.Current.GoToAsync("//Exercises");
     }
+
+    private void OnBorderTapped(object sender, TappedEventArgs e)
+    {
+        Shell.Current.GoToAsync("//Exercises");
+    }
 }

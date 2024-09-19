@@ -11,4 +11,9 @@ public partial class NutritionView : ContentPage
     {
         Shell.Current.GoToAsync("//Water");
     }
+
+    private void OnBorderTapped(object sender, TappedEventArgs e)
+    {
+        Shell.Current.GoToAsync("//Water");
+    }
 }

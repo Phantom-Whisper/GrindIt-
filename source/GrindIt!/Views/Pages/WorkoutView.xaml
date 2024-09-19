@@ -2,14 +2,18 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrindIt_.Views.Pages.WorkoutView"
+             xmlns:local="clr-namespace:GrindIt_.Components"
              Title="">
     <VerticalStackLayout>
         <Label 
             Text="Welcome to your personnal workout space !"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <Button
-            Text="Exercises"
-            Clicked="Exercises_Clicked"/>
+
+        <local:Card Text="Exercises">
+            <local:Card.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBorderTapped" />
+            </local:Card.GestureRecognizers>
+        </local:Card>
     </VerticalStackLayout>
 </ContentPage>

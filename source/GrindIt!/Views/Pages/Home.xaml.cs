@@ -20,5 +20,10 @@ public partial class Home : ContentPage
 
         SemanticScreenReader.Announce(CounterBtn.Text);
     }
+
+    private void OnBorderTapped(object sender, TappedEventArgs e)
+    {
+        Shell.Current.GoToAsync("//AccountView");
+    }
 }
 
