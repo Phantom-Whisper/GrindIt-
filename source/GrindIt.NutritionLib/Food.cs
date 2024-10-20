@@ -1,5 +1,6 @@
 ﻿namespace GrindIt.NutritionLib
 {
+    [Serializable]
     public class Food
     {
         public Food(string name, float calories, float carbohydrate, float fat, float protein, float saturedFat, float transFat, 

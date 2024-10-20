@@ -1,5 +1,9 @@
-﻿namespace Core
+﻿using System.Xml.Serialization;
+
+namespace Core
 {
+    [Serializable]
+    [XmlRoot("UserInfo")]
     public class User
     {
         private string name;
@@ -8,7 +12,7 @@
         private double height;
         private double bmi;
 
-        public User(string name, int age, double weight, double height) 
+        public User(string name, int age, double weight, double height)
         {
             Name = name;
             Age = age;
@@ -71,7 +75,8 @@
             {
                 throw new InvalidOperationException("Height and weight must be greater than zero to calculate BMI.");
             }
-            bmi = weight / (height * height);
+
+            bmi = Math.Round((weight / Math.Pow(height, 2))*10000, 1);
             return bmi;
         }
 
@@ -84,11 +89,11 @@
 
             if (bmi == 0)
             {
-                CalculateBMI();
+                throw new InvalidOperationException("BMI must be calculated before IMG.");
             }
 
-            double IMG = (float)((1.20 * bmi) + (0.23 * age) - (isMale ? 16.2 : 5.4));
-            return IMG;
+            double img = (1.20 * bmi) + (0.23 * age) - (isMale ? 16.2 : 5.4);
+            return img;
         }
 
         public string GetBMICategory()
@@ -111,11 +116,11 @@
             }
         }
 
-        public string GetIMGCategory(float IMG, bool isMale)
+        public string GetIMGCategory(double img, bool isMale)
         {
             if (isMale)
             {
-                return IMG switch
+                return img switch
                 {
                     <= 5 => "Essential Fat",
                     > 5 and <= 13 => "Athletes",
@@ -126,7 +131,7 @@
             }
             else
             {
-                return IMG switch
+                return img switch
                 {
                     <= 13 => "Essential Fat",
                     > 13 and <= 20 => "Athletes",

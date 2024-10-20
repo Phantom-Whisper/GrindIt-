@@ -2,6 +2,7 @@
 
 namespace GrindIt.NutritionLib
 {
+    [Serializable]
     public class Meal
     {
         public Meal(MealType type)

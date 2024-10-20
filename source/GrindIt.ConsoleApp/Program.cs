@@ -64,16 +64,17 @@ void CreateUser()
     Console.Write("Enter your age: ");
     int.TryParse(Console.ReadLine(), out age);
 
-    Console.Write("Enter your weight: ");
+    Console.Write("Enter your weight (kg): ");
     double.TryParse(Console.ReadLine(), out weight);
 
-    Console.Write("Enter your height: ");
+    Console.Write("Enter your height (cm): ");
     double.TryParse(Console.ReadLine(), out height);
 
     User user = new(name, age, weight, height);
 
     Console.Clear();
     user.CalculateBMI();
+    Console.WriteLine($"BMI: {user.CalculateBMI()}");
     Console.WriteLine($"You are {user.GetBMICategory()}.");
 }
 void ShowKnownFood()
