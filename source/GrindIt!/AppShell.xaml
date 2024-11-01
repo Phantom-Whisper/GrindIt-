@@ -80,4 +80,24 @@
         ContentTemplate="{DataTemplate pages:Menu}"
         Route="Menu"/>
 
+    <ShellContent
+        Title="Sleep"
+        ContentTemplate="{DataTemplate pages:Sleep}"
+        Route="Sleep"/>
+
+    <ShellContent
+        Title="BodyComposition"
+        ContentTemplate="{DataTemplate pages:BodyComposition}"
+        Route="BodyComposition"/>
+
+    <ShellContent
+    Title="Meal"
+    ContentTemplate="{DataTemplate pages:Meal}"
+    Route="Meal"/>
+
+    <ShellContent
+        Title="Steps"
+        ContentTemplate="{DataTemplate pages:Steps}"
+        Route="Steps"/>
+
 </Shell>

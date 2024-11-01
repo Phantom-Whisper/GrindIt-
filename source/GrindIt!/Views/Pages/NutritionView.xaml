@@ -6,15 +6,52 @@
              Title="">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to your personnal nutrition space !"
+            Text="Eat those gains!"
+            FontSize="Header"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <local:Card Text="Water">
-            
+        <local:Card>
+            <local:Card.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnStepsTapped"/>
+            </local:Card.GestureRecognizers>
+        </local:Card>
+
+        <local:Card
+            Text="Meal"
+            ImageSource="cutlery.png"
+            Margin="0,10,0,2.5">
+            <local:Card.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnMealTapped" />
+            </local:Card.GestureRecognizers>
+        </local:Card>
+        
+        <local:Card
+            Text="Sleep"
+            ImageSource="bedtime.png"
+            Margin="0,2.5,0,2.5">
+            <local:Card.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnSleepTapped" />
+            </local:Card.GestureRecognizers>            
+        </local:Card>
+
+        <local:Card
+            Text="Body composition"
+            ImageSource="scale.png"
+            Margin="0,2.5,0,2.5">
+            <local:Card.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnBodyTapped" />
+            </local:Card.GestureRecognizers>
+        </local:Card>
+        
+        <local:Card 
+            Text="Water"
+            ImageSource="glass.png"
+            Margin="0,2.5,0,2.5">            
             <local:Card.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnBorderTapped" />
             </local:Card.GestureRecognizers>
         </local:Card>
+        
     </VerticalStackLayout>
 </ContentPage>

@@ -9,7 +9,7 @@
             <ImageButton
                 HorizontalOptions="Start"
                 Margin="0,0,0,20"
-                Source="back.png"
+                Source="{AppThemeBinding Light=back.png, Dark=back_white.png}"
                 HeightRequest="40"
                 WidthRequest="100"
                 CornerRadius="50"

@@ -1,11 +1,11 @@
 namespace GrindIt_.Views.Pages;
 
-public partial class Water : ContentPage
+public partial class Meal : ContentPage
 {
-    public Water()
-    {
-        InitializeComponent();
-    }
+	public Meal()
+	{
+		InitializeComponent();
+	}
 
     private void Return_Clicked(object sender, EventArgs e)
     {

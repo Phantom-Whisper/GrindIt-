@@ -10,44 +10,51 @@
             BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
             StrokeShape="RoundRectangle 30">
 
-        <Grid
-                ColumnDefinitions="*,*">
+        <Grid ColumnDefinitions="*,*">
             <Grid
-                    Margin="10,0,10,10"
-                    RowDefinitions="50,50">
-                <Grid
-                        ColumnDefinitions="*,*">
+                Margin="10,5,10,10"
+                RowDefinitions="50,50">
+                <Grid ColumnDefinitions="Auto, Auto">
                     <Border
-                            WidthRequest="30"
-                            HeightRequest="30"
-                            StrokeShape="RoundRectangle 50"
-                            BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
-                            HorizontalOptions="Start">
-                        <Image />
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        StrokeShape="RoundRectangle 50"
+                        BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
+                        HorizontalOptions="Start">
+                        <Image 
+                            Source="{Binding ImageSource}"
+                            Aspect="AspectFit"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"/>
                     </Border>
-                    <Label
-                            Text="{Binding Text}"
-                            VerticalOptions="Center"
-                            Grid.Column="1" />
+                    <Label 
+                        Text="{Binding Text}"
+                        TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                        FontSize="Medium"
+                        Margin="5"
+                        VerticalOptions="Center"
+                        HorizontalOptions="StartAndExpand"
+                        WidthRequest="155"
+                        Grid.Column="1"/>
                 </Grid>
                 <Border
-                        WidthRequest="100"
-                        HeightRequest="40"
-                        StrokeShape="RoundRectangle 50"
-                        HorizontalOptions="Start"
-                        Grid.Row="1">
+                    WidthRequest="125"
+                    HeightRequest="40"
+                    StrokeShape="RoundRectangle 50"
+                    HorizontalOptions="Start"
+                    Grid.Row="1">
                     <Button
-                            Text=""
-                            BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}" />
+                        Text="{Binding Value}"
+                        BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}" />
                 </Border>
             </Grid>
             <Border
-                    HeightRequest="100"
-                    WidthRequest="100"
-                    Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-                    HorizontalOptions="End"
-                    Margin="10,0,20,0"
-                    Grid.Column="1">
+                HeightRequest="100"
+                WidthRequest="100"
+                Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+                HorizontalOptions="End"
+                Margin="10,0,20,0"
+                Grid.Column="1">
                 <Image />
             </Border>
         </Grid>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GrindIt_.Views.Pages.RegistrationView"
-             Title="RegistrationView">
+             x:Class="GrindIt_.Views.Pages.RegistrationView">
     
     <Grid RowDefinitions=".3*, .7*">
         <Image Aspect="AspectFill" Source="gym_background.jpg" />
@@ -17,14 +16,14 @@
             <RoundRectangle
                 Margin="-5,-30,-5,-2"
                 CornerRadius="30,30,0,0"
-                Fill="AliceBlue"/>
+                Fill="{AppThemeBinding Light=AliceBlue, Dark=PrimaryDarkText}"/>
             <VerticalStackLayout Margin="30,0,30,0">
                 <Label 
                     FontAttributes="Bold"
                     FontFamily="bold"
                     FontSize="Medium"
                     Text="Create your account!"
-                    TextColor="#2D2D2D"/>
+                    TextColor="{AppThemeBinding Light=#2D2D2D, Dark=Gray500}"/>
                 <Grid 
                     Margin="0,30,0,0"
                     ColumnDefinitions=".2*,.8*">
