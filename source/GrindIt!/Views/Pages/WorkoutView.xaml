@@ -6,7 +6,7 @@
              Title="">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to your personnal workout space !"
+            Text="Push those weights !"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 

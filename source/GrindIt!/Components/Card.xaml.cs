@@ -14,8 +14,8 @@ public partial class Card : ContentView
     public static readonly BindableProperty ValueProperty =
             BindableProperty.Create(nameof(Value), typeof(string), typeof(Card), default(string));
 
-    public static readonly BindableProperty ImageSourceProperty =
-            BindableProperty.Create(nameof(ImageSource), typeof(string), typeof(Card), default(string));
+    public static readonly BindableProperty GlyphProperty =
+            BindableProperty.Create(nameof(Glyph), typeof(string), typeof(Card), default(string));
 
 
     public string Text
@@ -30,10 +30,10 @@ public partial class Card : ContentView
         set => SetValue(ValueProperty, value);
     }
 
-    public string ImageSource
+    public string Glyph
     {
-        get => (string)GetValue(ImageSourceProperty);
-        set => SetValue(ImageSourceProperty, value);
+        get => (string)GetValue(GlyphProperty);
+        set => SetValue(GlyphProperty, value);
     }
 
 }

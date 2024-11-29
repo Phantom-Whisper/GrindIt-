@@ -19,13 +19,18 @@
                         WidthRequest="50"
                         HeightRequest="50"
                         StrokeShape="RoundRectangle 50"
-                        BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}"
+                        StrokeThickness="0"
+                        BackgroundColor="Transparent"
                         HorizontalOptions="Start">
-                        <Image 
-                            Source="{Binding ImageSource}"
-                            Aspect="AspectFit"
-                            HorizontalOptions="Center"
-                            VerticalOptions="Center"/>
+                        <Image HorizontalOptions="Center">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="AwesomeSolid"
+                                    Glyph="{Binding Glyph}"
+                                    Size="30"
+                                    Color="#1B1212"/>
+                                </Image.Source>
+                            </Image>
                     </Border>
                     <Label 
                         Text="{Binding Text}"
@@ -45,6 +50,7 @@
                     Grid.Row="1">
                     <Button
                         Text="{Binding Value}"
+                        FontSize="Body"
                         BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}" />
                 </Border>
             </Grid>

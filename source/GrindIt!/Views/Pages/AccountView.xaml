@@ -3,29 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrindIt_.Views.Pages.AccountView"
              Title="">
+    
     <VerticalStackLayout>
         <ImageButton
-            Source="{AppThemeBinding Light=menu_burger.png, Dark=menu_burger_white.png}"
             HorizontalOptions="End"
             VerticalOptions="Start"
-            Margin="0,10,10,0"
+            Margin="0,20,20,0"
             HeightRequest="32"
-            Clicked="Menu_Clicked"/>
+            WidthRequest="32"
+            Clicked="Menu_Clicked">
+            <ImageButton.Source>
+                <FontImageSource
+                    FontFamily="AwesomeSolid"
+                    Glyph="&#xf013;"
+                    Size="30"
+                    Color="{AppThemeBinding Light=Black, Dark=White}" />
+            </ImageButton.Source>
+        </ImageButton>
+
         <Border
             HeightRequest="100"
             WidthRequest="100"
             HorizontalOptions="Start"
             Margin="10,0,0,10">
             <Border.StrokeShape>
-                <Ellipse/>
+                <Ellipse />
             </Border.StrokeShape>
             <Image
                 Source="gym_background.jpg"
-                Aspect="AspectFill"/>
+                Aspect="AspectFill" />
         </Border>
+
         <Label 
             Text="Name"
             HorizontalOptions="Start"
-            Margin="10,0,10,0"/>
+            Margin="10,0,10,0" />
     </VerticalStackLayout>
 </ContentPage>
