@@ -7,7 +7,7 @@
 For now, you on need an IDE for creating modern applications for Android and iOS (like Visual Studio Community).
 ## 🚦What have we now ?
 * For the moment... Not much 😓 <br>
-🔜 Finalising the graphic interface <br>
+🔜 Finalising the graphic user interface <br>
 🔜 Finalising the Classes and their methods<br>
 * Still to be done <br>
 📝 Implementing interfaces and delegates <br>
