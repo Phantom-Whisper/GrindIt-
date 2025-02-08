@@ -9,8 +9,8 @@
             HorizontalOptions="End"
             VerticalOptions="Start"
             Margin="0,20,20,0"
-            HeightRequest="32"
-            WidthRequest="32"
+            HeightRequest="26"
+            WidthRequest="26"
             Clicked="Menu_Clicked">
             <ImageButton.Source>
                 <FontImageSource

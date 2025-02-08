@@ -9,6 +9,6 @@ public partial class Steps : ContentPage
 
     private void Return_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Exercises");
+        Shell.Current.GoToAsync("//NutritionView");
     }
 }

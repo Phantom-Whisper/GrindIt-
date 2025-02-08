@@ -19,7 +19,7 @@ public partial class ThemeView : ContentPage
         }
     }
 
-    private void Exit_Clicked(object sender, EventArgs e)
+    private void Return_Clicked(object sender, EventArgs e)
     {
         Shell.Current.GoToAsync("//Menu");
     }

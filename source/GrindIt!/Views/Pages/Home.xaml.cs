@@ -9,6 +9,7 @@ public partial class Home : ContentPage
         InitializeComponent();
     }
 
+    
     private void OnCounterClicked(object sender, EventArgs e)
     {
         count++;

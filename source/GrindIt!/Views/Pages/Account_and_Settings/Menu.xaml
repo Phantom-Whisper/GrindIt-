@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrindIt_.Views.Pages.Menu"
+             xmlns:local="clr-namespace:GrindIt_.Components">
+    <VerticalStackLayout>
+        <ImageButton
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="10,0,0,10"
+            HeightRequest="24"
+            WidthRequest="24"
+            Clicked="Exit_Clicked">
+            <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="AwesomeSolid"
+                        Glyph=""
+                        Size="30"
+                        Color="{AppThemeBinding Light=Black, Dark=White}" />
+            </ImageButton.Source>
+        </ImageButton>
+        
+        <Label
+            Text="App settings"
+            FontSize="Title"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            Margin="0,0,0,40"/>
+
+        <local:SettingsCard
+            Glyph=""
+            Text="Profile">
+            <local:SettingsCard.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Profile_Clicked"/>
+            </local:SettingsCard.GestureRecognizers>
+        </local:SettingsCard>
+        
+        <local:SettingsCard
+            Glyph=""
+            Text="Preferences">
+            <local:SettingsCard.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Preferences_Clicked"/>
+            </local:SettingsCard.GestureRecognizers>
+        </local:SettingsCard>
+        
+        <local:SettingsCard
+            Glyph=""
+            Text="Theme">
+            <local:SettingsCard.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Theme_Clicked"/>
+            </local:SettingsCard.GestureRecognizers>
+        </local:SettingsCard>
+        
+        <local:SettingsCard
+            Glyph=""
+            Text="FAQ">
+            <local:SettingsCard.GestureRecognizers>
+                <TapGestureRecognizer Tapped="FAQ_Clicked"/>
+            </local:SettingsCard.GestureRecognizers>
+        </local:SettingsCard>
+        
+        <local:SettingsCard
+            Glyph="?"
+            Text="About">
+            <local:SettingsCard.GestureRecognizers>
+                <TapGestureRecognizer Tapped="About_Clicked"/>
+            </local:SettingsCard.GestureRecognizers>
+        </local:SettingsCard>
+    </VerticalStackLayout>
+</ContentPage>

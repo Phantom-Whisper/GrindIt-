@@ -9,19 +9,23 @@
             Text="Eat those gains!"
             FontSize="Header"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            Margin="0,5,0,5"/>
 
-        <local:Card>
-            <local:Card.GestureRecognizers>
+        <local:StepsCard
+            Value="0/"
+            TargetValue="6000"
+            Margin="0,5,0,5">
+            <local:StepsCard.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnStepsTapped"/>
-            </local:Card.GestureRecognizers>
-        </local:Card>
+            </local:StepsCard.GestureRecognizers>
+        </local:StepsCard>
 
         <local:Card
             Text="0/3,500 kcal"
             Glyph="&#xf2e7;"
             Value="Enter"
-            Margin="0,10,0,2.5">
+            Margin="0,5,0,5">
             <local:Card.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnMealTapped" />
             </local:Card.GestureRecognizers>
@@ -31,7 +35,7 @@
             Text="Sleep"
             Glyph="&#xf236;"
             Value="Enter"
-            Margin="0,2.5,0,2.5">
+            Margin="0,5,0,5">
             <local:Card.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnSleepTapped" />
             </local:Card.GestureRecognizers>            
@@ -41,7 +45,7 @@
             Text="Body composition"
             Glyph="&#xf496;;"
             Value="Enter"
-            Margin="0,2.5,0,2.5">
+            Margin="0,5,0,5">
             <local:Card.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnBodyTapped" />
             </local:Card.GestureRecognizers>
@@ -51,7 +55,7 @@
             Text="0/2,000 ml"
             Glyph="&#xf7a0;"
             Value="+250 ml"
-            Margin="0,2.5,0,2.5">            
+            Margin="0,5,0,5">            
             <local:Card.GestureRecognizers>
                 <TapGestureRecognizer Tapped="OnBorderTapped" />
             </local:Card.GestureRecognizers>

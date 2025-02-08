@@ -14,12 +14,19 @@
             ColumnDefinitions="*,*">
             <ImageButton
                 HorizontalOptions="Start"
-                Margin="0,0,0,20"
-                Source="back.png"
-                HeightRequest="40"
-                WidthRequest="100"
-                CornerRadius="50"
-                Clicked="Return_Clicked"/>
+                VerticalOptions="Start"
+                Margin="10,0,20,0"
+                HeightRequest="26"
+                WidthRequest="26"
+                Clicked="Return_Clicked">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="AwesomeSolid"
+                        Glyph=""
+                        Size="30"
+                        Color="{AppThemeBinding Light=Black, Dark=White}" />
+                </ImageButton.Source>
+            </ImageButton>
             <Button
                 Grid.Column="1"
                 Text="Create Exercise"
@@ -33,7 +40,7 @@
 
         <SearchBar
             Placeholder="Name of the exercise"
-            Margin="10,0,30,0"/>
+            Margin="10,0,30,10"/>
 
         <!--List of all the targeted muscle and their exercise-->
         <Button

@@ -4,6 +4,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:GrindIt_.Views.Pages"
+    xmlns:accountSettings="clr-namespace:GrindIt_.Views.Pages.Account_and_Settings"
     Shell.FlyoutBehavior="Disabled"
     Title="GrindIt_">
     
@@ -66,7 +67,6 @@
         Route="RegistrationView"/>
 
     <ShellContent
-        Title="ThemeView"
         ContentTemplate="{DataTemplate pages:ThemeView}"
         Route="ThemeView"/>
 
@@ -99,5 +99,20 @@
         Title="Steps"
         ContentTemplate="{DataTemplate pages:Steps}"
         Route="Steps"/>
+    
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:About}"
+        Route="About"/>
 
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:FAQ}"
+        Route="FAQ"/>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:Preferences}"
+        Route="Preferences"/>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:Profile}"
+        Route="Profile"/>
 </Shell>

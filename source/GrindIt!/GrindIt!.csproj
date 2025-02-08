@@ -40,7 +40,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Resize="True" BaseSize="48,48" Color="#1B1212" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Resize="True" Color="#1B1212" />
 		<!--<MauiIcon Include="Resources\Raw\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#1B1212" />-->
 
 		<!-- Splash Screen -->
@@ -70,19 +70,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\Pages\AccountView.xaml.cs">
+	  <Compile Update="Views\Pages\Account_and_Settings\AccountView.xaml.cs">
 	    <DependentUpon>AccountView.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\Pages\Home.xaml.cs">
 	    <DependentUpon>Home.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Pages\LoginView.xaml.cs">
+	  <Compile Update="Views\Pages\Login_and_Registration\LoginView.xaml.cs">
 	    <DependentUpon>LoginView.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Pages\NutritionView.xaml.cs">
+	  <Compile Update="Views\Pages\Nutrition_Pages\NutritionView.xaml.cs">
 	    <DependentUpon>NutritionView.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Pages\WorkoutView.xaml.cs">
+	  <Compile Update="Views\Pages\Workout\WorkoutView.xaml.cs">
 	    <DependentUpon>WorkoutView.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
@@ -91,49 +91,67 @@
 	  <MauiXaml Update="Components\Card.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\AccountView.xaml">
+	  <MauiXaml Update="Components\SettingsCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\BodyComposition.xaml">
+	  <MauiXaml Update="Components\StepsCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\CreateExercise.xaml">
+	  <MauiXaml Update="Views\Pages\Account_and_Settings\About.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Exercise.xaml">
+	  <MauiXaml Update="Views\Pages\Account_and_Settings\AccountView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Exercises.xaml">
+	  <MauiXaml Update="Views\Pages\Account_and_Settings\FAQ.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\LoginView.xaml">
+	  <MauiXaml Update="Views\Pages\Account_and_Settings\Preferences.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Meal.xaml">
+	  <MauiXaml Update="Views\Pages\Account_and_Settings\Profile.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Menu.xaml">
+	  <MauiXaml Update="Views\Pages\Nutrition_Pages\BodyComposition.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\NutritionView.xaml">
+	  <MauiXaml Update="Views\Pages\Workout\CreateExercise.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\RegistrationView.xaml">
+	  <MauiXaml Update="Views\Pages\Workout\Exercise.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Sleep.xaml">
+	  <MauiXaml Update="Views\Pages\Workout\Exercises.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Steps.xaml">
+	  <MauiXaml Update="Views\Pages\Login_and_Registration\LoginView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\ThemeView.xaml">
+	  <MauiXaml Update="Views\Pages\Nutrition_Pages\Meal.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\Water.xaml">
+	  <MauiXaml Update="Views\Pages\Account_and_Settings\Menu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\Pages\WorkoutView.xaml">
+	  <MauiXaml Update="Views\Pages\Nutrition_Pages\NutritionView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Login_and_Registration\RegistrationView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Nutrition_Pages\Sleep.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Nutrition_Pages\Steps.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Account_and_Settings\ThemeView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Nutrition_Pages\Water.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\Workout\WorkoutView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

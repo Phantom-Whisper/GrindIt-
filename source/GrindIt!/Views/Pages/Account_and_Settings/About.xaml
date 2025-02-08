@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrindIt_.Views.Pages.Account_and_Settings.About"
+             Title="About">
+    <VerticalStackLayout>
+        <ImageButton
+            HorizontalOptions="Start"
+            VerticalOptions="Start"
+            Margin="10,0,20,0"
+            HeightRequest="26"
+            WidthRequest="26"
+            Clicked="Return_Clicked">
+            <ImageButton.Source>
+                <FontImageSource
+                    FontFamily="AwesomeSolid"
+                    Glyph=""
+                    Size="30"
+                    Color="{AppThemeBinding Light=Black, Dark=White}" />
+            </ImageButton.Source>
+        </ImageButton>
+
+        <Label
+            Text="About"
+            FontSize="Medium"
+            HorizontalOptions="Center"
+            FontAttributes="Bold"
+            Margin="0,0,0,30"/>
+        
+        <Image 
+            Source="{AppThemeBinding Light=logo.png, Dark=logo_white.png}" 
+            MaximumWidthRequest="200"
+            MaximumHeightRequest="70"/>
+
+        <Label
+            Text="Version: 1.0.0 (Beta)"
+            HorizontalOptions="Center"/>
+
+        <Label
+            Text="Made by a gymrat for the whole fitness community"
+            HorizontalOptions="Center"
+            Margin="0,15,0,30"/>
+
+        <!--Links to the accordings pages-->
+        <Label
+            Text="Terms of service"
+            HorizontalOptions="Center"
+            Margin="0,15,0,30"/>
+
+        <Label
+            Text="Privacy Policy"
+            HorizontalOptions="Center"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

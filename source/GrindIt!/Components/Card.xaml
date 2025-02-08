@@ -4,15 +4,15 @@
              x:Class="GrindIt_.Components.Card">
 
     <Border
-            WidthRequest="350"
-            HeightRequest="110"
+            WidthRequest="400"
+            HeightRequest="120"
             Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
             BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
             StrokeShape="RoundRectangle 30">
 
         <Grid ColumnDefinitions="*,*">
             <Grid
-                Margin="10,5,10,10"
+                Margin="15,5,10,10"
                 RowDefinitions="50,50">
                 <Grid ColumnDefinitions="Auto, Auto">
                     <Border
@@ -50,6 +50,7 @@
                     Grid.Row="1">
                     <Button
                         Text="{Binding Value}"
+                        Padding="5"
                         FontSize="Body"
                         BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}" />
                 </Border>

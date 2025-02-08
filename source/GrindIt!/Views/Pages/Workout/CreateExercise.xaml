@@ -8,13 +8,19 @@
             ColumnDefinitions="*,*">
             <ImageButton
                 HorizontalOptions="Start"
-                Margin="0,0,0,20"
-                Source="back.png"
-                HeightRequest="40"
-                WidthRequest="100"
-                CornerRadius="50"
-                Clicked="Return_Clicked"
-                />
+                VerticalOptions="Start"
+                Margin="10,0,20,0"
+                HeightRequest="26"
+                WidthRequest="26"
+                Clicked="Return_Clicked">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="AwesomeSolid"
+                        Glyph=""
+                        Size="30"
+                        Color="{AppThemeBinding Light=Black, Dark=White}" />
+                </ImageButton.Source>
+            </ImageButton>
             <Button
                 Grid.Column="1"
                 HorizontalOptions="End"
@@ -23,7 +29,6 @@
                 HeightRequest="40"
                 WidthRequest="100"
                 CornerRadius="50"/>
-
         </Grid>
         
         <Label 
@@ -39,7 +44,6 @@
             HorizontalOptions="Center"
             ColumnDefinitions="50*,50*"
             ColumnSpacing="20">
-
             <Label
                 Text="Bodyweight exercise "
                 VerticalOptions="Center"
@@ -55,8 +59,8 @@
             Text="Select at least one muscle targeted"
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
-        
-        <ImageButton 
+
+        <ImageButton
             BackgroundColor= "{StaticResource Primary}"
             BorderColor="{StaticResource Primary}"
             BorderWidth="1"
@@ -64,10 +68,16 @@
             HeightRequest="35"
             CornerRadius="50"
             Padding="8,8,8,8"
-            Margin="5"
-            Source="plus_sign.png"/>
+            Margin="5">
+            <ImageButton.Source>
+                <FontImageSource
+                    FontFamily="AwesomeSolid"
+                    Glyph="+"
+                    Size="30"
+                    Color="{AppThemeBinding Light=Black, Dark=White}" />
+            </ImageButton.Source>
+        </ImageButton>
         <!--eventHandler-->
         <!--When toggled show a list of the muscles-->
-
     </VerticalStackLayout>
 </ContentPage>

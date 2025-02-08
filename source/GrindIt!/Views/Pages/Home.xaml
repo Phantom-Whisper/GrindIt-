@@ -11,7 +11,9 @@
             Spacing="25">
             
             <Image 
-                Source="{AppThemeBinding Light=logo.png, Dark=logo_white.png}" />
+                Source="{AppThemeBinding Light=logo.png, Dark=logo_white.png}"
+                MaximumWidthRequest="200"
+                MaximumHeightRequest="70"/>
 
 
             <!-- Bind a motivation quote here -->
@@ -31,6 +33,10 @@
                     <TapGestureRecognizer Tapped="OnBorderTapped" />
                 </local:Card.GestureRecognizers>
             </local:Card>
+
+            <local:StepsCard>
+                
+            </local:StepsCard>
         </VerticalStackLayout>
     </ScrollView>
 
