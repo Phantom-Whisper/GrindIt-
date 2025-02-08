@@ -2,8 +2,8 @@
 {
     public interface ISerialize
     {
-        object Load();
+        T Load<T>();
 
-        void Save();
+        void Save<T>(T data);
     }
 }

@@ -8,8 +8,9 @@
         {
             if (name == null)
             {
-                throw new ArgumentNullException("You have to provide a name");
+                throw new ArgumentNullException(nameof(name));
             }
+
             this.name = name;
             this.calories = calories;
             this.cabohydrate = carbohydrate;

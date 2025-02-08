@@ -71,12 +71,12 @@ namespace Core
 
         public double CalculateBMI()
         {
-            if (height <= 0 || weight <= 0)
+            if (Height <= 0 || Weight <= 0) 
             {
                 throw new InvalidOperationException("Height and weight must be greater than zero to calculate BMI.");
             }
 
-            bmi = Math.Round((weight / Math.Pow(height, 2))*10000, 1);
+            bmi = Math.Round((Weight / Math.Pow(Height, 2)) * 10000, 1);
             return bmi;
         }
 
