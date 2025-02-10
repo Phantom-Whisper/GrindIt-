@@ -11,7 +11,7 @@ For now, you on need an IDE for creating modern applications for Android and iOS
 🔜 Finalising the Classes and their methods<br>
 * Still to be done <br>
 📝 Implementing interfaces and delegates <br>
-📝 Link between Views and Model
+📝 Link between Views and Model <br>
 📝 xUnit tests
 ## 🧪 Running the tests
 To run the tests, you just need to launch Visual Studio 😜
