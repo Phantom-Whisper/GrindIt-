@@ -115,6 +115,9 @@
 	  <MauiXaml Update="Views\Pages\Nutrition_Pages\BodyComposition.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Pages\test.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Pages\Workout\CreateExercise.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

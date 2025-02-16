@@ -27,6 +27,11 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
+            <Button
+                x:Name="TestLink"
+                Text="Test view link"
+                Clicked="TestLink_Clicked"
+                />
 
             <local:Card>
                 <local:Card.GestureRecognizers>

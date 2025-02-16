@@ -26,5 +26,10 @@ public partial class Home : ContentPage
     {
         Shell.Current.GoToAsync("//AccountView");
     }
+
+    private void TestLink_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync("//test");
+    }
 }
 

@@ -4,44 +4,54 @@
              x:Class="GrindIt_.Components.Card">
 
     <Border
-            WidthRequest="400"
-            HeightRequest="120"
-            Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-            BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-            StrokeShape="RoundRectangle 30">
+        Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+        BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+        StrokeShape="RoundRectangle 25"
+        Margin="10,5,10,5"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
 
-        <Grid ColumnDefinitions="*,*">
+        <Grid 
+            ColumnDefinitions="*, Auto" 
+            
+            RowDefinitions="Auto, Auto">
             <Grid
                 Margin="15,5,10,10"
                 RowDefinitions="50,50">
-                <Grid ColumnDefinitions="Auto, Auto">
-                    <Border
-                        WidthRequest="50"
-                        HeightRequest="50"
-                        StrokeShape="RoundRectangle 50"
-                        StrokeThickness="0"
-                        BackgroundColor="Transparent"
-                        HorizontalOptions="Start">
-                        <Image HorizontalOptions="Center">
-                            <Image.Source>
-                                <FontImageSource
-                                    FontFamily="AwesomeSolid"
-                                    Glyph="{Binding Glyph}"
-                                    Size="30"
-                                    Color="#1B1212"/>
-                                </Image.Source>
-                            </Image>
-                    </Border>
-                    <Label 
-                        Text="{Binding Text}"
-                        TextColor="{AppThemeBinding Light=White, Dark=Black}"
-                        FontSize="Medium"
-                        Margin="5"
-                        VerticalOptions="Center"
-                        HorizontalOptions="StartAndExpand"
-                        WidthRequest="155"
-                        Grid.Column="1"/>
-                </Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Border
+                WidthRequest="50"
+                HeightRequest="50"
+                StrokeShape="RoundRectangle 50"
+                StrokeThickness="0"
+                HorizontalOptions="Center"
+                    Margin="5,0,15,0">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                            FontFamily="AwesomeSolid"
+                            Glyph="{Binding Glyph}"
+                            Size="30"
+                            Color="#1B1212"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
+
+                <Label
+                Text="{Binding Text}"
+                TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                FontSize="{OnIdiom Phone=Medium, Tablet=Large}"
+                Margin="5"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="{OnIdiom Phone=155, Tablet=200}"
+                Grid.Column="1" />
+
                 <Border
                     WidthRequest="125"
                     HeightRequest="40"
@@ -50,19 +60,26 @@
                     Grid.Row="1">
                     <Button
                         Text="{Binding Value}"
-                        Padding="5"
-                        FontSize="Body"
+                        Padding="{OnIdiom Phone=5, Tablet=10}"
+                        FontSize="{OnIdiom Phone=Body, Tablet=Large}"
                         BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}" />
                 </Border>
             </Grid>
+
             <Border
                 HeightRequest="100"
                 WidthRequest="100"
                 Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
                 HorizontalOptions="End"
-                Margin="10,0,20,0"
+                Margin="10,0,10,0"
                 Grid.Column="1">
-                <Image />
+                <GraphicsView x:Name="ProgressRingView"
+              WidthRequest="50"
+              HeightRequest="50"
+              HorizontalOptions="Center" 
+              VerticalOptions="Center" />
+
+
             </Border>
         </Grid>
     </Border>

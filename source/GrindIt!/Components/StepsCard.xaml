@@ -3,41 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GrindIt_.Components.StepsCard">
     <Border
-        WidthRequest="400"
-        HeightRequest="120"
         Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
         BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-        StrokeShape="RoundRectangle 30">
+        StrokeShape="RoundRectangle 30"
+        Margin="10,10,10,5">
 
         <Grid ColumnDefinitions="*,*">
             <Grid
-            Margin="15,15,10,10"
-            RowDefinitions="50,50">
-                <Grid ColumnDefinitions="Auto, Auto">
-                    <Label 
+                Margin="15,15,10,10"
+                RowDefinitions="Auto, Auto">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label 
                     Text="{Binding Value}"
                     TextColor="{AppThemeBinding Light=White, Dark=Black}"
-                    FontSize="Large"
+                    FontSize="{OnIdiom Phone=20, Tablet=20}" 
                     Margin="5"
                     VerticalOptions="Center"
                     HorizontalOptions="StartAndExpand"
-                    WidthRequest="155"
-                    Grid.Column="1"
-                    />
-                </Grid>
+                    Grid.Column="0"/>
                 <Label
                     Grid.Row="1"
-                    Grid.Column="1"
+                    Grid.Column="0"
                     Text="{Binding TargetValue}"
-                    TextColor="{AppThemeBinding Light=White, Dark=Black}"/>
+                    TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                    FontSize="{OnIdiom Phone=22, Tablet=22}"/>
             </Grid>
             <Border
-            HeightRequest="100"
-            WidthRequest="100"
-            Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-            HorizontalOptions="End"
-            Margin="10,0,20,0"
-            Grid.Column="1">
+                HeightRequest="100"
+                WidthRequest="100"
+                Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+                HorizontalOptions="End"
+                Margin="10,0,20,0"
+                Grid.Column="1">
                 <Image />
             </Border>
         </Grid>

@@ -4,62 +4,64 @@
              x:Class="GrindIt_.Views.Pages.NutritionView"
              xmlns:local="clr-namespace:GrindIt_.Components"
              Title="">
-    <VerticalStackLayout>
-        <Label 
-            Text="Eat those gains!"
-            FontSize="Header"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            Margin="0,5,0,5"/>
+    <ScrollView>        
+        <VerticalStackLayout>
+            <Label 
+                Text="Eat those gains!"
+                FontSize="Header"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="0,5,0,5"/>
 
-        <local:StepsCard
-            Value="0/"
-            TargetValue="6000"
-            Margin="0,5,0,5">
-            <local:StepsCard.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnStepsTapped"/>
-            </local:StepsCard.GestureRecognizers>
-        </local:StepsCard>
+            <local:StepsCard
+                Value="0/"
+                TargetValue="6000"
+                Margin="0,5,0,5">
+                <local:StepsCard.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnStepsTapped"/>
+                </local:StepsCard.GestureRecognizers>
+            </local:StepsCard>
 
-        <local:Card
-            Text="0/3,500 kcal"
-            Glyph="&#xf2e7;"
-            Value="Enter"
-            Margin="0,5,0,5">
-            <local:Card.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnMealTapped" />
-            </local:Card.GestureRecognizers>
-        </local:Card>
+            <local:Card
+                Text="0/3,500 kcal"
+                Glyph="&#xf2e7;"
+                Value="Enter"
+                Margin="0,5,0,5">
+                <local:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMealTapped" />
+                </local:Card.GestureRecognizers>
+            </local:Card>
         
-        <local:Card
-            Text="Sleep"
-            Glyph="&#xf236;"
-            Value="Enter"
-            Margin="0,5,0,5">
-            <local:Card.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnSleepTapped" />
-            </local:Card.GestureRecognizers>            
-        </local:Card>
+            <local:Card
+                Text="Sleep"
+                Glyph="&#xf236;"
+                Value="Enter"
+                Margin="0,5,0,5">
+                <local:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSleepTapped" />
+                </local:Card.GestureRecognizers>            
+            </local:Card>
 
-        <local:Card
-            Text="Body composition"
-            Glyph="&#xf496;;"
-            Value="Enter"
-            Margin="0,5,0,5">
-            <local:Card.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnBodyTapped" />
-            </local:Card.GestureRecognizers>
-        </local:Card>
+            <local:Card
+                Text="Body composition"
+                Glyph="&#xf496;;"
+                Value="Enter"
+                Margin="0,5,0,5">
+                <local:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBodyTapped" />
+                </local:Card.GestureRecognizers>
+            </local:Card>
         
-        <local:Card 
-            Text="0/2,000 ml"
-            Glyph="&#xf7a0;"
-            Value="+250 ml"
-            Margin="0,5,0,5">            
-            <local:Card.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnBorderTapped" />
-            </local:Card.GestureRecognizers>
-        </local:Card>
+            <local:Card 
+                Text="0/2,000 ml"
+                Glyph="&#xf7a0;"
+                Value="+250 ml"
+                Margin="0,5,0,5">            
+                <local:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBorderTapped" />
+                </local:Card.GestureRecognizers>
+            </local:Card>
         
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

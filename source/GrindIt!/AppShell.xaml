@@ -115,4 +115,8 @@
     <ShellContent
         ContentTemplate="{DataTemplate accountSettings:Profile}"
         Route="Profile"/>
+    
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:test}"
+        Route="test"/>
 </Shell>

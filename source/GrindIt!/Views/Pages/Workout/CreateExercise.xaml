@@ -59,7 +59,7 @@
             Text="Select at least one muscle targeted"
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
-
+        
         <ImageButton
             BackgroundColor= "{StaticResource Primary}"
             BorderColor="{StaticResource Primary}"
