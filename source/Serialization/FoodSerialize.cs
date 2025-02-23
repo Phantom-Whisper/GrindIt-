@@ -1,30 +1,30 @@
-﻿using System;
-using System.IO;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 using Manager;
 
 namespace Serialization
 {
-    public class Serialize : ISerialize
+    public class FoodSerialize : ISerialize
     {
         readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Structures\\";
-        const string xmlFile = "save.xml";
+        const string xmlFile = "foodSave.xml";
         readonly string path = Path.Combine(filePath, xmlFile);
 
-        public Serialize()
+        public FoodSerialize()
         {
-            if (!Directory.Exists(filePath))
+            try
             {
-                Directory.CreateDirectory(filePath);
+                if (!Directory.Exists(filePath))
+                {
+                    Directory.CreateDirectory(filePath);
+                }
             }
-
-            if (!File.Exists(path))
+            catch (Exception ex)
             {
-                File.Create(path).Close();
+                Console.WriteLine($"Error creating directory: {ex.Message}");
             }
         }
 
-        T ISerialize.Load<T>()
+        public T Load<T>()
         {
             if (!File.Exists(path) || new FileInfo(path).Length == 0)
             {
@@ -48,7 +48,7 @@ namespace Serialization
 
         public void Save<T>(T data)
         {
-            try
+            try 
             {
                 using (FileStream stream = new FileStream(path, FileMode.Create))
                 {

@@ -2,14 +2,21 @@
 
 namespace GrindIt.WorkoutLib
 {
+    [Serializable]
     public class Exercise
     {
-        public Exercise(string name,  bool bodyWeight)
+        public Exercise()
         {
-            this.Name = name;
-            this.targetedMuscles = new ObservableCollection<TargetedMuscles>();
-            this.BodyWeight = bodyWeight;
+            TargetedMuscles = new ObservableCollection<TargetedMuscles>();
         }
+
+        public Exercise(string name, bool bodyWeight) : this()
+        {
+            Name = name;
+            BodyWeight = bodyWeight;
+        }
+
+        public ObservableCollection<TargetedMuscles> TargetedMuscles { get; set; }
 
         public string? Name
         {
@@ -18,13 +25,6 @@ namespace GrindIt.WorkoutLib
         }
 
         private string? name;
-
-        public ReadOnlyObservableCollection<TargetedMuscles> TargetedMuscles
-        {
-            get { return new ReadOnlyObservableCollection<TargetedMuscles>(targetedMuscles); }
-        }
-
-        private readonly ObservableCollection<TargetedMuscles> targetedMuscles;
 
         public bool BodyWeight
         {
@@ -36,15 +36,15 @@ namespace GrindIt.WorkoutLib
 
         public void AddTargetedMuscles(TargetedMuscles muscles)
         {
-            targetedMuscles.Add(muscles);
+            TargetedMuscles.Add(muscles);
         }
 
         public void ShowExercise()
         {
             Console.WriteLine("Exercise Information:");
             Console.WriteLine($"Name: {name}");
-            Console.WriteLine("Muscles targeted: " + (targetedMuscles.Count > 0
-                            ? string.Join(", ", targetedMuscles)
+            Console.WriteLine("Muscles targeted: " + (TargetedMuscles.Count > 0
+                            ? string.Join(", ", TargetedMuscles)
                             : "None"));
             Console.WriteLine($"BodyWheight: {bodyWeight}");
         }

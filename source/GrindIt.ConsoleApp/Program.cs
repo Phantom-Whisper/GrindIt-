@@ -1,44 +1,26 @@
 ﻿using Core;
 using GrindIt.NutritionLib;
 using GrindIt.WorkoutLib;
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
-using System.Xml.Linq;
+using Serialization;
 
-List<Food> list = new List<Food>();
-Food food1 = new("Grilled Chicken Breast", 165, 0, 3.6f, 31f, 1f, 0f, 85f, 70f, 256f, 0f, 0f, FoodCategory.MEATS);
-Food food2 = new("Apple", 52f, 14f, 0.2f, 0.3f, 0f, 0f, 0f, 1f, 107f, 2.4f, 10f, FoodCategory.FRUITS);
-Food food3 = new("Avocado", 160f, 9f, 15f, 2f, 2.1f, 0f, 0f, 7f, 485f, 7f, 0.7f, FoodCategory.FRUITS);
-Food food4 = new("Chocolate Cake", 352f, 50f, 15f, 5f, 3.8f, 0.1f, 50f, 210f, 160f, 2f, 36f, FoodCategory.SUGARS);
-Food food5 = new("Salmon Fillet", 206f, 0f, 13f, 22f, 3.1f, 0f, 63f, 55f, 384f, 0f, 0f, FoodCategory.FISH);
-Food food6 = new("Broccoli", 55f, 11.2f, 0.6f, 3.7f, 0f, 0f, 0f, 33f, 316f, 2.4f, 2.2f, FoodCategory.VEGETABLES);
-Food food7 = new("Banana", 89f, 22.8f, 0.3f, 1.1f, 0.1f, 0f, 0f, 1f, 358f, 2.6f, 12.2f, FoodCategory.FRUITS);
-Food food8 = new("Oatmeal", 158f, 27f, 3.2f, 6f, 0.5f, 0f, 0f, 2f, 164f, 4f, 1f, FoodCategory.CEREALS);
-Food food9 = new("Almonds", 576f, 21.6f, 49.4f, 21.2f, 3.7f, 0f, 0f, 1f, 705f, 12.5f, 4.8f, FoodCategory.CEREALS);
-Food food10 = new("Greek Yogurt", 59f, 3.6f, 0.4f, 10f, 0.1f, 0f, 5f, 36f, 141f, 0f, 3.2f, FoodCategory.DAIRY);
-Food food11 = new("Sweet Potato", 86f, 20.1f, 0.1f, 1.6f, 0f, 0f, 0f, 55f, 337f, 3f, 4.2f, FoodCategory.VEGETABLES);
-Food food12 = new("Peanut Butter", 588f, 20f, 50f, 25f, 10f, 0f, 0f, 17f, 649f, 6f, 9f, FoodCategory.FATS);
-Food food13 = new("Cheddar Cheese", 402f, 1.3f, 33.1f, 24.9f, 19f, 1f, 105f, 621f, 98f, 0f, 0.5f, FoodCategory.DAIRY);
-Food food14 = new("Brown Rice", 123f, 25.6f, 1f, 2.7f, 0.2f, 0f, 0f, 5f, 86f, 1.8f, 0.4f, FoodCategory.CEREALS);
-Food food15 = new("Eggs", 155f, 1.1f, 11f, 13f, 3.3f, 1.6f, 373f, 124f, 126f, 0f, 1.1f, FoodCategory.MEATS);
-
-list.Add(food1);
-list.Add(food2);
-list.Add(food3);
-list.Add(food4);
-list.Add(food5);
-list.Add(food6);
-list.Add(food7);
-list.Add(food8);
-list.Add(food9);
-list.Add(food10);
-list.Add(food11);
-list.Add(food12);
-list.Add(food13);
-list.Add(food14);
-list.Add(food15);
-
-
+List<Food> list = new List<Food>
+{
+    new Food("Grilled Chicken Breast", 165, 0, 3.6f, 31f, 1f, 0f, 85f, 70f, 256f, 0f, 0f, FoodCategory.MEATS),
+    new Food("Apple", 52f, 14f, 0.2f, 0.3f, 0f, 0f, 0f, 1f, 107f, 2.4f, 10f, FoodCategory.FRUITS),
+    new Food("Avocado", 160f, 9f, 15f, 2f, 2.1f, 0f, 0f, 7f, 485f, 7f, 0.7f, FoodCategory.FRUITS),
+    new Food("Chocolate Cake", 352f, 50f, 15f, 5f, 3.8f, 0.1f, 50f, 210f, 160f, 2f, 36f, FoodCategory.SUGARS),
+    new Food("Salmon Fillet", 206f, 0f, 13f, 22f, 3.1f, 0f, 63f, 55f, 384f, 0f, 0f, FoodCategory.FISH),
+    new Food("Broccoli", 55f, 11.2f, 0.6f, 3.7f, 0f, 0f, 0f, 33f, 316f, 2.4f, 2.2f, FoodCategory.VEGETABLES),
+    new Food("Banana", 89f, 22.8f, 0.3f, 1.1f, 0.1f, 0f, 0f, 1f, 358f, 2.6f, 12.2f, FoodCategory.FRUITS),
+    new Food("Oatmeal", 158f, 27f, 3.2f, 6f, 0.5f, 0f, 0f, 2f, 164f, 4f, 1f, FoodCategory.CEREALS),
+    new Food("Almonds", 576f, 21.6f, 49.4f, 21.2f, 3.7f, 0f, 0f, 1f, 705f, 12.5f, 4.8f, FoodCategory.CEREALS),
+    new Food("Greek Yogurt", 59f, 3.6f, 0.4f, 10f, 0.1f, 0f, 5f, 36f, 141f, 0f, 3.2f, FoodCategory.DAIRY),
+    new Food("Sweet Potato", 86f, 20.1f, 0.1f, 1.6f, 0f, 0f, 0f, 55f, 337f, 3f, 4.2f, FoodCategory.VEGETABLES),
+    new Food("Peanut Butter", 588f, 20f, 50f, 25f, 10f, 0f, 0f, 17f, 649f, 6f, 9f, FoodCategory.FATS),
+    new Food("Cheddar Cheese", 402f, 1.3f, 33.1f, 24.9f, 19f, 1f, 105f, 621f, 98f, 0f, 0.5f, FoodCategory.DAIRY),
+    new Food("Brown Rice", 123f, 25.6f, 1f, 2.7f, 0.2f, 0f, 0f, 5f, 86f, 1.8f, 0.4f, FoodCategory.CEREALS),
+    new Food("Eggs", 155f, 1.1f, 11f, 13f, 3.3f, 1.6f, 373f, 124f, 126f, 0f, 1.1f, FoodCategory.MEATS),
+};
 
 
 //SetTest();
@@ -48,8 +30,48 @@ list.Add(food15);
 //CreateExercise();
 //CreateMeal();
 //WaterManagement();
-CreateUser();
+//CreateUser();
+ExercicesSave();
 
+void ExercicesSave()
+{
+    ExerciseSerialize serializer = new();
+
+    List<Exercise> exercicesList = serializer.Load<List<Exercise>>();
+
+    if (exercicesList != null)
+    {
+        foreach (var exercise in exercicesList)
+        {
+            exercise.ShowExercise();
+        }
+    }
+    else
+    {
+        Console.WriteLine("No data found.");
+    }
+}
+
+void FoodSave()
+{
+    FoodSerialize foodSerialize = new();
+
+    foodSerialize.Save(list);
+
+    List<Food> loadedFood = foodSerialize.Load<List<Food>>();
+
+    if (loadedFood != null)
+    {
+        foreach (Food food in loadedFood)
+        {
+            food.ShowFood();
+        }
+    }
+    else
+    {
+        Console.WriteLine("No data found.");
+    }
+}
 void CreateUser()
 {
     string name;

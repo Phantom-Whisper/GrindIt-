@@ -11,6 +11,8 @@
     <ProjectReference Include="..\Core\Core.csproj" />
     <ProjectReference Include="..\GrindIt.NutritionLib\GrindIt.NutritionLib.csproj" />
     <ProjectReference Include="..\GrindIt.WorkoutLib\GrindIt.WorkoutLib.csproj" />
+    <ProjectReference Include="..\Manager\Manager.csproj" />
+    <ProjectReference Include="..\Serialization\Serialization.csproj" />
   </ItemGroup>
 
 </Project>

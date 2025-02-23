@@ -1,16 +1,17 @@
-﻿namespace GrindIt.NutritionLib
+﻿using System;
+using System.Xml.Serialization;
+
+namespace GrindIt.NutritionLib
 {
     [Serializable]
+    [XmlRoot("Food")]  
     public class Food
     {
-        public Food(string name, float calories, float carbohydrate, float fat, float protein, float saturedFat, float transFat, 
+        public Food() { }
+
+        public Food(string name, float calories, float carbohydrate, float fat, float protein, float saturedFat, float transFat,
             float cholesterol, float sodium, float potassium, float dietaryFiber, float sugar, FoodCategory category)
         {
-            if (name == null)
-            {
-                throw new ArgumentNullException(nameof(name));
-            }
-
             this.name = name;
             this.calories = calories;
             this.cabohydrate = carbohydrate;
@@ -25,145 +26,133 @@
             this.sugar = sugar;
             this.category = category;
         }
-        private string? name;
 
-        public string? Name 
-        { 
-            get 
-            { 
-                return name; 
-            }
+        private string? name;
+        [XmlElement("Name")]  
+        public string? Name
+        {
+            get => name;
+            set => name = value;
         }
 
         private FoodCategory? category;
-
+        [XmlElement("Category")]  
         public FoodCategory? Category
         {
-            get
-            {
-                return category;
-            }
+            get => category;
+            set => category = value;
         }
 
         private float calories;
+        [XmlElement("Calories")]  
         public float Calories
         {
-            get
-            {
-                return calories;
-            }
+            get => calories;
+            set => calories = value;
         }
 
         private float cabohydrate;
+        [XmlElement("Cabohydrate")]  
         public float Cabohydrate
         {
-            get
-            {
-                return cabohydrate;
-            }
+            get => cabohydrate;
+            set => cabohydrate = value;
         }
 
         private float fat;
-
+        [XmlElement("Fat")]  
         public float Fat
         {
-            get
-            {
-                return fat;
-            }
+            get => fat;
+            set => fat = value;
         }
 
         private float protein;
-
+        [XmlElement("Protein")]  
         public float Protein
         {
-            get
-            {
-                return protein;
-            }
+            get => protein;
+            set => protein = value;
         }
 
         private float saturedFat;
-
+        [XmlElement("SaturedFat")]  
         public float SaturedFat
         {
-            get
-            {
-                return saturedFat;
-            }
+            get => saturedFat;
+            set => saturedFat = value;
         }
 
         private float transFat;
+        [XmlElement("TransFat")]  
         public float TransFat
         {
-            get
-            {
-                return transFat;
-            }
+            get => transFat;
+            set => transFat = value;
         }
 
         private float cholesterol;
+        [XmlElement("Cholesterol")]  
         public float Cholesterol
         {
-            get
-            {
-                return cholesterol;
-            }
+            get => cholesterol;
+            set => cholesterol = value;
         }
 
         private float sodium;
+        [XmlElement("Sodium")]  
         public float Sodium
         {
-            get
-            {
-                return sodium;
-            }
+            get => sodium;
+            set => sodium = value;
         }
 
         private float potassium;
+        [XmlElement("Potassium")]  
         public float Potassium
         {
-            get
-            {
-                return potassium;
-            }
+            get => potassium;
+            set => potassium = value;
         }
 
         private float dietaryFiber;
+        [XmlElement("DietaryFiber")]  
         public float DietaryFiber
         {
-            get
-            {
-                return dietaryFiber;
-            }
+            get => dietaryFiber;
+            set => dietaryFiber = value;
         }
 
         private float sugar;
-
+        [XmlElement("Sugar")]  
         public float Sugar
         {
-            get
-            {
-                return sugar;
-            }
+            get => sugar;
+            set => sugar = value;
         }
 
         public void ShowFood()
         {
-            Console.WriteLine("Food Information:");
+            Console.WriteLine("======================================");
+            Console.WriteLine("         Food Nutrition Chart         ");
+            Console.WriteLine("======================================");
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Category: {Category?.ToString() ?? "Unknown"}");
-            Console.WriteLine($"Calories: {Calories} kcal");
-            Console.WriteLine($"Carbohydrate: {Cabohydrate} g");
-            Console.WriteLine($"Fat: {Fat} g");
-            Console.WriteLine($"Protein: {Protein} g");
-            Console.WriteLine($"Saturated Fat: {SaturedFat} g");
-            Console.WriteLine($"Trans Fat: {TransFat} g");
-            Console.WriteLine($"Cholesterol: {Cholesterol} mg");
-            Console.WriteLine($"Sodium: {Sodium} mg");
-            Console.WriteLine($"Potassium: {Potassium} mg");
-            Console.WriteLine($"Dietary Fiber: {DietaryFiber} g");
-            Console.WriteLine($"Sugar: {Sugar} g");
+            Console.WriteLine("======================================");
+            Console.WriteLine("| Nutrient          | Amount         |");
+            Console.WriteLine("|-------------------|----------------|");
+            Console.WriteLine($"| Calories          | {Calories,10} kcal|");
+            Console.WriteLine($"| Carbohydrate      | {Cabohydrate,13} g|");
+            Console.WriteLine($"| Fat               | {Fat,13} g|");
+            Console.WriteLine($"| Protein           | {Protein,13} g|");
+            Console.WriteLine($"| Saturated Fat     | {SaturedFat,13} g|");
+            Console.WriteLine($"| Trans Fat         | {TransFat,13} g|");
+            Console.WriteLine($"| Cholesterol       | {Cholesterol,12} mg|");
+            Console.WriteLine($"| Sodium            | {Sodium,12} mg|");
+            Console.WriteLine($"| Potassium         | {Potassium,12} mg|");
+            Console.WriteLine($"| Dietary Fiber     | {DietaryFiber,13} g|");
+            Console.WriteLine($"| Sugar             | {Sugar,13} g|");
+            Console.WriteLine("======================================");
         }
     }
 }
