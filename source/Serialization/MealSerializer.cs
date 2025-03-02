@@ -1,15 +1,16 @@
-﻿using System.Xml.Serialization;
-using Manager;
+﻿using Manager;
+using System.Xml.Serialization;
+using System.IO;
 
 namespace Serialization
 {
-    public class FoodSerialize : ISerialize
+    public class MealSerializer : ISerialize
     {
         readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Structures\\";
-        const string xmlFile = "foodSave.xml";
+        const string xmlFile = "mealSave.xml";
         readonly string path = Path.Combine(filePath, xmlFile);
 
-        public FoodSerialize()
+        public MealSerializer()
         {
             try
             {
@@ -48,7 +49,7 @@ namespace Serialization
 
         public void Save<T>(T data)
         {
-            try 
+            try
             {
                 using (FileStream stream = new FileStream(path, FileMode.Create))
                 {

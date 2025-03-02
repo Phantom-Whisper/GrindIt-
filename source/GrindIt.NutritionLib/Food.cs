@@ -1,30 +1,32 @@
 ﻿using System;
 using System.Xml.Serialization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GrindIt.NutritionLib
 {
     [Serializable]
     [XmlRoot("Food")]  
-    public class Food
+    public class Food : IComparable<Food>
     {
         public Food() { }
 
-        public Food(string name, float calories, float carbohydrate, float fat, float protein, float saturedFat, float transFat,
+        public Food(string name, float calories, int serving, float carbohydrate, float fat, float protein, float saturedFat, float transFat,
             float cholesterol, float sodium, float potassium, float dietaryFiber, float sugar, FoodCategory category)
         {
-            this.name = name;
-            this.calories = calories;
-            this.cabohydrate = carbohydrate;
-            this.fat = fat;
-            this.protein = protein;
-            this.saturedFat = saturedFat;
-            this.transFat = transFat;
-            this.cholesterol = cholesterol;
-            this.sodium = sodium;
-            this.potassium = potassium;
-            this.dietaryFiber = dietaryFiber;
-            this.sugar = sugar;
-            this.category = category;
+            Name = name;
+            Calories = calories;
+            ServingSize = serving;
+            Carbohydrate = carbohydrate;
+            Fat = fat;
+            Protein = protein;
+            SaturedFat = saturedFat;
+            TransFat = transFat;
+            Cholesterol = cholesterol;
+            Sodium = sodium;
+            Potassium = potassium;
+            DietaryFiber = dietaryFiber;
+            Sugar = sugar;
+            Category = category;
         }
 
         private string? name;
@@ -43,6 +45,14 @@ namespace GrindIt.NutritionLib
             set => category = value;
         }
 
+        private int servingSize;
+        [XmlElement("ServingSize")]
+        public int ServingSize
+        {
+            get => servingSize;
+            set => servingSize = value;
+        }
+
         private float calories;
         [XmlElement("Calories")]  
         public float Calories
@@ -51,12 +61,12 @@ namespace GrindIt.NutritionLib
             set => calories = value;
         }
 
-        private float cabohydrate;
-        [XmlElement("Cabohydrate")]  
-        public float Cabohydrate
+        private float carbohydrate;
+        [XmlElement("Carbohydrate")]  
+        public float Carbohydrate
         {
-            get => cabohydrate;
-            set => cabohydrate = value;
+            get => carbohydrate;
+            set => carbohydrate = value;
         }
 
         private float fat;
@@ -131,6 +141,11 @@ namespace GrindIt.NutritionLib
             set => sugar = value;
         }
 
+        public int CompareTo(Food other)
+        {
+            return other == null ? 1 : string.Compare(Name, other.Name, StringComparison.OrdinalIgnoreCase);
+        }
+
         public void ShowFood()
         {
             Console.WriteLine("======================================");
@@ -138,11 +153,12 @@ namespace GrindIt.NutritionLib
             Console.WriteLine("======================================");
             Console.WriteLine($"Name: {Name}");
             Console.WriteLine($"Category: {Category?.ToString() ?? "Unknown"}");
+            Console.WriteLine($"Per serving of {ServingSize}");
             Console.WriteLine("======================================");
             Console.WriteLine("| Nutrient          | Amount         |");
             Console.WriteLine("|-------------------|----------------|");
             Console.WriteLine($"| Calories          | {Calories,10} kcal|");
-            Console.WriteLine($"| Carbohydrate      | {Cabohydrate,13} g|");
+            Console.WriteLine($"| Carbohydrate      | {Carbohydrate,13} g|");
             Console.WriteLine($"| Fat               | {Fat,13} g|");
             Console.WriteLine($"| Protein           | {Protein,13} g|");
             Console.WriteLine($"| Saturated Fat     | {SaturedFat,13} g|");

@@ -1,152 +1,81 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Xml.Serialization;
 
 namespace GrindIt.NutritionLib
 {
     [Serializable]
+    [XmlRoot("Meal")]
     public class Meal
     {
-        public Meal(MealType type)
+        public Meal()
         {
-            this.type = type;
-            this.foodList = new ObservableCollection<Food>();
+            FoodList = new ObservableCollection<FoodEntry>();
+            MealDateTime = DateTime.Now.AddSeconds(-DateTime.Now.Second);
         }
 
-        private readonly MealType? type;
-
-        public MealType? Type
+        public Meal(MealType type) : this()
         {
-            get
+            Type = type;
+        }
+
+        public MealType? Type { get; set; }
+
+        private ObservableCollection<FoodEntry> foodList;
+
+        [XmlArray("FoodList")]
+        [XmlArrayItem("FoodEntry")]
+        public ObservableCollection<FoodEntry> FoodList
+        {
+            get => foodList ??= new ObservableCollection<FoodEntry>();
+            set => foodList = value ?? new ObservableCollection<FoodEntry>();
+        }
+
+        [XmlElement("MealDateTime")]
+        public DateTime MealDateTime { get; set; }
+
+        public float TotalCalories() => FoodList.Sum(entry => entry.Food.Calories * entry.PortionSize);
+        public float TotalCarbs() => FoodList.Sum(entry => entry.Food.Carbohydrate * entry.PortionSize);
+        public float TotalFat() => FoodList.Sum(entry => entry.Food.Fat * entry.PortionSize);
+        public float TotalProtein() => FoodList.Sum(entry => entry.Food.Protein * entry.PortionSize);
+        public float TotalSatFat() => FoodList.Sum(entry => entry.Food.SaturedFat * entry.PortionSize);
+        public float TotalTransFat() => FoodList.Sum(entry => entry.Food.TransFat * entry.PortionSize);
+        public float TotalChol() => FoodList.Sum(entry => entry.Food.Cholesterol * entry.PortionSize);
+        public float TotalSodium() => FoodList.Sum(entry => entry.Food.Sodium * entry.PortionSize);
+        public float TotalPot() => FoodList.Sum(entry => entry.Food.Potassium * entry.PortionSize);
+        public float TotalDietFiber() => FoodList.Sum(entry => entry.Food.DietaryFiber * entry.PortionSize);
+        public float TotalSugar() => FoodList.Sum(entry => entry.Food.Sugar * entry.PortionSize);
+
+        public void AddFood(Food food, float portionSize)
+        {
+            FoodList.Add(new FoodEntry(food, portionSize));
+        }
+
+        public void RemoveFood(Food food)
+        {
+            var foodEntry = FoodList.FirstOrDefault(entry => entry.Food.Name == food.Name);
+            if (foodEntry != null)
             {
-                return type;
+                FoodList.Remove(foodEntry);
             }
-        }
-
-        private readonly ObservableCollection<Food> foodList;
-
-        public float TotalCalories()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
+            else
             {
-                sum += food.Calories;
+                throw new InvalidOperationException("Food is not in the list.");
             }
-            return sum;
-        }
-
-        public float TotalCarbs()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.Cabohydrate;
-            }
-            return sum;
-        }
-
-        public float TotalFat()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.Fat;
-            }
-            return sum;
-        }
-
-        public float TotalProtein()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.Protein;
-            }
-            return sum;
-        }
-
-        public float TotalSatFat()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.SaturedFat;
-            }
-            return sum;
-        }
-
-        public float TotalTransFat()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.TransFat;
-            }
-            return sum;
-        }
-
-        public float TotalChol()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.Cholesterol;
-            }
-            return sum;
-        }
-
-        public float TotalSodium()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.Sodium;
-            }
-            return sum;
-        }
-
-        public float TotalPot()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.Potassium;
-            }
-            return sum;
-        }
-
-        public float TotalDietFiber()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.DietaryFiber;
-            }
-            return sum;
-        }
-
-        public float TotalSugar()
-        {
-            float sum = 0;
-            foreach (Food food in foodList)
-            {
-                sum += food.Sugar;
-            }
-            return sum;
-        }
-
-        public void AddFood(Food food)
-        {
-            foodList.Add(food);
         }
 
         public void ShowMeal()
         {
             Console.WriteLine("Meal Information");
-            foreach (Food food in foodList)
+            foreach (var food in foodList)
             {
-                Console.WriteLine($"{food.Name}");
+                Console.WriteLine($"{food.Food.Name} ({food.Food.ServingSize} portion)"); 
             }
             Console.WriteLine("-------------------------------------------");
-            Console.WriteLine($"Meal type: {type}");
+            Console.WriteLine($"Meal Date & Time: {MealDateTime:yyyy-MM-dd HH:mm}");
+            Console.WriteLine($"Meal type: {Type}");
             Console.WriteLine($"- Total Calories: {TotalCalories()} kcal");
             Console.WriteLine($"- Total Carbs: {TotalCarbs()} g");
             Console.WriteLine($"- Total Fat: {TotalFat()} g");

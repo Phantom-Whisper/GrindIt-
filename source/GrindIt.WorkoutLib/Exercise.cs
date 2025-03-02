@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 
 namespace GrindIt.WorkoutLib
 {
@@ -8,6 +9,7 @@ namespace GrindIt.WorkoutLib
         public Exercise()
         {
             TargetedMuscles = new ObservableCollection<TargetedMuscles>();
+            SetList = new ObservableCollection<Set>();
         }
 
         public Exercise(string name, bool bodyWeight) : this()
@@ -23,7 +25,6 @@ namespace GrindIt.WorkoutLib
             get { return name; }
             set { name = value; }
         }
-
         private string? name;
 
         public bool BodyWeight
@@ -31,12 +32,18 @@ namespace GrindIt.WorkoutLib
             get { return bodyWeight; }
             set { bodyWeight = value; }
         }
-
         private bool bodyWeight;
+
+        public ObservableCollection<Set> SetList { get; set; }
 
         public void AddTargetedMuscles(TargetedMuscles muscles)
         {
             TargetedMuscles.Add(muscles);
+        }
+
+        public void AddSet(Set set)
+        {
+            SetList.Add(set);
         }
 
         public void ShowExercise()
@@ -46,7 +53,20 @@ namespace GrindIt.WorkoutLib
             Console.WriteLine("Muscles targeted: " + (TargetedMuscles.Count > 0
                             ? string.Join(", ", TargetedMuscles)
                             : "None"));
-            Console.WriteLine($"BodyWheight: {bodyWeight}");
+            Console.WriteLine($"BodyWeight: {bodyWeight}");
+
+            if (SetList.Count > 0)
+            {
+                Console.WriteLine("Sets:");
+                foreach (var set in SetList)
+                {
+                    Console.WriteLine($"  - {set.Reps} reps at {set.Weight}kg");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No sets available for this exercise.");
+            }
         }
     }
 }

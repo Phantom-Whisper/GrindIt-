@@ -2,18 +2,19 @@
 {
     public enum MealType
     {
-        BREAKFAST = 0,
-        LUNCH = 1,
-        DINNER = 2,
-        MORNINGSNACK = 3,
-        AFTERNOONSNACK = 4,
-        EVENINGSNACK = 5
+        BREAKFAST,
+        LUNCH,
+        DINNER,
+        MORNINGSNACK,
+        AFTERNOONSNACK,
+        EVENINGSNACK
     }
 
     public class MealTypeToString
     {
         public static string ToString(MealType mealType) => ((int)mealType).ToString();
     }
+
     public static class IntToCategory
     {
         public static MealType? FromInt(int value)

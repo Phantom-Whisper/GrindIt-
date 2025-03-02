@@ -2,25 +2,29 @@
 using GrindIt.NutritionLib;
 using GrindIt.WorkoutLib;
 using Serialization;
+using System.Globalization;
 
 List<Food> list = new List<Food>
 {
-    new Food("Grilled Chicken Breast", 165, 0, 3.6f, 31f, 1f, 0f, 85f, 70f, 256f, 0f, 0f, FoodCategory.MEATS),
-    new Food("Apple", 52f, 14f, 0.2f, 0.3f, 0f, 0f, 0f, 1f, 107f, 2.4f, 10f, FoodCategory.FRUITS),
-    new Food("Avocado", 160f, 9f, 15f, 2f, 2.1f, 0f, 0f, 7f, 485f, 7f, 0.7f, FoodCategory.FRUITS),
-    new Food("Chocolate Cake", 352f, 50f, 15f, 5f, 3.8f, 0.1f, 50f, 210f, 160f, 2f, 36f, FoodCategory.SUGARS),
-    new Food("Salmon Fillet", 206f, 0f, 13f, 22f, 3.1f, 0f, 63f, 55f, 384f, 0f, 0f, FoodCategory.FISH),
-    new Food("Broccoli", 55f, 11.2f, 0.6f, 3.7f, 0f, 0f, 0f, 33f, 316f, 2.4f, 2.2f, FoodCategory.VEGETABLES),
-    new Food("Banana", 89f, 22.8f, 0.3f, 1.1f, 0.1f, 0f, 0f, 1f, 358f, 2.6f, 12.2f, FoodCategory.FRUITS),
-    new Food("Oatmeal", 158f, 27f, 3.2f, 6f, 0.5f, 0f, 0f, 2f, 164f, 4f, 1f, FoodCategory.CEREALS),
-    new Food("Almonds", 576f, 21.6f, 49.4f, 21.2f, 3.7f, 0f, 0f, 1f, 705f, 12.5f, 4.8f, FoodCategory.CEREALS),
-    new Food("Greek Yogurt", 59f, 3.6f, 0.4f, 10f, 0.1f, 0f, 5f, 36f, 141f, 0f, 3.2f, FoodCategory.DAIRY),
-    new Food("Sweet Potato", 86f, 20.1f, 0.1f, 1.6f, 0f, 0f, 0f, 55f, 337f, 3f, 4.2f, FoodCategory.VEGETABLES),
-    new Food("Peanut Butter", 588f, 20f, 50f, 25f, 10f, 0f, 0f, 17f, 649f, 6f, 9f, FoodCategory.FATS),
-    new Food("Cheddar Cheese", 402f, 1.3f, 33.1f, 24.9f, 19f, 1f, 105f, 621f, 98f, 0f, 0.5f, FoodCategory.DAIRY),
-    new Food("Brown Rice", 123f, 25.6f, 1f, 2.7f, 0.2f, 0f, 0f, 5f, 86f, 1.8f, 0.4f, FoodCategory.CEREALS),
-    new Food("Eggs", 155f, 1.1f, 11f, 13f, 3.3f, 1.6f, 373f, 124f, 126f, 0f, 1.1f, FoodCategory.MEATS),
+    new Food("Grilled Chicken Breast", 165, 100, 0, 3.6f, 31f, 1f, 0f, 85f, 70f, 256f, 0f, 0f, FoodCategory.MEATS),
+    new Food("Apple", 52f, 100, 14f, 0.2f, 0.3f, 0f, 0f, 0f, 1f, 107f, 2.4f, 10f, FoodCategory.FRUITS),
+    new Food("Avocado", 160f, 100, 9f, 15f, 2f, 2.1f, 0f, 0f, 7f, 485f, 7f, 0.7f, FoodCategory.FRUITS),
+    new Food("Chocolate Cake", 352f, 100, 50f, 15f, 5f, 3.8f, 0.1f, 50f, 210f, 160f, 2f, 36f, FoodCategory.SUGARS),
+    new Food("Salmon Fillet", 206f, 100, 0f, 13f, 22f, 3.1f, 0f, 63f, 55f, 384f, 0f, 0f, FoodCategory.FISH),
+    new Food("Broccoli", 55f, 100, 11.2f, 0.6f, 3.7f, 0f, 0f, 0f, 33f, 316f, 2.4f, 2.2f, FoodCategory.VEGETABLES),
+    new Food("Banana", 89f, 100, 22.8f, 0.3f, 1.1f, 0.1f, 0f, 0f, 1f, 358f, 2.6f, 12.2f, FoodCategory.FRUITS),
+    new Food("Oatmeal", 158f, 100, 27f, 3.2f, 6f, 0.5f, 0f, 0f, 2f, 164f, 4f, 1f, FoodCategory.CEREALS),
+    new Food("Almonds", 576f, 100, 21.6f, 49.4f, 21.2f, 3.7f, 0f, 0f, 1f, 705f, 12.5f, 4.8f, FoodCategory.CEREALS),
+    new Food("Greek Yogurt", 59f, 100, 3.6f, 0.4f, 10f, 0.1f, 0f, 5f, 36f, 141f, 0f, 3.2f, FoodCategory.DAIRY),
+    new Food("Sweet Potato", 86f, 100, 20.1f, 0.1f, 1.6f, 0f, 0f, 0f, 55f, 337f, 3f, 4.2f, FoodCategory.VEGETABLES),
+    new Food("Peanut Butter", 588f, 100, 20f, 50f, 25f, 10f, 0f, 0f, 17f, 649f, 6f, 9f, FoodCategory.FATS),
+    new Food("Cheddar Cheese", 402f, 100, 1.3f, 33.1f, 24.9f, 19f, 1f, 105f, 621f, 98f, 0f, 0.5f, FoodCategory.DAIRY),
+    new Food("Brown Rice", 123f, 100, 25.6f, 1f, 2.7f, 0.2f, 0f, 0f, 5f, 86f, 1.8f, 0.4f, FoodCategory.CEREALS),
+    new Food("Eggs", 155f, 100, 1.1f, 11f, 13f, 3.3f, 1.6f, 373f, 124f, 126f, 0f, 1.1f, FoodCategory.MEATS),
 };
+
+list.Sort();
+
 
 
 //SetTest();
@@ -31,11 +35,112 @@ List<Food> list = new List<Food>
 //CreateMeal();
 //WaterManagement();
 //CreateUser();
-ExercicesSave();
+//ExercicesSave();
+//RecordMeal();
+//RecordSleep();
+RecordWorkout();
+
+void RecordWorkout()
+{
+    WorkoutSerializer workoutSerializer = new WorkoutSerializer();
+
+    var workout = new Workout();
+
+    var exercise1 = new Exercise("Assisted Dips", false);
+    exercise1.AddSet(new Set(50, 10));  
+    exercise1.AddSet(new Set(60, 8));   
+
+    var exercise2 = new Exercise("Band-Assisted Bench Press", false);
+    exercise2.AddSet(new Set(40, 12));
+    exercise2.AddSet(new Set(45, 10));
+
+    var exercise3 = new Exercise("Bar Dips", true);
+    exercise3.AddSet(new Set(0, 15)); 
+    exercise3.AddSet(new Set(0, 12)); 
+
+    var exercise4 = new Exercise("Barbell Bench Press", false);
+    exercise4.AddSet(new Set(70, 10));  
+    exercise4.AddSet(new Set(80, 8));  
+
+    var exercise5 = new Exercise("Barbell Board Press", false);
+    exercise5.AddSet(new Set(60, 6));   
+    exercise5.AddSet(new Set(65, 5));   
+
+    workout.AddExercise(exercise1);
+    workout.AddExercise(exercise2);
+    workout.AddExercise(exercise3);
+    workout.AddExercise(exercise4);
+    workout.AddExercise(exercise5);
+
+    Console.WriteLine($"Workout Date: {workout.WorkoutDateTime}");
+    foreach (var exercise in workout.Exercises)
+    {
+        Console.WriteLine($"Exercise: {exercise.Name} (Bodyweight: {exercise.BodyWeight})");
+        foreach (var set in exercise.SetList)
+        {
+            Console.WriteLine($"  - {set.Reps} reps at {set.Weight}kg");
+        }
+    }
+
+    // End the workout
+    workout.EndWorkout();
+    workoutSerializer.SaveWorkoutRecord(workout);
+    Console.WriteLine($"Workout Duration: {workout.WorkoutDuration}");
+}
+
+void RecordSleep()
+{
+    DateTime bedTime = new DateTime(2025, 3, 1, 22, 35, 0);
+    DateTime wakeUpTime = new DateTime(2025, 3, 2, 8, 5, 0);
+
+    SleepSerializer sleepSerializer = new SleepSerializer();
+
+    Sleep newSleep = new Sleep(bedTime, wakeUpTime, sleepSerializer);
+
+    newSleep.CalculateSleepDuration();
+
+    newSleep.SaveSleepRecord();
+
+    newSleep.ShowSleepDuration();
+}
+
+void RecordMeal()
+{
+    Meal userMeal = CreateMeal();
+
+    Console.WriteLine($"Default meal date & time: {userMeal.MealDateTime:yyyy-MM-dd HH:mm}");
+    Console.WriteLine("Do you want to change it? (yes/no): ");
+    string changeInput = Console.ReadLine()?.Trim().ToLower();
+
+    if (changeInput == "yes")
+    {
+        Console.WriteLine("Enter new meal date (yyyy-MM-dd): ");
+        string dateInput = Console.ReadLine();
+        Console.WriteLine("Enter new meal time (HH:mm): ");
+        string timeInput = Console.ReadLine();
+
+        userMeal.MealDateTime = DateTime.Parse($"{dateInput} {timeInput}");
+    }
+
+    userMeal.ShowMeal();
+
+    var mealSerialize = new MealSerializer();
+
+    mealSerialize.Save(userMeal);
+
+    var loadedMeal = mealSerialize.Load<Meal>();
+
+    if (loadedMeal != null)
+    {
+        Console.WriteLine("----------------Loading test-----------------------");
+        loadedMeal.ShowMeal();
+    }
+    else Console.WriteLine("No data found.");
+}
 
 void ExercicesSave()
 {
-    ExerciseSerialize serializer = new();
+    ExerciseSerializer serializer = new();
 
     List<Exercise> exercicesList = serializer.Load<List<Exercise>>();
 
@@ -54,7 +159,7 @@ void ExercicesSave()
 
 void FoodSave()
 {
-    FoodSerialize foodSerialize = new();
+    FoodSerializer foodSerialize = new();
 
     foodSerialize.Save(list);
 
@@ -72,6 +177,7 @@ void FoodSave()
         Console.WriteLine("No data found.");
     }
 }
+
 void CreateUser()
 {
     string name;
@@ -99,6 +205,7 @@ void CreateUser()
     Console.WriteLine($"BMI: {user.CalculateBMI()}");
     Console.WriteLine($"You are {user.GetBMICategory()}.");
 }
+
 void ShowKnownFood()
 {
     int count = 1;
@@ -109,9 +216,9 @@ void ShowKnownFood()
     }
 }
 
-void SetTest()
+Set SetTest()
 {
-    Set reps1 = new Set();
+    Set set = new Set();
     bool exit = false;
     
     while (!exit)
@@ -126,11 +233,11 @@ void SetTest()
         Console.WriteLine("9. Exit");
 
         Console.Write("Weight: ");
-        Console.WriteLine(reps1.Weight);
+        Console.WriteLine(set.Weight);
         Console.Write("Reps: ");
-        Console.WriteLine(reps1.Reps);
+        Console.WriteLine(set.Reps);
         Console.Write("Test total weight of the series: ");
-        int test = reps1.TotalWeight();
+        int test = set.TotalWeight();
         Console.WriteLine(test);
 
         Console.Write("Your choice: ");
@@ -139,30 +246,30 @@ void SetTest()
         switch (input)
         {
             case "1":
-                reps1.AddWeight();
+                set.AddWeight();
                 break;
             case "2":
-                reps1.RemoveWeigth();
+                set.RemoveWeight();
                 break;
             case "3":
-                reps1.AddReps();
+                set.AddReps();
                 break;
             case "4":
-                reps1.RemoveReps();
+                set.RemoveReps();
                 break;
             case "5":
                 int weight;
                 Console.WriteLine("Enter the weight: ");
                 string? input2 = Console.ReadLine();
                 int.TryParse(input2, out weight);
-                reps1.AddWeight(weight);
+                set.SetWeight(weight);
                 break;
             case "6":
                 int reps;
                 Console.WriteLine("Enter the reps: ");
                 string? input3 = Console.ReadLine();
                 int.TryParse(input3, out reps);
-                reps1.AddReps(reps);
+                set.SetReps(reps);
                 break;
             case "9":
                 exit = true;
@@ -172,6 +279,8 @@ void SetTest()
                 break;
         }
     }
+
+    return set;
 }
 
 void CreateFood()
@@ -199,18 +308,18 @@ void CreateFood()
             }
         }
     }
-
-    float cal = GetValidIntInput("Enter the amount of calories for 100g: ");
-    float carbs = GetValidIntInput("Enter the amount of carbohydrate for 100g: ");
-    float fat = GetValidIntInput("Enter the amount of fat for 100g: ");
-    float prot = GetValidIntInput("Enter the amount of protein for 100g: ");
-    float satFat = GetValidIntInput("Enter the amount of saturated fat for 100g: ");
-    float transFat = GetValidIntInput("Enter the amount of trans fat for 100g: ");
-    float chol = GetValidIntInput("Enter the amount of cholesterol for 100g: ");
-    float sodium = GetValidIntInput("Enter the amount of sodium for 100g: ");
-    float pot = GetValidIntInput("Enter the amount of potassium for 100g: ");
-    float diet = GetValidIntInput("Enter the amount of dietary fiber for 100g: ");
-    float sugar = GetValidIntInput("Enter the amount of sugar for 100g: ");
+    int serving = (int)GetValidIntInput("Enter the size of one serving: ");
+    float cal = GetValidIntInput($"Enter the amount of calories for {serving}: ");
+    float carbs = GetValidIntInput($"Enter the amount of carbohydrate for {serving}: ");
+    float fat = GetValidIntInput($"Enter the amount of fat for {serving}: ");
+    float prot = GetValidIntInput($"Enter the amount of protein for {serving}: ");
+    float satFat = GetValidIntInput($"Enter the amount of carbohydrate for  {serving}: ");
+    float transFat = GetValidIntInput($"Enter the amount of carbohydrate for  {serving}:  ");
+    float chol = GetValidIntInput($"Enter the amount of protein for  {serving}: ");
+    float sodium = GetValidIntInput($"Enter the amount of sodium for {serving}: ");
+    float pot = GetValidIntInput($"Enter the amount of potassium for {serving}: ");
+    float diet = GetValidIntInput($"Enter the amount of dietary fiber for {serving}: ");
+    float sugar = GetValidIntInput($"Enter the amount of sugar for {serving}: ");
 
     Console.Clear();
     DisplayCategoryEnum();
@@ -230,7 +339,7 @@ void CreateFood()
         }
     }
 
-    Food food = new Food(name, cal, carbs, fat, prot, satFat, transFat, chol, sodium, pot, diet, sugar, category);
+    Food food = new Food(name, cal, serving, carbs, fat, prot, satFat, transFat, chol, sodium, pot, diet, sugar, category);
 
     Console.Clear();
     food.ShowFood();
@@ -303,7 +412,7 @@ void CreateExercise()
     exercise.ShowExercise();
 }
 
-void CreateMeal()
+Meal CreateMeal()
 {
     DisplayMealTypeEnum();
     MealType mealType;
@@ -332,7 +441,9 @@ void CreateMeal()
         if (int.TryParse(Console.ReadLine(), out int foodNumber) && foodNumber >= 0 && foodNumber <= list.Count)
         {
             if (foodNumber == 0) break;
-            meal.AddFood(list[foodNumber - 1]);
+            Console.Write("Enter the serving portion of the food you to add (separate with ',': ");
+            float.TryParse(Console.ReadLine(), out float serving);
+            meal.AddFood(list[foodNumber - 1], serving);
         }
         else
         {
@@ -344,10 +455,13 @@ void CreateMeal()
 
     Console.Clear();
     meal.ShowMeal();
+
+    return meal;
 }
 
 void WaterManagement()
 {
+    WaterSerializer waterSerializer = new WaterSerializer();
     bool exit = false;
 
     Console.Write("Enter a cup size (it will be used to add a certain quantity of water to your daily track): ");
@@ -358,13 +472,14 @@ void WaterManagement()
 
     Console.Write("Enter a daily target: ");
     int.TryParse(Console.ReadLine(), out int dailyTarget);
-    Water water = new(dailyTarget);
+    Water water = new(dailyTarget, waterSerializer);
 
     while (!exit)
     {
         Console.Clear();
         Console.WriteLine("1. Add");
-        Console.WriteLine("2. Exit");
+        Console.WriteLine("2. Remove");
+        Console.WriteLine("3. Exit");
         water.ShowWater();
 
         int.TryParse(Console.ReadLine(), out int choice);
@@ -376,12 +491,18 @@ void WaterManagement()
         }
         else if (choice == 2)
         {
+            Console.Clear();
+            water.RemoveWater(cup.CupSize);
+        }
+        else if (choice == 3)
+        {
             exit = true;
         }
         else
         {
             Console.WriteLine("Invalid option. Please try again.");
         }
+
     }
 }
 
@@ -390,7 +511,7 @@ void DisplayCategoryEnum()
     Console.WriteLine("Test Enum food category");
     foreach (FoodCategory category in Enum.GetValues(typeof(FoodCategory)))
     {
-        string categoryString = CategoryToString.ToString(category);
+        string categoryString = FoodCategoryHelper.ConvertToString(category);
         Console.WriteLine($"Category: {category}, ToString: {categoryString}");
     }
 }

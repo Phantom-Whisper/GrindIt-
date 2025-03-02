@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GrindIt.WorkoutLib\GrindIt.WorkoutLib.csproj" />
     <ProjectReference Include="..\Manager\Manager.csproj" />
   </ItemGroup>
 

@@ -2,34 +2,29 @@
 {
     public enum FoodCategory
     {
-        CEREALS = 0,
-        FRUITS = 1,
-        VEGETABLES = 2,
-        DAIRY = 3,
-        MEATS = 4,
-        FISH = 5,
-        FATS = 6,
-        SUGARS = 7,
-        DRINKS = 8
+        CEREALS,
+        FRUITS,
+        VEGETABLES,
+        DAIRY,
+        MEATS,
+        FISH,
+        FATS,
+        SUGARS,
+        DRINKS
     }
 
-    public static class CategoryToString
+    public static class FoodCategoryHelper
     {
-        public static string ToString(FoodCategory category) => ((int)category).ToString();
-    }
+        public static string ConvertToString(FoodCategory category) => ((int)category).ToString();
 
-    public static class StringToCategory
-    {
-        public static FoodCategory? FromInt(int value)
-        {
-            if (Enum.IsDefined(typeof(FoodCategory), value))
-            {
-                return (FoodCategory)value;
-            }
-            else
-            {
-                return null;
-            }
-        }
+        public static FoodCategory? FromInt(int value) =>
+            Enum.IsDefined(typeof(FoodCategory), value) ? (FoodCategory)value : null;
+
+        public static FoodCategory FromIntOrDefault(int value, FoodCategory defaultCategory = FoodCategory.CEREALS) =>
+            Enum.IsDefined(typeof(FoodCategory), value) ? (FoodCategory)value : defaultCategory;
+
+        public static FoodCategory FromIntOrThrow(int value) =>
+            Enum.IsDefined(typeof(FoodCategory), value) ? (FoodCategory)value
+            : throw new ArgumentException($"Invalid FoodCategory value: {value}");
     }
 }

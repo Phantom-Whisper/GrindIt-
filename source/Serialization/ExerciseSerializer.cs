@@ -3,13 +3,13 @@ using Manager;
 
 namespace Serialization
 {
-    public class ExerciseSerialize : ISerialize
+    public class ExerciseSerializer : ISerialize
     {
         readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Structures\\";
-        const string xmlFile = "exerciseSave.xml";
+        const string xmlFile = "ExerciseSave.xml";
         readonly string path = Path.Combine(filePath, xmlFile);
 
-        public ExerciseSerialize()
+        public ExerciseSerializer()
         {
             try
             {

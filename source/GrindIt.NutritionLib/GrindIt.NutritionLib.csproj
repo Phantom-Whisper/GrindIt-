@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Manager\Manager.csproj" />
+    <ProjectReference Include="..\Serialization\Serialization.csproj" />
+  </ItemGroup>
+
 </Project>

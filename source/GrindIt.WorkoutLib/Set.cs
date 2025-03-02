@@ -4,67 +4,54 @@
     {
         public Set() { }
 
-        /*
-        public Series(int weight, int nbReps)
-        { 
-            this.weight = weight;
-            this.reps = nbReps;
-        }
-        */
-
-        public int Weight
+        public Set(int weight, int reps)
         {
-            get { return weight; }
+            Weight = weight;
+            Reps = reps;
         }
 
-        private int weight;
+        public int Weight { get; set; }
+        public int Reps { get; set; }
 
-        public int Reps
+        public void SetReps(int reps)
         {
-            get { return reps; }
-        }
-
-        private int reps;
-
-        public void AddReps(int reps)
-        {
-            this.reps = reps;
+            Reps = reps;
         }
 
         public void AddReps()
         {
-            reps++;
+            Reps++;
         }
 
         public void RemoveReps()
         {
-            if (reps > 0)
+            if (Reps > 0)
             {
-                reps--;
+                Reps--;
             }
         }
 
-        public void AddWeight(int weight)
+        public void SetWeight(int weight)
         {
-            this.weight = weight;
+            Weight = weight;
         }
 
         public void AddWeight()
         {
-            weight++;
+            Weight++;
         }
 
-        public void RemoveWeigth()
+        public void RemoveWeight()
         {
-            if (weight > 0)
+            if (Weight > 0)
             {
-                weight--;
+                Weight--;
             }
         }
 
         public int TotalWeight()
         {
-            return weight * reps;
+            return Weight * Reps;
         }
     }
 }
