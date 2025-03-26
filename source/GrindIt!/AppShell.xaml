@@ -3,15 +3,18 @@
     x:Class="GrindIt_.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:pages="clr-namespace:GrindIt_.Views.Pages"
-    xmlns:accountSettings="clr-namespace:GrindIt_.Views.Pages.Account_and_Settings"
+    xmlns:pages="clr-namespace:GrindIt_.Pages"
+    xmlns:accountSettings="clr-namespace:GrindIt_.Pages.Account_and_Settings"
+    xmlns:loginAndRegister="clr-namespace:GrindIt_.Pages.Login_and_Registration"
+    xmlns:nutrition="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
+    xmlns:workout="clr-namespace:GrindIt_.Pages.Workout_Pages"
     Shell.FlyoutBehavior="Disabled"
     Title="GrindIt_">
     
     <ShellContent
-        Title="LoginView"
-        ContentTemplate="{DataTemplate pages:LoginView}"
-        Route="LoginView"/>
+        Title="Login"
+        ContentTemplate="{DataTemplate loginAndRegister:Login}"
+        Route="Login"/>
 
     <!-- Bottom Tab Bar -->
     <TabBar>
@@ -22,24 +25,24 @@
                 Route="Home" />
         </Tab>
 
-        <Tab Icon="food.png" Route="NutritionView">
+        <Tab Icon="food.png" Route="Nutrition">
             <ShellContent
                 Title="Nutrition"
-                ContentTemplate="{DataTemplate pages:NutritionView}"
-                Route="NutritionView"/>
+                ContentTemplate="{DataTemplate nutrition:Nutrition}"
+                Route="Nutrition"/>
         </Tab>
 
-        <Tab Icon="dumbbell.png" Route="WorkoutView">
+        <Tab Icon="dumbbell.png" Route="Workout">
             <ShellContent
                 Title="Workout"
-                ContentTemplate="{DataTemplate pages:WorkoutView}"
-                Route="WorkoutView"/>
+                ContentTemplate="{DataTemplate workout:Workout}"
+                Route="Workout"/>
         </Tab>
 
-        <Tab Icon="account.png" Route="AccountView">
+        <Tab Icon="account.png" Route="Account">
             <ShellContent
                 Title="Account"
-                ContentTemplate="{DataTemplate pages:AccountView}"
+                ContentTemplate="{DataTemplate accountSettings:Account}"
                 Route="AccountView"/>
         </Tab>
     </TabBar>
@@ -47,57 +50,57 @@
     <!-- Additional pages not in the Tab Bar -->
     <ShellContent
         Title="Exercises"
-        ContentTemplate="{DataTemplate pages:Exercises}"
+        ContentTemplate="{DataTemplate workout:Exercises}"
         Route="Exercises"/>
 
     <ShellContent
         Title="Exercise"
-        ContentTemplate="{DataTemplate pages:Exercise}"
+        ContentTemplate="{DataTemplate workout:Exercise}"
         Route="Exercise"/>
 
     <ShellContent
         Title="Create Exercise"
-        ContentTemplate="{DataTemplate pages:CreateExercise}"
+        ContentTemplate="{DataTemplate workout:CreateExercise}"
         Route="CreateExercise"/>
 
 
     <ShellContent
-        Title="RegistrationView"
-        ContentTemplate="{DataTemplate pages:RegistrationView}"
-        Route="RegistrationView"/>
+        Title="Registration"
+        ContentTemplate="{DataTemplate loginAndRegister:Registration}"
+        Route="Registration"/>
 
     <ShellContent
-        ContentTemplate="{DataTemplate pages:ThemeView}"
-        Route="ThemeView"/>
+        ContentTemplate="{DataTemplate accountSettings:Theme}"
+        Route="Theme"/>
 
     <ShellContent
         Title="Water"
-        ContentTemplate="{DataTemplate pages:Water}"
+        ContentTemplate="{DataTemplate nutrition:Water}"
         Route="Water"/>
 
     <ShellContent
         Title="Menu"
-        ContentTemplate="{DataTemplate pages:Menu}"
+        ContentTemplate="{DataTemplate accountSettings:Menu}"
         Route="Menu"/>
 
     <ShellContent
         Title="Sleep"
-        ContentTemplate="{DataTemplate pages:Sleep}"
+        ContentTemplate="{DataTemplate nutrition:Sleep}"
         Route="Sleep"/>
 
     <ShellContent
         Title="BodyComposition"
-        ContentTemplate="{DataTemplate pages:BodyComposition}"
+        ContentTemplate="{DataTemplate nutrition:BodyComposition}"
         Route="BodyComposition"/>
 
     <ShellContent
     Title="Meal"
-    ContentTemplate="{DataTemplate pages:Meal}"
+    ContentTemplate="{DataTemplate nutrition:Meal}"
     Route="Meal"/>
 
     <ShellContent
         Title="Steps"
-        ContentTemplate="{DataTemplate pages:Steps}"
+        ContentTemplate="{DataTemplate nutrition:Steps}"
         Route="Steps"/>
     
     <ShellContent

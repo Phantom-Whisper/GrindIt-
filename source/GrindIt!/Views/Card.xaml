@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrindIt_.Views.Card">
+
+    <Border
+        Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+        BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+        StrokeShape="RoundRectangle 25"
+        Margin="10,5,10,5"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="FillAndExpand">
+
+        <Grid 
+            ColumnDefinitions="*, Auto" 
+            
+            RowDefinitions="Auto, Auto">
+            <Grid
+                Margin="15,5,10,10"
+                RowDefinitions="50,50">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Border
+                WidthRequest="50"
+                HeightRequest="50"
+                StrokeShape="RoundRectangle 50"
+                StrokeThickness="0"
+                HorizontalOptions="Center"
+                    Margin="5,0,15,0">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                            FontFamily="AwesomeSolid"
+                            Glyph="{Binding Glyph}"
+                            Size="30"
+                            Color="#1B1212"/>
+                        </Image.Source>
+                    </Image>
+                </Border>
+
+                <Label
+                Text="{Binding Text}"
+                TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                FontSize="{OnIdiom Phone=Medium, Tablet=Large}"
+                Margin="5"
+                VerticalOptions="Center"
+                HorizontalOptions="StartAndExpand"
+                WidthRequest="{OnIdiom Phone=155, Tablet=200}"
+                Grid.Column="1" />
+
+                <Border
+                    WidthRequest="125"
+                    HeightRequest="40"
+                    StrokeShape="RoundRectangle 50"
+                    HorizontalOptions="Start"
+                    Grid.Row="1">
+                    <Button
+                        Text="{Binding Value}"
+                        Padding="{OnIdiom Phone=5, Tablet=10}"
+                        FontSize="{OnIdiom Phone=Body, Tablet=Large}"
+                        BackgroundColor="{AppThemeBinding Light=#C8C8C8, Dark=Gray}" />
+                </Border>
+            </Grid>
+
+            <Border
+                HeightRequest="100"
+                WidthRequest="100"
+                Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+                HorizontalOptions="End"
+                Margin="10,0,10,0"
+                Grid.Column="1">
+                <GraphicsView x:Name="ProgressRingView"
+              WidthRequest="50"
+              HeightRequest="50"
+              HorizontalOptions="Center" 
+              VerticalOptions="Center" />
+
+
+            </Border>
+        </Grid>
+    </Border>
+</ContentView>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrindIt_.Pages.Workout_Pages.CreateExercise"
+             Title="Create Exercise"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout>
+        <Grid
+            ColumnDefinitions="*,*">
+            <ImageButton
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="10,10,20,0"
+                HeightRequest="26"
+                WidthRequest="26"
+                Clicked="Return_Clicked">
+                <ImageButton.Source>
+                    <FontImageSource
+                        FontFamily="AwesomeSolid"
+                        Glyph=""
+                        Size="30"
+                        Color="{AppThemeBinding Light=Black, Dark=White}" />
+                </ImageButton.Source>
+            </ImageButton>
+            <Button
+                Grid.Column="1"
+                HorizontalOptions="End"
+                Margin="0,10,20,20"
+                Text="Create"
+                HeightRequest="40"
+                WidthRequest="100"
+                CornerRadius="50"/>
+        </Grid>
+        
+        <Label 
+            Text="Name the exercise"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry
+            Margin="40,20,40,20"
+            Placeholder="Name of the exercise"/>
+
+        <Grid
+            HorizontalOptions="Center"
+            ColumnDefinitions="50*,50*"
+            ColumnSpacing="20">
+            <Label
+                Text="Bodyweight exercise "
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Grid.Column="0"/>
+
+            <CheckBox
+                HorizontalOptions="Start"
+                Grid.Column="1"/>
+        </Grid>
+
+        <Label
+            Text="Select at least one muscle targeted"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+        
+        <ImageButton
+            BackgroundColor= "{StaticResource Primary}"
+            BorderColor="{StaticResource Primary}"
+            BorderWidth="1"
+            WidthRequest="35"
+            HeightRequest="35"
+            CornerRadius="50"
+            Padding="8,8,8,8"
+            Margin="5">
+            <ImageButton.Source>
+                <FontImageSource
+                    FontFamily="AwesomeSolid"
+                    Glyph="+"
+                    Size="30"
+                    Color="{AppThemeBinding Light=Black, Dark=White}" />
+            </ImageButton.Source>
+        </ImageButton>
+        <!--eventHandler-->
+        <!--When toggled show a list of the muscles-->
+    </VerticalStackLayout>
+</ContentPage>

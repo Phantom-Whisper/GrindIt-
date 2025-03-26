@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GrindIt_.Pages.Account_and_Settings.Account"
+             Title="AccountView"
+             Shell.NavBarIsVisible="False">
+    
+    <VerticalStackLayout>
+        <ImageButton
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            Margin="0,20,20,0"
+            HeightRequest="26"
+            WidthRequest="26"
+            Clicked="Menu_Clicked">
+            <ImageButton.Source>
+                <FontImageSource
+                    FontFamily="AwesomeSolid"
+                    Glyph="&#xf013;"
+                    Size="30"
+                    Color="{AppThemeBinding Light=Black, Dark=White}" />
+            </ImageButton.Source>
+        </ImageButton>
+
+        <Border
+            HeightRequest="100"
+            WidthRequest="100"
+            HorizontalOptions="Start"
+            Margin="10,0,0,10">
+            <Border.StrokeShape>
+                <Ellipse />
+            </Border.StrokeShape>
+            <Image
+                Source="gym_background.jpg"
+                Aspect="AspectFill" />
+        </Border>
+
+        <Label 
+            Text="Name"
+            HorizontalOptions="Start"
+            Margin="10,0,10,0" />
+    </VerticalStackLayout>
+</ContentPage>
