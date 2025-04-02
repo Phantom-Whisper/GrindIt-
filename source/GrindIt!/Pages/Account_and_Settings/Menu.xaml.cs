@@ -9,7 +9,7 @@ public partial class Menu : ContentPage
 
     private void Theme_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync("//ThemeView");
+		Shell.Current.GoToAsync("//Theme");
     }
 
     private void Profile_Clicked(object sender, EventArgs e)

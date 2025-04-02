@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
              x:Class="GrindIt_.Pages.Account_and_Settings.Menu"
              xmlns:local="clr-namespace:GrindIt_.Views"
              Title="Menu"
@@ -23,7 +24,7 @@
         </ImageButton>
         
         <Label
-            Text="App settings"
+            Text="{ext:LocalizedString Key=AppSettings}"
             FontSize="Title"
             FontAttributes="Bold"
             HorizontalOptions="Center"

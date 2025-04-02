@@ -19,7 +19,7 @@
                 Margin="-5,-30,-5,-2"
                 CornerRadius="30,30,0,0"
                 Fill="{AppThemeBinding Light=AliceBlue, Dark=PrimaryDarkText}"/>
-            <VerticalStackLayout Margin="30,0,30,0">
+            <VerticalStackLayout Margin="30,10,30,0">
                 <Label 
                     FontAttributes="Bold"
                     FontFamily="bold"

@@ -94,9 +94,9 @@
         Route="BodyComposition"/>
 
     <ShellContent
-    Title="Meal"
-    ContentTemplate="{DataTemplate nutrition:Meal}"
-    Route="Meal"/>
+        Title="Meal"
+        ContentTemplate="{DataTemplate nutrition:Meal}"
+        Route="Meal"/>
 
     <ShellContent
         Title="Steps"
@@ -119,7 +119,4 @@
         ContentTemplate="{DataTemplate accountSettings:Profile}"
         Route="Profile"/>
     
-    <ShellContent
-        ContentTemplate="{DataTemplate pages:test}"
-        Route="test"/>
 </Shell>
