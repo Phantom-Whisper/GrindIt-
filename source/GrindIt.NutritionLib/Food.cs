@@ -1,15 +1,36 @@
-﻿using System;
-using System.Xml.Serialization;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Xml.Serialization;
 
 namespace GrindIt.NutritionLib
 {
+    /// <summary>
+    /// Represents a food item with detailed nutritional information.
+    /// </summary>
     [Serializable]
-    [XmlRoot("Food")]  
+    [XmlRoot("Food")]
     public class Food : IComparable<Food>
     {
+        /// <summary>
+        /// Default constructor used for XML serialization.
+        /// </summary>
         public Food() { }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Food"/> class with all nutritional values and category.
+        /// </summary>
+        /// <param name="name">Name of the food.</param>
+        /// <param name="calories">Calories per serving.</param>
+        /// <param name="serving">Serving size (usually in grams or ml).</param>
+        /// <param name="carbohydrate">Carbohydrate content per serving (in grams).</param>
+        /// <param name="fat">Fat content per serving (in grams).</param>
+        /// <param name="protein">Protein content per serving (in grams).</param>
+        /// <param name="saturedFat">Saturated fat content per serving (in grams).</param>
+        /// <param name="transFat">Trans fat content per serving (in grams).</param>
+        /// <param name="cholesterol">Cholesterol content per serving (in milligrams).</param>
+        /// <param name="sodium">Sodium content per serving (in milligrams).</param>
+        /// <param name="potassium">Potassium content per serving (in milligrams).</param>
+        /// <param name="dietaryFiber">Dietary fiber content per serving (in grams).</param>
+        /// <param name="sugar">Sugar content per serving (in grams).</param>
+        /// <param name="category">Category to which the food belongs.</param>
         public Food(string name, float calories, int serving, float carbohydrate, float fat, float protein, float saturedFat, float transFat,
             float cholesterol, float sodium, float potassium, float dietaryFiber, float sugar, FoodCategory category)
         {
@@ -30,7 +51,11 @@ namespace GrindIt.NutritionLib
         }
 
         private string? name;
-        [XmlElement("Name")]  
+
+        /// <summary>
+        /// Gets or sets the name of the food.
+        /// </summary>
+        [XmlElement("Name")]
         public string? Name
         {
             get => name;
@@ -38,7 +63,11 @@ namespace GrindIt.NutritionLib
         }
 
         private FoodCategory? category;
-        [XmlElement("Category")]  
+
+        /// <summary>
+        /// Gets or sets the category of the food (e.g., Fruit, Dairy, Meat).
+        /// </summary>
+        [XmlElement("Category")]
         public FoodCategory? Category
         {
             get => category;
@@ -46,6 +75,10 @@ namespace GrindIt.NutritionLib
         }
 
         private int servingSize;
+
+        /// <summary>
+        /// Gets or sets the serving size for the nutritional information.
+        /// </summary>
         [XmlElement("ServingSize")]
         public int ServingSize
         {
@@ -54,7 +87,11 @@ namespace GrindIt.NutritionLib
         }
 
         private float calories;
-        [XmlElement("Calories")]  
+
+        /// <summary>
+        /// Gets or sets the number of calories per serving.
+        /// </summary>
+        [XmlElement("Calories")]
         public float Calories
         {
             get => calories;
@@ -62,90 +99,83 @@ namespace GrindIt.NutritionLib
         }
 
         private float carbohydrate;
-        [XmlElement("Carbohydrate")]  
+
+        /// <summary>
+        /// Gets or sets the carbohydrate content per serving (in grams).
+        /// </summary>
+        [XmlElement("Carbohydrate")]
         public float Carbohydrate
         {
             get => carbohydrate;
             set => carbohydrate = value;
         }
 
-        private float fat;
-        [XmlElement("Fat")]  
-        public float Fat
-        {
-            get => fat;
-            set => fat = value;
-        }
+        /// <summary>
+        /// Gets or sets the fat content per serving (in grams).
+        /// </summary>
+        [XmlElement("Fat")]
+        public float Fat { get; set; }
 
-        private float protein;
-        [XmlElement("Protein")]  
-        public float Protein
-        {
-            get => protein;
-            set => protein = value;
-        }
+        /// <summary>
+        /// Gets or sets the protein content per serving (in grams).
+        /// </summary>
+        [XmlElement("Protein")]
+        public float Protein { get; set; }
 
-        private float saturedFat;
-        [XmlElement("SaturedFat")]  
-        public float SaturedFat
-        {
-            get => saturedFat;
-            set => saturedFat = value;
-        }
+        /// <summary>
+        /// Gets or sets the saturated fat content per serving (in grams).
+        /// </summary>
+        [XmlElement("SaturedFat")]
+        public float SaturedFat { get; set; }
 
-        private float transFat;
-        [XmlElement("TransFat")]  
-        public float TransFat
-        {
-            get => transFat;
-            set => transFat = value;
-        }
+        /// <summary>
+        /// Gets or sets the trans fat content per serving (in grams).
+        /// </summary>
+        [XmlElement("TransFat")]
+        public float TransFat { get; set; }
 
-        private float cholesterol;
-        [XmlElement("Cholesterol")]  
-        public float Cholesterol
-        {
-            get => cholesterol;
-            set => cholesterol = value;
-        }
+        /// <summary>
+        /// Gets or sets the cholesterol content per serving (in milligrams).
+        /// </summary>
+        [XmlElement("Cholesterol")]
+        public float Cholesterol { get; set; }
 
-        private float sodium;
-        [XmlElement("Sodium")]  
-        public float Sodium
-        {
-            get => sodium;
-            set => sodium = value;
-        }
+        /// <summary>
+        /// Gets or sets the sodium content per serving (in milligrams).
+        /// </summary>
+        [XmlElement("Sodium")]
+        public float Sodium { get; set; }
 
-        private float potassium;
-        [XmlElement("Potassium")]  
-        public float Potassium
-        {
-            get => potassium;
-            set => potassium = value;
-        }
+        /// <summary>
+        /// Gets or sets the potassium content per serving (in milligrams).
+        /// </summary>
+        [XmlElement("Potassium")]
+        public float Potassium { get; set; }
 
-        private float dietaryFiber;
-        [XmlElement("DietaryFiber")]  
-        public float DietaryFiber
-        {
-            get => dietaryFiber;
-            set => dietaryFiber = value;
-        }
+        /// <summary>
+        /// Gets or sets the dietary fiber content per serving (in grams).
+        /// </summary>
+        [XmlElement("DietaryFiber")]
+        public float DietaryFiber { get; set; }
 
-        private float sugar;
-        [XmlElement("Sugar")]  
-        public float Sugar
-        {
-            get => sugar;
-            set => sugar = value;
-        }
+        /// <summary>
+        /// Gets or sets the sugar content per serving (in grams).
+        /// </summary>
+        [XmlElement("Sugar")]
+        public float Sugar { get; set; }
 
-        public int CompareTo(Food other)
-        {
-            return other == null ? 1 : string.Compare(Name, other.Name, StringComparison.OrdinalIgnoreCase);
-        }
+        /// <summary>
+        /// Compares the current <see cref="Food"/> object with another <see cref="Food"/> object based on name.
+        /// </summary>
+        /// <param name="other">The other food item to compare with.</param>
+        /// <returns>
+        /// An integer that indicates the relative order of the objects being compared. 
+        /// Returns less than zero if this instance precedes <paramref name="other"/> in the sort order. 
+        /// Zero if they are equal, and greater than zero if it follows <paramref name="other"/>.
+        /// </returns>
+        public int CompareTo(Food other) => other == null ? 1 : string.Compare(Name, other.Name, StringComparison.OrdinalIgnoreCase);
 
+        //Will be erased
         public void ShowFood()
         {
             Console.WriteLine("======================================");

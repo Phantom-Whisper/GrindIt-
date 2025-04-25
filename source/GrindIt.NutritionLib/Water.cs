@@ -1,12 +1,20 @@
 ﻿using Serialization;
-using System;
 
 namespace GrindIt.NutritionLib
 {
+    /// <summary>
+    /// Represents the water intake tracker for a specific day, including target and consumed amount.
+    /// </summary>
     public class Water
     {
         private readonly WaterSerializer _waterSerializer;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Water"/> class with a specified target and serializer.
+        /// Loads the current day's water consumption data from persistent storage.
+        /// </summary>
+        /// <param name="target">The target amount of water to be consumed (in milliliters).</param>
+        /// <param name="waterSerializer">An instance of <see cref="WaterSerializer"/> used to persist and load water consumption data.</param>
         public Water(int target, WaterSerializer waterSerializer)
         {
             WaterTarget = target;
@@ -17,29 +25,36 @@ namespace GrindIt.NutritionLib
             WaterDrank = _waterSerializer.LoadWaterDrank(currentDate);
         }
 
-        private int waterTarget;
-
+        /// <summary>
+        /// Gets or sets the target water consumption (in milliliters).
+        /// </summary>
         public int WaterTarget
         {
-            get => waterTarget;
-            set => waterTarget = value;
+            get;
+            set;
         }
 
-        private int waterDrank;
-
+        /// <summary>
+        /// Gets or sets the amount of water consumed (in milliliters).
+        /// </summary>
         public int WaterDrank
         {
-            get => waterDrank;
-            set => waterDrank = value;
+            get;
+            set;
         }
 
-        // Method to add water consumption
+        /// <summary>
+        /// Adds the specified amount of water to the current water consumption total.
+        /// Also saves the consumption event with the current date and time.
+        /// </summary>
+        /// <param name="water">The amount of water to add (in milliliters).</param>
+        /// <exception cref="ArgumentException">Thrown when the provided water amount is negative.</exception>
         public void AddWater(int water)
         {
             if (water < 0)
                 throw new ArgumentException("Water amount cannot be negative.");
 
-            waterDrank += water;
+            WaterDrank += water;
 
             string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
             string currentTime = DateTime.Now.ToString("HH:mm");
@@ -48,7 +63,12 @@ namespace GrindIt.NutritionLib
             _waterSerializer.SaveWaterConsumption(currentDate, currentTime, water);
         }
 
-        // Method to remove water consumption
+        /// <summary>
+        /// Removes the specified amount of water from the current water consumption total.
+        /// </summary>
+        /// <param name="water">The amount of water to remove (in milliliters).</param>
+        /// <exception cref="ArgumentException">Thrown when the provided water amount is negative.</exception>
+        /// <exception cref="InvalidOperationException">Thrown when trying to remove more water than has been consumed.</exception>
         public void RemoveWater(int water)
         {
             if (water < 0)
@@ -60,10 +80,10 @@ namespace GrindIt.NutritionLib
                 throw new InvalidOperationException("Not enough water to remove.");
         }
 
-        // Method to display the current water consumption
+        // To be deleted
         public void ShowWater()
         {
-            Console.WriteLine($"{waterDrank}/{WaterTarget} ml");
+            Console.WriteLine($"{WaterDrank}/{WaterTarget} ml");
         }
     }
 }

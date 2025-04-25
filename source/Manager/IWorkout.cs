@@ -1,4 +1,4 @@
-﻿namespace GrindIt.WorkoutLib
+﻿namespace Manager
 {
     public interface IWorkout
     {
