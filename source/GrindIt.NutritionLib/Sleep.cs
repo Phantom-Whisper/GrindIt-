@@ -60,9 +60,7 @@ namespace GrindIt.NutritionLib
             _sleepSerializer.SaveSleepRecord(currentDate, currentTime, TotalSleepDuration);
         }
 
-        /// <summary>
-        /// Displays the total sleep duration in the console.
-        /// </summary>
+        // Wil be deleted
         public void ShowSleepDuration()
         {
             Console.WriteLine($"Total sleep duration: {TotalSleepDuration}");

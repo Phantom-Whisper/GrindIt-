@@ -80,7 +80,7 @@ namespace GrindIt.NutritionLib
                 throw new InvalidOperationException("Not enough water to remove.");
         }
 
-        // To be deleted
+        // Will be deleted
         public void ShowWater()
         {
             Console.WriteLine($"{WaterDrank}/{WaterTarget} ml");
