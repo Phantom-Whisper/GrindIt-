@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>Made by a gymrat for the whole fitness community</value>
+  </data>
   <data name="AppSettings" xml:space="preserve">
     <value>App settings</value>
   </data>
   <data name="PickerText" xml:space="preserve">
     <value>Choose a language</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="Terms" xml:space="preserve">
+    <value>Terms of service</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
   </data>
 </root>

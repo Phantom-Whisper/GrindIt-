@@ -61,6 +61,24 @@ namespace GrindIt_.Resources.Localization {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à About.
+        /// </summary>
+        internal static string About {
+            get {
+                return ResourceManager.GetString("About", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Made by a gymrat for the whole fitness community.
+        /// </summary>
+        internal static string AboutText {
+            get {
+                return ResourceManager.GetString("AboutText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à App settings.
         /// </summary>
         internal static string AppSettings {
@@ -75,6 +93,42 @@ namespace GrindIt_.Resources.Localization {
         internal static string PickerText {
             get {
                 return ResourceManager.GetString("PickerText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Privacy Policy.
+        /// </summary>
+        internal static string Privacy {
+            get {
+                return ResourceManager.GetString("Privacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Profile.
+        /// </summary>
+        internal static string Profile {
+            get {
+                return ResourceManager.GetString("Profile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Terms of service.
+        /// </summary>
+        internal static string Terms {
+            get {
+                return ResourceManager.GetString("Terms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Theme.
+        /// </summary>
+        internal static string Theme {
+            get {
+                return ResourceManager.GetString("Theme", resourceCulture);
             }
         }
     }

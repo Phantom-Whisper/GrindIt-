@@ -25,7 +25,8 @@
         <Picker 
             x:Name="picker"
             Title="{ext:LocalizedString Key=PickerText}"
-            SelectedItem="{Binding Culture, Source={StaticResource Localization}}">
+            SelectedItem="{Binding Culture, Source={StaticResource Localization}}"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
                     <x:String>en</x:String>

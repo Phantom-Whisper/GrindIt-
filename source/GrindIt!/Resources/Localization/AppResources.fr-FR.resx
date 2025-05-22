@@ -117,10 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>À propos</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>Conçu par un go muscu pour la communauté\n du fitness</value>
+  </data>
   <data name="AppSettings" xml:space="preserve">
     <value>Paramètres</value>
   </data>
   <data name="PickerText" xml:space="preserve">
     <value>Choisir une langue</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Politique de confidentialité</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="Terms" xml:space="preserve">
+    <value>Conditions d'utilisation</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Thème</value>
   </data>
 </root>
