@@ -1,26 +1,32 @@
 ﻿namespace Core
 {
-    public class HealthMetrics
+    /// <summary>
+    /// Contains the basic health metrics
+    /// </summary>
+    public class HealthMetrics(User user, Weight weight, Height height)
     {
-        private readonly User user;
-        private readonly Weight weight;
-        private readonly Height height;
+        private readonly User user = user;
+        private readonly Weight weight = weight;
+        private readonly Height height = height;
 
         private double? bmi;
 
-        public HealthMetrics(User user, Weight weight, Height height)
-        {
-            this.user = user;
-            this.weight = weight;
-            this.height = height;
-        }
-
+        /// <summary>
+        /// Calculates the user BMI
+        /// </summary>
+        /// <returns></returns>
         public double CalculateBMI()
         {
             bmi = Math.Round((weight.Value / Math.Pow(height.Value, 2)) * 10000, 1);
             return bmi.Value;
         }
 
+        /// <summary>
+        /// Calculates the user IMG
+        /// </summary>
+        /// <param name="isMale"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
         public double CalculateIMG(bool isMale)
         {
             if (!bmi.HasValue)
@@ -29,6 +35,11 @@
             return (1.20 * bmi.Value) + (0.23 * user.Age) - (isMale ? 16.2 : 5.4);
         }
 
+        /// <summary>
+        /// Returns the BMI category
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
         public string GetBMICategory()
         {
             if (!bmi.HasValue)
@@ -43,7 +54,13 @@
             };
         }
 
-        public string GetIMGCategory(double img, bool isMale)
+        /// <summary>
+        /// Returns the IMG category
+        /// </summary>
+        /// <param name="img"></param>
+        /// <param name="isMale"></param>
+        /// <returns></returns>
+        public static string GetIMGCategory(double img, bool isMale)
         {
             if (isMale)
             {

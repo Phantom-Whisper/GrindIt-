@@ -35,10 +35,10 @@ list.Sort();
 //CreateMeal();
 //WaterManagement();
 //CreateUser();
-//ExercicesSave();
+ExercicesSave();
 //RecordMeal();
 //RecordSleep();
-RecordWorkout();
+//RecordWorkout();
 
 void RecordWorkout()
 {
@@ -180,9 +180,7 @@ void FoodSave()
 
 void CreateUser()
 {
-    string name;
-    int age;
-    double weight, height;
+    string? name;
     do
     {
         Console.Write("Enter your name (cannot be empty): ");
@@ -190,20 +188,23 @@ void CreateUser()
     } while (string.IsNullOrWhiteSpace(name));
 
     Console.Write("Enter your age: ");
-    int.TryParse(Console.ReadLine(), out age);
+    int.TryParse(Console.ReadLine(), out int age);
 
     Console.Write("Enter your weight (kg): ");
-    double.TryParse(Console.ReadLine(), out weight);
+    double.TryParse(Console.ReadLine(), out double weight);
 
     Console.Write("Enter your height (cm): ");
-    double.TryParse(Console.ReadLine(), out height);
+    double.TryParse(Console.ReadLine(), out double height);
 
-    User user = new(name, age, weight, height);
+    User user = new(name, age);
+    Height userHeight = new(height);
+    Weight userWeight = new(weight);
+    HealthMetrics healthMetrics = new(user, userWeight, userHeight);
+
 
     Console.Clear();
-    user.CalculateBMI();
-    Console.WriteLine($"BMI: {user.CalculateBMI()}");
-    Console.WriteLine($"You are {user.GetBMICategory()}.");
+    Console.WriteLine($"BMI: {healthMetrics.CalculateBMI()}");
+    Console.WriteLine($"You are {healthMetrics.GetBMICategory()}.");
 }
 
 void ShowKnownFood()

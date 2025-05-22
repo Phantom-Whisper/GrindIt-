@@ -8,7 +8,7 @@ namespace Serialization
 {
     public class SleepSerializer : ISerialize
     {
-        readonly static string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "GrindIt!\\Structures");
+        readonly static string filePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "GrindIt!\\Data\\");
         const string xmlFile = "SleepTracking.xml";
         readonly string path = Path.Combine(filePath, xmlFile);
 

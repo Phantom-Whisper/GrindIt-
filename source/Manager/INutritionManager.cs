@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Manager
 {
-    public interface INutrition
+    public interface INutritionManager
     {
     }
 }

@@ -6,6 +6,7 @@ public class FoodCategoryTests
     public void CategoryToString_ShouldReturnCorrectStringRepresentation()
     {
         // Arrange & Act
+        ConvertToString(FoodCategory.CEREALS);
         string cerealsString = CategoryToString.ToString(FoodCategory.CEREALS);
         string fruitsString = CategoryToString.ToString(FoodCategory.FRUITS);
         string vegetablesString = CategoryToString.ToString(FoodCategory.VEGETABLES);

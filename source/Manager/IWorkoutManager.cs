@@ -1,6 +1,6 @@
 ﻿namespace Manager
 {
-    public interface IWorkout
+    public interface IWorkoutManager
     {
     }
 }

@@ -6,7 +6,7 @@ namespace Serialization
 {
     public class MealSerializer : ISerialize
     {
-        readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Structures\\";
+        static readonly string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Data\\";
         const string xmlFile = "mealSave.xml";
         readonly string path = Path.Combine(filePath, xmlFile);
 
@@ -25,7 +25,7 @@ namespace Serialization
             }
         }
 
-        public T Load<T>()
+        public T? Load<T>()
         {
             if (!File.Exists(path) || new FileInfo(path).Length == 0)
             {

@@ -5,7 +5,7 @@ namespace Serialization
 {
     public class FoodSerializer : ISerialize
     {
-        readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Structures\\";
+        readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Data\\";
         const string xmlFile = "FoodSave.xml";
         readonly string path = Path.Combine(filePath, xmlFile);
 

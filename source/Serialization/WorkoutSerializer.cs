@@ -8,7 +8,7 @@ namespace Serialization
 {
     public class WorkoutSerializer : ISerialize
     {
-        readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Structures\\";
+        readonly static string filePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\GrindIt!\\Data\\";
         const string xmlFile = "WorkoutTracking.xml";
         readonly string path = Path.Combine(filePath, xmlFile);
 
