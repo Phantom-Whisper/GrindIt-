@@ -14,6 +14,8 @@ For now, you on need an IDE for creating modern applications for Android and iOS
 📝 Implementing interfaces and delegates <br>
 📝 Link between Views and Model <br>
 📝 xUnit tests
+> [!IMPORTANT]
+> Refer to the AppDesign branch if you want to take a look at the UI, and the classLib branch if you want to take a look at the C# code.
 ## 🧪 Running the tests
 To run the tests, you just need to launch Visual Studio 😜
 ## How to contribute ?
