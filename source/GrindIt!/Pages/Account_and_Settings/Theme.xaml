@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
              x:Class="GrindIt_.Pages.Account_and_Settings.Theme"
              Title="ThemeView"
              Shell.NavBarIsVisible="False">
@@ -21,13 +22,13 @@
             </ImageButton.Source>
         </ImageButton>
         <Label
-            Text="Theme Preferences"
+            Text="{ext:LocalizedString Key=ThemePreferences}"
             Style="{StaticResource SubHeadline}"/>
         <Grid
             ColumnDefinitions="*,*"
             Margin="20,10,20,0">
             <Label
-                Text="Dark mode"
+                Text="{ext:LocalizedString Key=DarkMode}"
                 VerticalOptions="Center"
                 HorizontalOptions="End"/>
             <Switch
@@ -36,18 +37,12 @@
                 HorizontalOptions="Center"
                 Toggled="Switch_Toggled"/>
         </Grid>
-        <Grid
-            ColumnDefinitions="*,*"
-            Margin="20,10,20,0">
-            <Label
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Text="App banner"/>
-            <ImageButton
-                Grid.Column="1"
-                HeightRequest="44"
-                Source="gym_background.png"/>
-        </Grid>
+        <Label
+            Text="{ext:LocalizedString Key=ThemeMainColour}"
+            HorizontalOptions="Center"/>
+        <Label
+            Text="{ext:LocalizedString Key=ThemeRestoreDefault}"
+            HorizontalOptions="Center"/>
         <!--Add grid with all the colors you can use for the app theme-->
     </VerticalStackLayout>
 </ContentPage>

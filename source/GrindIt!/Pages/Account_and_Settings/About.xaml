@@ -44,16 +44,17 @@
         <Label
             Text="{ext:LocalizedString Key=AboutText}"
             HorizontalOptions="Center"
+            HorizontalTextAlignment="Center"
             Margin="0,15,0,30"/>
 
         <!--Links to the accordings pages-->
         <Label
-            Text="{ext:LocalizedString Key=Terms}"
+            Text="{ext:LocalizedString Key=AboutTerms}"
             HorizontalOptions="Center"
             Margin="0,15,0,30"/>
 
         <Label
-            Text="{ext:LocalizedString Key=Privacy}"
+            Text="{ext:LocalizedString Key=AboutPrivacy}"
             HorizontalOptions="Center"/>
         
     </VerticalStackLayout>

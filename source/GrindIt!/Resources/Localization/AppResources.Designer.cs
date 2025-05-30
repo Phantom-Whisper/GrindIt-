@@ -70,6 +70,24 @@ namespace GrindIt_.Resources.Localization {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Privacy Policy.
+        /// </summary>
+        internal static string AboutPrivacy {
+            get {
+                return ResourceManager.GetString("AboutPrivacy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Terms of service.
+        /// </summary>
+        internal static string AboutTerms {
+            get {
+                return ResourceManager.GetString("AboutTerms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Made by a gymrat for the whole fitness community.
         /// </summary>
         internal static string AboutText {
@@ -88,20 +106,56 @@ namespace GrindIt_.Resources.Localization {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Choose a language.
+        ///   Recherche une chaîne localisée semblable à Dark Mode.
         /// </summary>
-        internal static string PickerText {
+        internal static string DarkMode {
             get {
-                return ResourceManager.GetString("PickerText", resourceCulture);
+                return ResourceManager.GetString("DarkMode", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Privacy Policy.
+        ///   Recherche une chaîne localisée semblable à FAQ.
         /// </summary>
-        internal static string Privacy {
+        internal static string FAQ {
             get {
-                return ResourceManager.GetString("Privacy", resourceCulture);
+                return ResourceManager.GetString("FAQ", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Female.
+        /// </summary>
+        internal static string Female {
+            get {
+                return ResourceManager.GetString("Female", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Male.
+        /// </summary>
+        internal static string Male {
+            get {
+                return ResourceManager.GetString("Male", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Preferences.
+        /// </summary>
+        internal static string Preferences {
+            get {
+                return ResourceManager.GetString("Preferences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Prefer not to say.
+        /// </summary>
+        internal static string PreferNotToSay {
+            get {
+                return ResourceManager.GetString("PreferNotToSay", resourceCulture);
             }
         }
         
@@ -115,11 +169,74 @@ namespace GrindIt_.Resources.Localization {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à Terms of service.
+        ///   Recherche une chaîne localisée semblable à Bio.
         /// </summary>
-        internal static string Terms {
+        internal static string ProfileSettingsBio {
             get {
-                return ResourceManager.GetString("Terms", resourceCulture);
+                return ResourceManager.GetString("ProfileSettingsBio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Write something about yourself....
+        /// </summary>
+        internal static string ProfileSettingsEditorText {
+            get {
+                return ResourceManager.GetString("ProfileSettingsEditorText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à First Name.
+        /// </summary>
+        internal static string ProfileSettingsFirstNameEntry {
+            get {
+                return ResourceManager.GetString("ProfileSettingsFirstNameEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Gender.
+        /// </summary>
+        internal static string ProfileSettingsGenderPickerTitle {
+            get {
+                return ResourceManager.GetString("ProfileSettingsGenderPickerTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Last Name.
+        /// </summary>
+        internal static string ProfileSettingsLastNameEntry {
+            get {
+                return ResourceManager.GetString("ProfileSettingsLastNameEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Edit Picture.
+        /// </summary>
+        internal static string ProfileSettingsPicture {
+            get {
+                return ResourceManager.GetString("ProfileSettingsPicture", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Profile settings.
+        /// </summary>
+        internal static string ProfileSettingsTitle {
+            get {
+                return ResourceManager.GetString("ProfileSettingsTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Save Changes.
+        /// </summary>
+        internal static string SaveChanges {
+            get {
+                return ResourceManager.GetString("SaveChanges", resourceCulture);
             }
         }
         
@@ -129,6 +246,33 @@ namespace GrindIt_.Resources.Localization {
         internal static string Theme {
             get {
                 return ResourceManager.GetString("Theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Main Colour.
+        /// </summary>
+        internal static string ThemeMainColour {
+            get {
+                return ResourceManager.GetString("ThemeMainColour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Theme Preferences.
+        /// </summary>
+        internal static string ThemePreferences {
+            get {
+                return ResourceManager.GetString("ThemePreferences", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Restore Default.
+        /// </summary>
+        internal static string ThemeRestoreDefault {
+            get {
+                return ResourceManager.GetString("ThemeRestoreDefault", resourceCulture);
             }
         }
     }

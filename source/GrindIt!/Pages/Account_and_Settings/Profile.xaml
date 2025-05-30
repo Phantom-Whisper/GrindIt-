@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
              x:Class="GrindIt_.Pages.Account_and_Settings.Profile"
              Title="Profile"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
+    
+    <VerticalStackLayout
+        Spacing="10">
         <ImageButton
             HorizontalOptions="Start"
             VerticalOptions="Start"
@@ -20,5 +23,105 @@
                     Color="{AppThemeBinding Light=Black, Dark=White}" />
             </ImageButton.Source>
         </ImageButton>
+        
+        <!-- Page Title -->
+        <Label 
+            Text="{ext:LocalizedString Key=ProfileSettingsTitle}"
+            FontSize="24"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"/>
+
+        <!-- Avatar -->
+        <Border
+            HeightRequest="120"
+            WidthRequest="120"
+            StrokeThickness="1"
+            Stroke="White"
+            BackgroundColor="Transparent"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            StrokeShape="RoundRectangle 60">
+            <Image 
+                Source="gym_background.jpg"
+                Aspect="AspectFill"/>
+        </Border>
+
+        <!-- Edit Picture Text -->
+        <Label 
+            Text="{ext:LocalizedString Key=ProfileSettingsPicture}"
+            FontSize="14"
+            HorizontalOptions="Center"/>
+
+        <!-- Name Fields -->
+        <Grid 
+            ColumnSpacing="10"
+            HorizontalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Entry 
+                Placeholder="{ext:LocalizedString Key=ProfileSettingsFirstNameEntry}"
+                Grid.Column="0"
+                HorizontalOptions="Fill"
+                Margin="0,0,0,0"/>
+            <Entry 
+                Placeholder="{ext:LocalizedString Key=ProfileSettingsLastNameEntry}"
+                Grid.Column="1"
+                HorizontalOptions="Fill"
+                Margin="0,0,0,0"/>
+        </Grid>
+        
+        <!-- Bio -->
+        <Label 
+            Text="{ext:LocalizedString Key=ProfileSettingsBio}"
+            Margin="10,0,0,0"
+            FontAttributes="Bold"
+            HorizontalOptions="Start"/>
+        <Border 
+            StrokeThickness="1"
+            Padding="5"
+            Stroke="Transparent">
+            <Editor 
+                Placeholder="{ext:LocalizedString Key=ProfileSettingsEditorText}"
+                AutoSize="TextChanges"
+                MaxLength="50"
+                BackgroundColor="Transparent"/>
+        </Border>
+        <Label 
+            Text="0/50"
+            FontSize="12"
+            Margin="0,0,10,0"
+            HorizontalOptions="End"/>
+
+        <!-- Gender -->
+        <Grid
+            HorizontalOptions="Center"
+            RowDefinitions="auto, auto">
+            <Label 
+                Text="{ext:LocalizedString Key=ProfileSettingsGenderPickerTitle}"
+                FontAttributes="Bold"
+                HorizontalOptions="Start"/>
+            <Picker
+                x:Name="GenderPicker"
+                HorizontalOptions="Start"
+                Grid.Row="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                        <x:String>Prefer not to say</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+        </Grid>
+
+        <!-- Save Button -->
+        <Button 
+            Text="{ext:LocalizedString Key=SaveChanges}"
+            HorizontalOptions="Center"
+            CornerRadius="12"
+            WidthRequest="200"/>
     </VerticalStackLayout>
 </ContentPage>

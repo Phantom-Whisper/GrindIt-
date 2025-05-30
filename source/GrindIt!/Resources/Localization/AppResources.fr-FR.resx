@@ -120,25 +120,73 @@
   <data name="About" xml:space="preserve">
     <value>À propos</value>
   </data>
+  <data name="AboutPrivacy" xml:space="preserve">
+    <value>Politique de confidentialité</value>
+  </data>
+  <data name="AboutTerms" xml:space="preserve">
+    <value>Conditions d'utilisation</value>
+  </data>
   <data name="AboutText" xml:space="preserve">
-    <value>Conçu par un go muscu pour la communauté\n du fitness</value>
+    <value>Conçu par un go muscu pour la communauté du fitness</value>
   </data>
   <data name="AppSettings" xml:space="preserve">
     <value>Paramètres</value>
   </data>
-  <data name="PickerText" xml:space="preserve">
-    <value>Choisir une langue</value>
+  <data name="DarkMode" xml:space="preserve">
+    <value>Mode sombre</value>
   </data>
-  <data name="Privacy" xml:space="preserve">
-    <value>Politique de confidentialité</value>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Femme</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Homme</value>
+  </data>
+  <data name="Preferences" xml:space="preserve">
+    <value>Préférences</value>
+  </data>
+  <data name="PreferNotToSay" xml:space="preserve">
+    <value>Préférer ne pas répondre</value>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Profil</value>
   </data>
-  <data name="Terms" xml:space="preserve">
-    <value>Conditions d'utilisation</value>
+  <data name="ProfileSettingsBio" xml:space="preserve">
+    <value>Biographie</value>
+  </data>
+  <data name="ProfileSettingsEditorText" xml:space="preserve">
+    <value>Écrivez quelque chose à propos de vous...</value>
+  </data>
+  <data name="ProfileSettingsFirstNameEntry" xml:space="preserve">
+    <value>Prénom</value>
+  </data>
+  <data name="ProfileSettingsGenderPickerTitle" xml:space="preserve">
+    <value>Genre</value>
+  </data>
+  <data name="ProfileSettingsLastNameEntry" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="ProfileSettingsPicture" xml:space="preserve">
+    <value>Changer la photo</value>
+  </data>
+  <data name="ProfileSettingsTitle" xml:space="preserve">
+    <value>Paramètres de profil</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Sauvegarder</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Thème</value>
+  </data>
+  <data name="ThemeMainColour" xml:space="preserve">
+    <value>Couleur principale</value>
+  </data>
+  <data name="ThemePreferences" xml:space="preserve">
+    <value>Préférences de thèmes</value>
+  </data>
+  <data name="ThemeRestoreDefault" xml:space="preserve">
+    <value>Rétablir la valeur par défaut</value>
   </data>
 </root>

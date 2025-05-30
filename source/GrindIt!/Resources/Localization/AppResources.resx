@@ -120,25 +120,73 @@
   <data name="About" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="AboutPrivacy" xml:space="preserve">
+    <value>Privacy Policy</value>
+  </data>
+  <data name="AboutTerms" xml:space="preserve">
+    <value>Terms of service</value>
+  </data>
   <data name="AboutText" xml:space="preserve">
     <value>Made by a gymrat for the whole fitness community</value>
   </data>
   <data name="AppSettings" xml:space="preserve">
     <value>App settings</value>
   </data>
-  <data name="PickerText" xml:space="preserve">
-    <value>Choose a language</value>
+  <data name="DarkMode" xml:space="preserve">
+    <value>Dark Mode</value>
   </data>
-  <data name="Privacy" xml:space="preserve">
-    <value>Privacy Policy</value>
+  <data name="FAQ" xml:space="preserve">
+    <value>FAQ</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Preferences" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="PreferNotToSay" xml:space="preserve">
+    <value>Prefer not to say</value>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>Profile</value>
   </data>
-  <data name="Terms" xml:space="preserve">
-    <value>Terms of service</value>
+  <data name="ProfileSettingsBio" xml:space="preserve">
+    <value>Bio</value>
+  </data>
+  <data name="ProfileSettingsEditorText" xml:space="preserve">
+    <value>Write something about yourself...</value>
+  </data>
+  <data name="ProfileSettingsFirstNameEntry" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="ProfileSettingsGenderPickerTitle" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="ProfileSettingsLastNameEntry" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="ProfileSettingsPicture" xml:space="preserve">
+    <value>Edit Picture</value>
+  </data>
+  <data name="ProfileSettingsTitle" xml:space="preserve">
+    <value>Profile settings</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Save Changes</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Theme</value>
+  </data>
+  <data name="ThemeMainColour" xml:space="preserve">
+    <value>Main Colour</value>
+  </data>
+  <data name="ThemePreferences" xml:space="preserve">
+    <value>Theme Preferences</value>
+  </data>
+  <data name="ThemeRestoreDefault" xml:space="preserve">
+    <value>Restore Default</value>
   </data>
 </root>
