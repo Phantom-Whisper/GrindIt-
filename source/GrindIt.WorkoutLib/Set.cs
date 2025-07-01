@@ -24,12 +24,12 @@
         /// <summary>
         /// Gets or sets the weight lifted in the set (in kilograms).
         /// </summary>
-        public int Weight { get; set; }
+        public int Weight { get; private set; }
 
         /// <summary>
         /// Gets or sets the number of repetitions performed in the set.
         /// </summary>
-        public int Reps { get; set; }
+        public int Reps { get; private set; }
 
         /// <summary>
         /// Sets the number of repetitions for the set.

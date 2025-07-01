@@ -5,18 +5,18 @@
     /// </summary>
     public enum MealType
     {
-        BREAKFAST,
-        LUNCH,
-        DINNER,
-        MORNINGSNACK,
-        AFTERNOONSNACK,
-        EVENINGSNACK
+        Breakfast,
+        Lunch,
+        Dinner,
+        MorningSnack,
+        AfternoonSnack,
+        EveningSnack
     }
 
     /// <summary>
     /// Provides conversion from <see cref="MealType"/> to string representations.
     /// </summary>
-    public class MealTypeToString
+    public static class MealTypeToString
     {
         /// <summary>
         /// Converts a <see cref="MealType"/> value to its corresponding numeric string representation.
@@ -38,14 +38,8 @@
         /// <returns>The corresponding <see cref="MealType"/> if the value is valid; otherwise, <c>null</c>.</returns>
         public static MealType? FromInt(int value)
         {
-            if (Enum.IsDefined(typeof(MealType), value))
-            {
-                return (MealType)value;
-            }
-            else
-            {
-                return null;
-            }
+            if (Enum.IsDefined(typeof(MealType), value)) { return (MealType)value; }
+            return null;
         }
     }
 }

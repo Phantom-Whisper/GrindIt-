@@ -17,8 +17,8 @@ namespace GrindIt.WorkoutLib
         /// </summary>
         public Exercise()
         {
-            TargetedMuscles = new ObservableCollection<TargetedMuscles>();
-            SetList = new ObservableCollection<Set>();
+            TargetedMuscles = [];
+            SetList = [];
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace GrindIt.WorkoutLib
         /// </summary>
         /// <param name="name">The name of the exercise.</param>
         /// <param name="bodyWeight">Indicates whether the exercise uses bodyweight (true) or weights (false).</param>
-        public Exercise(string name, bool bodyWeight) : this()
+        public Exercise(string? name, bool bodyWeight) : this()
         {
             Name = name;
             BodyWeight = bodyWeight;

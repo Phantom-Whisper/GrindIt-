@@ -5,15 +5,15 @@
     /// </summary>
     public enum FoodCategory
     {
-        CEREALS,
-        FRUITS,
-        VEGETABLES,
-        DAIRY,
-        MEATS,
-        FISH,
-        FATS,
-        SUGARS,
-        DRINKS
+        Cereals,
+        Fruits,
+        Vegetables,
+        Dairy,
+        Meats,
+        Fish,
+        Fats,
+        Sugars,
+        Drinks
     }
 
     /// <summary>
@@ -44,7 +44,7 @@
         /// <param name="value">The integer value to convert.</param>
         /// <param name="defaultCategory">The default category to return if the value is invalid.</param>
         /// <returns>A valid <see cref="FoodCategory"/> value.</returns>
-        public static FoodCategory FromIntOrDefault(int value, FoodCategory defaultCategory = FoodCategory.CEREALS) =>
+        public static FoodCategory FromIntOrDefault(int value, FoodCategory defaultCategory = FoodCategory.Cereals) =>
             Enum.IsDefined(typeof(FoodCategory), value) ? (FoodCategory)value : defaultCategory;
 
         /// <summary>

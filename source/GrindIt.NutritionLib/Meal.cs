@@ -16,7 +16,7 @@ namespace GrindIt.NutritionLib
         /// </summary>
         public Meal()
         {
-            FoodList = new ObservableCollection<FoodEntry>();
+            FoodList = [];
             MealDateTime = DateTime.Now.AddSeconds(-DateTime.Now.Second);
         }
 
@@ -34,7 +34,7 @@ namespace GrindIt.NutritionLib
         /// </summary>
         public MealType? Type { get; set; }
 
-        private ObservableCollection<FoodEntry> foodList;
+        private ObservableCollection<FoodEntry> _foodList;
 
         /// <summary>
         /// Gets or sets the list of food entries in the meal.
@@ -43,8 +43,8 @@ namespace GrindIt.NutritionLib
         [XmlArrayItem("FoodEntry")]
         public ObservableCollection<FoodEntry> FoodList
         {
-            get => foodList ??= new ObservableCollection<FoodEntry>();
-            set => foodList = value ?? new ObservableCollection<FoodEntry>();
+            get => _foodList;
+            set => _foodList = value ?? [];
         }
 
         /// <summary>
@@ -57,57 +57,57 @@ namespace GrindIt.NutritionLib
         /// Calculates the total number of calories in the meal.
         /// </summary>
         /// <returns>Total calories based on portion sizes.</returns>
-        public float TotalCalories() => FoodList.Sum(entry => entry.Food.Calories * entry.PortionSize);
+        public float TotalCalories() => FoodList.Sum(entry => entry.Food!.Calories * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total carbohydrates in the meal.
         /// </summary>
-        public float TotalCarbs() => FoodList.Sum(entry => entry.Food.Carbohydrate * entry.PortionSize);
+        public float TotalCarbs() => FoodList.Sum(entry => entry.Food!.Carbohydrate * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total fat in the meal.
         /// </summary>
-        public float TotalFat() => FoodList.Sum(entry => entry.Food.Fat * entry.PortionSize);
+        public float TotalFat() => FoodList.Sum(entry => entry.Food!.Fat * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total protein in the meal.
         /// </summary>
-        public float TotalProtein() => FoodList.Sum(entry => entry.Food.Protein * entry.PortionSize);
+        public float TotalProtein() => FoodList.Sum(entry => entry.Food!.Protein * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total saturated fat in the meal.
         /// </summary>
-        public float TotalSatFat() => FoodList.Sum(entry => entry.Food.SaturedFat * entry.PortionSize);
+        public float TotalSatFat() => FoodList.Sum(entry => entry.Food!.SaturedFat * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total trans fat in the meal.
         /// </summary>
-        public float TotalTransFat() => FoodList.Sum(entry => entry.Food.TransFat * entry.PortionSize);
+        public float TotalTransFat() => FoodList.Sum(entry => entry.Food!.TransFat * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total cholesterol in the meal.
         /// </summary>
-        public float TotalChol() => FoodList.Sum(entry => entry.Food.Cholesterol * entry.PortionSize);
+        public float TotalCholesterol() => FoodList.Sum(entry => entry.Food!.Cholesterol * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total sodium in the meal.
         /// </summary>
-        public float TotalSodium() => FoodList.Sum(entry => entry.Food.Sodium * entry.PortionSize);
+        public float TotalSodium() => FoodList.Sum(entry => entry.Food!.Sodium * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total potassium in the meal.
         /// </summary>
-        public float TotalPot() => FoodList.Sum(entry => entry.Food.Potassium * entry.PortionSize);
+        public float TotalPot() => FoodList.Sum(entry => entry.Food!.Potassium * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total dietary fiber in the meal.
         /// </summary>
-        public float TotalDietFiber() => FoodList.Sum(entry => entry.Food.DietaryFiber * entry.PortionSize);
+        public float TotalDietFiber() => FoodList.Sum(entry => entry.Food!.DietaryFiber * entry.PortionSize);
 
         /// <summary>
         /// Calculates the total sugar content in the meal.
         /// </summary>
-        public float TotalSugar() => FoodList.Sum(entry => entry.Food.Sugar * entry.PortionSize);
+        public float TotalSugar() => FoodList.Sum(entry => entry.Food!.Sugar * entry.PortionSize);
 
         /// <summary>
         /// Adds a food item to the meal with the specified portion size.
@@ -127,7 +127,7 @@ namespace GrindIt.NutritionLib
         /// <exception cref="InvalidOperationException">Thrown when the specified food is not in the list.</exception>
         public void RemoveFood(Food food)
         {
-            var foodEntry = FoodList.FirstOrDefault(entry => entry.Food.Name == food.Name);
+            var foodEntry = FoodList.FirstOrDefault(entry => entry.Food?.Name == food.Name);
             if (foodEntry != null)
             {
                 FoodList.Remove(foodEntry);
@@ -142,9 +142,9 @@ namespace GrindIt.NutritionLib
         public void ShowMeal()
         {
             Console.WriteLine("Meal Information");
-            foreach (var food in foodList)
+            foreach (var food in _foodList)
             {
-                Console.WriteLine($"{food.Food.Name} ({food.Food.ServingSize} portion)");
+                Console.WriteLine($"{food.Food?.Name} ({food.Food?.ServingSize} portion)");
             }
             Console.WriteLine("-------------------------------------------");
             Console.WriteLine($"Meal Date & Time: {MealDateTime:yyyy-MM-dd HH:mm}");
@@ -155,7 +155,7 @@ namespace GrindIt.NutritionLib
             Console.WriteLine($"- Total Protein: {TotalProtein()} g");
             Console.WriteLine($"- Total Saturated Fat: {TotalSatFat()} g");
             Console.WriteLine($"- Total Trans Fat: {TotalTransFat()} g");
-            Console.WriteLine($"- Total Cholesterol: {TotalChol()} mg");
+            Console.WriteLine($"- Total Cholesterol: {TotalCholesterol()} mg");
             Console.WriteLine($"- Total Sodium: {TotalSodium()} mg");
             Console.WriteLine($"- Total Potassium: {TotalPot()} mg");
             Console.WriteLine($"- Total Dietary Fiber: {TotalDietFiber()} g");

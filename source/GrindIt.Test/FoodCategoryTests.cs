@@ -1,59 +1,23 @@
-﻿namespace GrindIt.NutritionLib.Tests;
+﻿using GrindIt.NutritionLib;
 
-public class FoodCategoryTests
+namespace GrindIt.Test
 {
-    [Fact]
-    public void CategoryToString_ShouldReturnCorrectStringRepresentation()
+    public class FoodCategoryTests
     {
-        // Arrange & Act
-        ConvertToString(FoodCategory.CEREALS);
-        string cerealsString = CategoryToString.ToString(FoodCategory.CEREALS);
-        string fruitsString = CategoryToString.ToString(FoodCategory.FRUITS);
-        string vegetablesString = CategoryToString.ToString(FoodCategory.VEGETABLES);
-        string dairyString = CategoryToString.ToString(FoodCategory.DAIRY);
-
-        // Assert
-        Assert.Equal("0", cerealsString);
-        Assert.Equal("1", fruitsString);
-        Assert.Equal("2", vegetablesString);
-        Assert.Equal("3", dairyString);
-    }
-
-    [Fact]
-    public void StringToCategory_ShouldReturnValidCategoryForValidInteger()
-    {
-        // Arrange & Act
-        FoodCategory? cerealsCategory = StringToCategory.FromInt(0);
-        FoodCategory? fruitsCategory = StringToCategory.FromInt(1);
-        FoodCategory? vegetablesCategory = StringToCategory.FromInt(2);
-        FoodCategory? dairyCategory = StringToCategory.FromInt(3);
-
-        // Assert
-        Assert.Equal(FoodCategory.CEREALS, cerealsCategory);
-        Assert.Equal(FoodCategory.FRUITS, fruitsCategory);
-        Assert.Equal(FoodCategory.VEGETABLES, vegetablesCategory);
-        Assert.Equal(FoodCategory.DAIRY, dairyCategory);
-    }
-
-    [Fact]
-    public void StringToCategory_ShouldReturnNullForInvalidInteger()
-    {
-        // Arrange & Act
-        FoodCategory? invalidCategory1 = StringToCategory.FromInt(-1);
-        FoodCategory? invalidCategory2 = StringToCategory.FromInt(10);
-
-        // Assert
-        Assert.Null(invalidCategory1); // -1 is an invalid value
-        Assert.Null(invalidCategory2); // 10 is out of the range of FoodCategory enum
-    }
-
-    [Fact]
-    public void StringToCategory_ShouldReturnNullForInvalidCategoryValue()
-    {
-        // Arrange & Act
-        FoodCategory? invalidCategory = StringToCategory.FromInt(999); // 999 is an invalid value
-
-        // Assert
-        Assert.Null(invalidCategory);
+        [Theory]
+        [InlineData("0", FoodCategory.Cereals)]
+        [InlineData("1", FoodCategory.Fruits)]
+        [InlineData("2", FoodCategory.Vegetables)]
+        [InlineData("3", FoodCategory.Dairy)]
+        [InlineData("4", FoodCategory.Meats)]
+        [InlineData("5", FoodCategory.Fish)]
+        [InlineData("6", FoodCategory.Fats)]
+        [InlineData("7", FoodCategory.Sugars)]
+        [InlineData("8", FoodCategory.Drinks)]
+        public void FoodCategoryHelper_ConvertToString(string expectedString, FoodCategory input)
+        {
+            Assert.Equal(expectedString, FoodCategoryHelper.ConvertToString(input));
+        }
     }
 }
+

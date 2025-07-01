@@ -31,7 +31,7 @@ namespace GrindIt.NutritionLib
         /// <param name="dietaryFiber">Dietary fiber content per serving (in grams).</param>
         /// <param name="sugar">Sugar content per serving (in grams).</param>
         /// <param name="category">Category to which the food belongs.</param>
-        public Food(string name, float calories, int serving, float carbohydrate, float fat, float protein, float saturedFat, float transFat,
+        public Food(string name, float calories, double serving, float carbohydrate, float fat, float protein, float saturedFat, float transFat,
             float cholesterol, float sodium, float potassium, float dietaryFiber, float sugar, FoodCategory category)
         {
             Name = name;
@@ -50,65 +50,44 @@ namespace GrindIt.NutritionLib
             Category = category;
         }
 
-        private string? name;
-
+        private string _name;
         /// <summary>
         /// Gets or sets the name of the food.
         /// </summary>
         [XmlElement("Name")]
         public string? Name
         {
-            get => name;
-            set => name = value;
+            get => _name;
+            set
+            {
+                ArgumentNullException.ThrowIfNull(value);
+                _name = value;
+            }
         }
-
-        private FoodCategory? category;
-
+        
         /// <summary>
         /// Gets or sets the category of the food (e.g., Fruit, Dairy, Meat).
         /// </summary>
         [XmlElement("Category")]
-        public FoodCategory? Category
-        {
-            get => category;
-            set => category = value;
-        }
-
-        private int servingSize;
+        public FoodCategory? Category { get; set; }
 
         /// <summary>
         /// Gets or sets the serving size for the nutritional information.
         /// </summary>
         [XmlElement("ServingSize")]
-        public int ServingSize
-        {
-            get => servingSize;
-            set => servingSize = value;
-        }
-
-        private float calories;
+        public double ServingSize { get; set; }
 
         /// <summary>
         /// Gets or sets the number of calories per serving.
         /// </summary>
         [XmlElement("Calories")]
-        public float Calories
-        {
-            get => calories;
-            set => calories = value;
-        }
-
-        private float carbohydrate;
-
+        public float Calories {  get; set; }
+        
         /// <summary>
         /// Gets or sets the carbohydrate content per serving (in grams).
         /// </summary>
         [XmlElement("Carbohydrate")]
-        public float Carbohydrate
-        {
-            get => carbohydrate;
-            set => carbohydrate = value;
-        }
+        public float Carbohydrate  { get; set; }
 
         /// <summary>
         /// Gets or sets the fat content per serving (in grams).
@@ -173,7 +152,7 @@ namespace GrindIt.NutritionLib
         /// Returns less than zero if this instance precedes <paramref name="other"/> in the sort order. 
         /// Zero if they are equal, and greater than zero if it follows <paramref name="other"/>.
         /// </returns>
-        public int CompareTo(Food other) => other == null ? 1 : string.Compare(Name, other.Name, StringComparison.OrdinalIgnoreCase);
+        public int CompareTo(Food? other) => other == null ? 1 : string.Compare(Name, other.Name, StringComparison.OrdinalIgnoreCase);
 
         //Will be erased
         public void ShowFood()

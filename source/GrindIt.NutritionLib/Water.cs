@@ -21,27 +21,19 @@ namespace GrindIt.NutritionLib
             _waterSerializer = waterSerializer;
 
             // Load existing water consumption from the file
-            string currentDate = DateTime.Now.ToString("yyyy-MM-dd");
+            var currentDate = DateTime.Now.ToString("yyyy-MM-dd");
             WaterDrank = _waterSerializer.LoadWaterDrank(currentDate);
         }
 
         /// <summary>
         /// Gets or sets the target water consumption (in milliliters).
         /// </summary>
-        public int WaterTarget
-        {
-            get;
-            set;
-        }
+        public int WaterTarget { get; set; }
 
         /// <summary>
         /// Gets or sets the amount of water consumed (in milliliters).
         /// </summary>
-        public int WaterDrank
-        {
-            get;
-            set;
-        }
+        public int WaterDrank { get; set; }
 
         /// <summary>
         /// Adds the specified amount of water to the current water consumption total.
