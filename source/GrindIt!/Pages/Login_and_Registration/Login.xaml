@@ -18,14 +18,14 @@
             <RoundRectangle 
                 Margin="-5,-30,-5,-2"
                 CornerRadius="30,30,0,0"
-                Fill="{AppThemeBinding Light=AliceBlue, Dark=PrimaryDarkText}"/>
+                Fill="{AppThemeBinding Light=AliceBlue, Dark={StaticResource PrimaryDarkText}}"/>
             <VerticalStackLayout Margin="30,10,30,0">
                 <Label 
                     FontAttributes="Bold"
                     FontFamily="bold"
                     FontSize="Medium"
                     Text="Welcome!"
-                    TextColor="{AppThemeBinding Light=#2D2D2D, Dark=Gray500}"/>
+                    TextColor="{AppThemeBinding Light=#2D2D2D, Dark={StaticResource Gray500}}"/>
                 <Label 
                     FontFamily="medium"
                     Text="Log in to continue"

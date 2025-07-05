@@ -2,27 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Account_and_Settings"
+             x:DataType="local:Profile"
              x:Class="GrindIt_.Pages.Account_and_Settings.Profile"
              Title="Profile"
              Shell.NavBarIsVisible="False">
     
     <VerticalStackLayout
         Spacing="10">
-        <ImageButton
+        <!--Return Button-->
+        <Button
+            Text=""
+            FontFamily="AwesomeSolid"
+            FontSize="24"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            BackgroundColor="Transparent"
             HorizontalOptions="Start"
-            VerticalOptions="Start"
+            VerticalOptions="Start" 
             Margin="10,10,20,0"
-            HeightRequest="26"
-            WidthRequest="26"
-            Clicked="Return_Clicked">
-            <ImageButton.Source>
-                <FontImageSource
-                    FontFamily="AwesomeSolid"
-                    Glyph=""
-                    Size="30"
-                    Color="{AppThemeBinding Light=Black, Dark=White}" />
-            </ImageButton.Source>
-        </ImageButton>
+            HeightRequest="48"
+            WidthRequest="48"
+            Clicked="Return_Clicked"/>
         
         <!-- Page Title -->
         <Label 
@@ -102,10 +102,10 @@
             <Label 
                 Text="{ext:LocalizedString Key=ProfileSettingsGenderPickerTitle}"
                 FontAttributes="Bold"
-                HorizontalOptions="Start"/>
+                HorizontalOptions="Center"/>
             <Picker
                 x:Name="GenderPicker"
-                HorizontalOptions="Start"
+                HorizontalOptions="Center"
                 Grid.Row="1">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">

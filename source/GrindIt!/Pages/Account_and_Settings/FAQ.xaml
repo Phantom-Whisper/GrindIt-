@@ -1,24 +1,56 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
              x:Class="GrindIt_.Pages.Account_and_Settings.FAQ"
              Title="FAQ"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <ImageButton
-            HorizontalOptions="Start"
-            VerticalOptions="Start"
-            Margin="10,10,20,0"
-            HeightRequest="26"
-            WidthRequest="26"
-            Clicked="Return_Clicked">
-            <ImageButton.Source>
-                <FontImageSource
-                    FontFamily="AwesomeSolid"
-                    Glyph=""
-                    Size="30"
-                    Color="{AppThemeBinding Light=Black, Dark=White}" />
-            </ImageButton.Source>
-        </ImageButton>
-    </VerticalStackLayout>
+    <ScrollView
+        Padding="10">
+        <VerticalStackLayout
+            Spacing="15">
+            <!--Return Button-->
+            <Button
+                Text=""
+                FontFamily="AwesomeSolid"
+                FontSize="24"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                HeightRequest="48"
+                WidthRequest="48"
+                Clicked="Return_Clicked"/>
+            <Label
+                Text="{ext:LocalizedString Key=FAQHelperText}"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+            <toolkit:Expander>
+                <toolkit:Expander.Header>
+                    <Label Text="What is this app about?" FontSize="18" FontAttributes="Bold" />
+                </toolkit:Expander.Header>
+                <Label Text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+                       FontSize="16"
+                       TextColor="Gray" />
+            </toolkit:Expander>
+
+            <toolkit:Expander>
+                <toolkit:Expander.Header>
+                    <Label Text="How to reset my password?" FontSize="18" FontAttributes="Bold" />
+                </toolkit:Expander.Header>
+                <Label Text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+                       FontSize="16"
+                       TextColor="Gray" />
+            </toolkit:Expander>
+
+            <toolkit:Expander>
+                <toolkit:Expander.Header>
+                    <Label Text="Is dark mode supported?" FontSize="18" FontAttributes="Bold" />
+                </toolkit:Expander.Header>
+                <Label Text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+                       FontSize="16"
+                       TextColor="Gray" />
+            </toolkit:Expander>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

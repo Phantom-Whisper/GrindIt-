@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Views"
+             x:DataType="local:SettingsCard"
              x:Class="GrindIt_.Views.SettingsCard">
     <Border
         Stroke="Transparent">
         <Grid
-            Margin="15,5,10,10"
+            Margin="20,5,10,10"
             ColumnDefinitions="20*,90*"
             ColumnSpacing="10">
             <Border

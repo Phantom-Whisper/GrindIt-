@@ -8,7 +8,7 @@
     xmlns:loginAndRegister="clr-namespace:GrindIt_.Pages.Login_and_Registration"
     xmlns:nutrition="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
     xmlns:workout="clr-namespace:GrindIt_.Pages.Workout_Pages"
-    Shell.FlyoutBehavior="Disabled"
+    FlyoutBehavior="Disabled"
     Title="GrindIt_">
     
     <ShellContent
@@ -112,7 +112,7 @@
         Route="FAQ"/>
 
     <ShellContent
-        ContentTemplate="{DataTemplate accountSettings:Preferences}"
+        ContentTemplate="{DataTemplate accountSettings:PreferencesPage}"
         Route="Preferences"/>
 
     <ShellContent

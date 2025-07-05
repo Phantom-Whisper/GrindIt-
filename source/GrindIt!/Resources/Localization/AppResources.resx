@@ -189,4 +189,10 @@
   <data name="ThemeRestoreDefault" xml:space="preserve">
     <value>Restore Default</value>
   </data>
+  <data name="CulturePickerTitle" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="FAQHelperText" xml:space="preserve">
+    <value>Click on the question you're interested in</value>
+  </data>
 </root>

@@ -6,21 +6,19 @@
              Title="ThemeView"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
-        <ImageButton
+        <!--Return Button-->
+        <Button
+            Text=""
+            FontFamily="AwesomeSolid"
+            FontSize="24"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            BackgroundColor="Transparent"
             HorizontalOptions="Start"
-            VerticalOptions="Start"
+            VerticalOptions="Start" 
             Margin="10,10,20,0"
-            HeightRequest="26"
-            WidthRequest="26"
-            Clicked="Return_Clicked">
-            <ImageButton.Source>
-                <FontImageSource
-                    FontFamily="AwesomeSolid"
-                    Glyph=""
-                    Size="30"
-                    Color="{AppThemeBinding Light=Black, Dark=White}" />
-            </ImageButton.Source>
-        </ImageButton>
+            HeightRequest="48"
+            WidthRequest="48"
+            Clicked="Return_Clicked"/>
         <Label
             Text="{ext:LocalizedString Key=ThemePreferences}"
             Style="{StaticResource SubHeadline}"/>

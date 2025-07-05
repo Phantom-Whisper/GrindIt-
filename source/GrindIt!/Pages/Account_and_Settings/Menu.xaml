@@ -7,21 +7,19 @@
              Title="Menu"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
-        <ImageButton
+        <!--Return Button-->
+        <Button
+            Text=""
+            FontFamily="AwesomeSolid"
+            FontSize="24"
+            HeightRequest="48"
+            WidthRequest="48"
+            BackgroundColor="Transparent"
             HorizontalOptions="Start"
             VerticalOptions="Start"
             Margin="10,10,0,10"
-            HeightRequest="24"
-            WidthRequest="24"
-            Clicked="Exit_Clicked">
-            <ImageButton.Source>
-                    <FontImageSource
-                        FontFamily="AwesomeSolid"
-                        Glyph=""
-                        Size="30"
-                        Color="{AppThemeBinding Light=Black, Dark=White}" />
-            </ImageButton.Source>
-        </ImageButton>
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            Clicked="Exit_Clicked"/>
         
         <Label
             Text="{ext:LocalizedString Key=AppSettings}"

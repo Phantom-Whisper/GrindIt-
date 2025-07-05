@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Account_and_Settings"
+             x:Class="GrindIt_.Pages.Account_and_Settings.PreferencesPage"
+             x:DataType="local:PreferencesPage"
+             Title="PreferencesPage"
+             Shell.NavBarIsVisible="False">
+    <VerticalStackLayout>
+        <!--Return Button-->
+        <Button
+            Text=""
+            FontFamily="AwesomeSolid"
+            FontSize="24"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            BackgroundColor="Transparent"
+            HorizontalOptions="Start"
+            VerticalOptions="Start" 
+            Margin="10,10,20,0"
+            HeightRequest="48"
+            WidthRequest="48"
+            Clicked="Return_Clicked"/>
+
+        <!--Culture Picker-->
+        <Label
+            Text="{ext:LocalizedString Key=CulturePickerTitle}"
+            Margin="0,10,0,0"
+            FontSize="Medium"/>
+        <Picker 
+            x:Name="CulturePicker"
+            x:DataType="ext:LocalizationApp"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            SelectedItem="{Binding Culture, Source={StaticResource Localization}}"
+            SelectedIndexChanged="CulturePicker_SelectedIndexChanged">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>en-EN</x:String>
+                    <x:String>fr-FR</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+    </VerticalStackLayout>
+</ContentPage>

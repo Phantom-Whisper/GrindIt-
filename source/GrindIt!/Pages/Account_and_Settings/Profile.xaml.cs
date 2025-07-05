@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Account_and_Settings;
 
-public partial class Profile : ContentPage
+public partial class Profile
 {
 	public Profile()
 	{

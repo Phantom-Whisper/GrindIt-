@@ -1,6 +1,6 @@
 namespace GrindIt_.Views;
 
-public partial class SettingsCard : ContentView
+public partial class SettingsCard
 {
 	public SettingsCard()
 	{
@@ -9,10 +9,10 @@ public partial class SettingsCard : ContentView
     }
 
     public static readonly BindableProperty TextProperty =
-            BindableProperty.Create(nameof(Text), typeof(string), typeof(Card), default(string));
+            BindableProperty.Create(nameof(Text), typeof(string), typeof(Card));
 
     public static readonly BindableProperty GlyphProperty =
-            BindableProperty.Create(nameof(Glyph), typeof(string), typeof(Card), default(string));
+            BindableProperty.Create(nameof(Glyph), typeof(string), typeof(Card));
 
     public string Text
     {

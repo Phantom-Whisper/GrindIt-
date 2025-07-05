@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Views"
+             x:DataType="local:Card"
              x:Class="GrindIt_.Views.Card">
 
     <Border
@@ -24,12 +26,12 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Border
-                WidthRequest="50"
-                HeightRequest="50"
-                StrokeShape="RoundRectangle 50"
-                StrokeThickness="0"
-                HorizontalOptions="Center"
+                <Border Grid.Column="0"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    StrokeShape="RoundRectangle 50"
+                    StrokeThickness="0"
+                    HorizontalOptions="Center"
                     Margin="5,0,15,0">
                     <Image HorizontalOptions="Center">
                         <Image.Source>
@@ -37,7 +39,7 @@
                             FontFamily="AwesomeSolid"
                             Glyph="{Binding Glyph}"
                             Size="30"
-                            Color="#1B1212"/>
+                            Color="{StaticResource Black}"/>
                         </Image.Source>
                     </Image>
                 </Border>
@@ -52,7 +54,7 @@
                 WidthRequest="{OnIdiom Phone=155, Tablet=200}"
                 Grid.Column="1" />
 
-                <Border
+                <Border Grid.Column="0"
                     WidthRequest="125"
                     HeightRequest="40"
                     StrokeShape="RoundRectangle 50"
@@ -73,13 +75,12 @@
                 HorizontalOptions="End"
                 Margin="10,0,10,0"
                 Grid.Column="1">
-                <GraphicsView x:Name="ProgressRingView"
-              WidthRequest="50"
-              HeightRequest="50"
-              HorizontalOptions="Center" 
-              VerticalOptions="Center" />
-
-
+                <GraphicsView 
+                    x:Name="ProgressRingView"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
             </Border>
         </Grid>
     </Border>
