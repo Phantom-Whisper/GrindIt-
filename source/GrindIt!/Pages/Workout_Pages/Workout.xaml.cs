@@ -1,19 +1,14 @@
 namespace GrindIt_.Pages.Workout_Pages;
 
-public partial class Workout : ContentPage
+public partial class Workout
 {
     public Workout()
     {
         InitializeComponent();
     }
 
-    private void Exercises_Clicked(object sender, EventArgs e)
+    private void Exercises_Tapped(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Exercises");
-    }
-
-    private void OnBorderTapped(object sender, TappedEventArgs e)
-    {
-        Shell.Current.GoToAsync("//Exercises");
+        Navigation.PushAsync(new Exercises());
     }
 }

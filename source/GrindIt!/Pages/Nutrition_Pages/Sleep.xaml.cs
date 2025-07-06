@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Nutrition_Pages;
 
-public partial class Sleep : ContentPage
+public partial class Sleep
 {
 	public Sleep()
 	{
@@ -9,6 +9,6 @@ public partial class Sleep : ContentPage
 
     private void Return_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//NutritionView");
+	    Navigation.PopAsync();
     }
 }

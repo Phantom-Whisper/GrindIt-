@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Account_and_Settings;
 
-public partial class Menu : ContentPage
+public partial class Menu
 {
 	public Menu()
 	{
@@ -9,31 +9,31 @@ public partial class Menu : ContentPage
 
     private void Theme_Clicked(object sender, EventArgs e)
     {
-		Shell.Current.GoToAsync("//Theme");
+		Navigation.PushAsync(new Theme());
     }
 
     private void Profile_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Profile");
+        Navigation.PushAsync(new Profile());
     }
 
     private void Preferences_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Preferences");
+        Navigation.PushAsync(new PreferencesPage());
     }
 
     private void FAQ_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//FAQ");
+        Navigation.PushAsync(new FAQ());
     }
 
     private void About_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//About");
+        Navigation.PushAsync(new About());
     }
 
     private void Exit_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//AccountView");
+        Shell.Current.GoToAsync("//Account");
     }
 }

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:GrindIt_.Views"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Workout_Pages"
              x:Class="GrindIt_.Pages.Workout_Pages.Workout"
-             xmlns:local="clr-namespace:GrindIt_.Views"
+             x:DataType="local:Workout"
              Title="Workout"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
@@ -11,10 +13,10 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
-        <local:Card Text="Exercises">
-            <local:Card.GestureRecognizers>
-                <TapGestureRecognizer Tapped="OnBorderTapped" />
-            </local:Card.GestureRecognizers>
-        </local:Card>
+        <views:Card Text="Exercises">
+            <views:Card.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Exercises_Tapped" />
+            </views:Card.GestureRecognizers>
+        </views:Card>
     </VerticalStackLayout>
 </ContentPage>

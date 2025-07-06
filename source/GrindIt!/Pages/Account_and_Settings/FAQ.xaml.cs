@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Account_and_Settings;
 
-public partial class FAQ : ContentPage
+public partial class FAQ
 {
 	public FAQ()
 	{

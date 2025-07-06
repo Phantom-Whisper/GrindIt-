@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Workout_Pages;
 
-public partial class CreateExercise : ContentPage
+public partial class CreateExercise
 {
     public CreateExercise()
     {
@@ -9,6 +9,6 @@ public partial class CreateExercise : ContentPage
     
     private void Return_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Exercises");
+        Navigation.PopAsync();
     }
 }

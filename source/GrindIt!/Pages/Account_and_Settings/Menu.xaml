@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
+             xmlns:views="clr-namespace:GrindIt_.Views"
              x:Class="GrindIt_.Pages.Account_and_Settings.Menu"
-             xmlns:local="clr-namespace:GrindIt_.Views"
              Title="Menu"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
@@ -20,52 +20,52 @@
             Margin="10,10,0,10"
             TextColor="{AppThemeBinding Light=Black, Dark=White}"
             Clicked="Exit_Clicked"/>
-        
+        <!--Page Title-->
         <Label
             Text="{ext:LocalizedString Key=AppSettings}"
             FontSize="Title"
             FontAttributes="Bold"
             HorizontalOptions="Center"
             Margin="0,0,0,40"/>
-
-        <local:SettingsCard
+        <!--Profile-->
+        <views:SettingsCard
             Glyph=""
             Text="{ext:LocalizedString Key=Profile}">
-            <local:SettingsCard.GestureRecognizers>
+            <views:SettingsCard.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Profile_Clicked"/>
-            </local:SettingsCard.GestureRecognizers>
-        </local:SettingsCard>
-        
-        <local:SettingsCard
+            </views:SettingsCard.GestureRecognizers>
+        </views:SettingsCard>
+        <!--Preferences-->
+        <views:SettingsCard
             Glyph=""
             Text="{ext:LocalizedString Key=Preferences}">
-            <local:SettingsCard.GestureRecognizers>
+            <views:SettingsCard.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Preferences_Clicked"/>
-            </local:SettingsCard.GestureRecognizers>
-        </local:SettingsCard>
-        
-        <local:SettingsCard
+            </views:SettingsCard.GestureRecognizers>
+        </views:SettingsCard>
+        <!--Theme-->
+        <views:SettingsCard
             Glyph=""
             Text="{ext:LocalizedString Key=Theme}">
-            <local:SettingsCard.GestureRecognizers>
+            <views:SettingsCard.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Theme_Clicked"/>
-            </local:SettingsCard.GestureRecognizers>
-        </local:SettingsCard>
-        
-        <local:SettingsCard
+            </views:SettingsCard.GestureRecognizers>
+        </views:SettingsCard>
+        <!--FAQ-->
+        <views:SettingsCard
             Glyph=""
             Text="{ext:LocalizedString Key=FAQ}">
-            <local:SettingsCard.GestureRecognizers>
+            <views:SettingsCard.GestureRecognizers>
                 <TapGestureRecognizer Tapped="FAQ_Clicked"/>
-            </local:SettingsCard.GestureRecognizers>
-        </local:SettingsCard>
-        
-        <local:SettingsCard
+            </views:SettingsCard.GestureRecognizers>
+        </views:SettingsCard>
+        <!--About-->
+        <views:SettingsCard
             Glyph="?"
             Text="{ext:LocalizedString Key=About}">
-            <local:SettingsCard.GestureRecognizers>
+            <views:SettingsCard.GestureRecognizers>
                 <TapGestureRecognizer Tapped="About_Clicked"/>
-            </local:SettingsCard.GestureRecognizers>
-        </local:SettingsCard>
+            </views:SettingsCard.GestureRecognizers>
+        </views:SettingsCard>
     </VerticalStackLayout>
 </ContentPage>

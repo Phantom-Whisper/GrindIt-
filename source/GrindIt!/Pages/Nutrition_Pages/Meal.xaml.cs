@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Nutrition_Pages;
 
-public partial class Meal : ContentPage
+public partial class Meal
 {
 	public Meal()
 	{
@@ -9,6 +9,6 @@ public partial class Meal : ContentPage
 
     private void Return_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//NutritionView");
+	    Navigation.PopAsync();
     }
 }

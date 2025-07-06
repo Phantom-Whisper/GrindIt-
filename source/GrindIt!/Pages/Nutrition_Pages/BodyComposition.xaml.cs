@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Nutrition_Pages;
 
-public partial class BodyComposition : ContentPage
+public partial class BodyComposition
 {
 	public BodyComposition()
 	{
@@ -9,6 +9,6 @@ public partial class BodyComposition : ContentPage
 
     private void Return_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//NutritionView");
+	    Navigation.PopAsync();
     }
 }

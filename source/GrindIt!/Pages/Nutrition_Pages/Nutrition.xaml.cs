@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Nutrition_Pages;
 
-public partial class Nutrition : ContentPage
+public partial class Nutrition
 {
     public Nutrition()
     {
@@ -9,26 +9,26 @@ public partial class Nutrition : ContentPage
 
     private void OnMealTapped(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Meal");
+        Navigation.PushAsync(new Meal());
     }
 
     private void OnStepsTapped(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Steps");
+        Navigation.PushAsync(new Steps());
     }
 
-    private void OnBorderTapped(object sender, TappedEventArgs e)
+    private void OnWaterTapped(object sender, TappedEventArgs e)
     {
-        Shell.Current.GoToAsync("//Water");
+        Navigation.PushAsync(new Water());
     }
 
     private void OnSleepTapped(object sender, TappedEventArgs e)
     {
-        Shell.Current.GoToAsync("//Sleep");
+        Navigation.PushAsync(new Sleep());
     }
 
     private void OnBodyTapped(object sender, TappedEventArgs e)
     {
-        Shell.Current.GoToAsync("//BodyComposition");
+        Navigation.PushAsync(new BodyComposition());
     }
 }

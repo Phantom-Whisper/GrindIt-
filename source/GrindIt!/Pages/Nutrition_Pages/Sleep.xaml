@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
              x:Class="GrindIt_.Pages.Nutrition_Pages.Sleep"
+             x:DataType="local:Sleep"
              Title="Sleep"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
-        <ImageButton
+        <!--Return Button-->
+        <Button
+            Text=""
+            FontFamily="AwesomeSolid"
+            FontSize="24"
+            TextColor="{AppThemeBinding Light=Black, Dark=White}"
+            BackgroundColor="Transparent"
             HorizontalOptions="Start"
             VerticalOptions="Start"
             Margin="10,10,20,0"
-            HeightRequest="26"
-            WidthRequest="26"
-            Clicked="Return_Clicked">
-            <ImageButton.Source>
-                <FontImageSource
-                    FontFamily="AwesomeSolid"
-                    Glyph=""
-                    Size="30"
-                    Color="{AppThemeBinding Light=Black, Dark=White}" />
-            </ImageButton.Source>
-        </ImageButton>
+            HeightRequest="48"
+            WidthRequest="48"
+            Clicked="Return_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

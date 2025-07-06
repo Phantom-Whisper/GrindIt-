@@ -1,6 +1,6 @@
 namespace GrindIt_.Pages.Login_and_Registration;
 
-public partial class Login : ContentPage
+public partial class Login
 {
     public Login()
     {
