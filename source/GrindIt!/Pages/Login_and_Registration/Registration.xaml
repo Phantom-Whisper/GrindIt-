@@ -27,7 +27,7 @@
                     FontFamily="bold"
                     FontSize="Medium"
                     Text="Create your account!"
-                    TextColor="{AppThemeBinding Light=#2D2D2D, Dark=Gray500}"/>
+                    TextColor="{AppThemeBinding Light=#2D2D2D, Dark={StaticResource Gray500}}"/>
                 <Grid 
                     Margin="0,30,0,0"
                     ColumnDefinitions=".2*,.8*">

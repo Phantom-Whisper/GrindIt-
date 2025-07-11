@@ -7,7 +7,7 @@
              Title="AccountView"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
-        <!--Return Button-->
+        <!--Menu Button-->
         <Button
             Text="&#xf013;"
             FontFamily="AwesomeSolid"
@@ -16,7 +16,7 @@
             BackgroundColor="Transparent"
             HorizontalOptions="End"
             VerticalOptions="Start" 
-            Margin="0,10,10,0"
+            Margin="0,10,0,0"
             HeightRequest="60"
             WidthRequest="60"
             Clicked="Menu_Clicked"/>

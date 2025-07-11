@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
              xmlns:views="clr-namespace:GrindIt_.Views"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Account_and_Settings"
              x:Class="GrindIt_.Pages.Account_and_Settings.Menu"
+             x:DataType="local:Menu"
              Title="Menu"
              Shell.NavBarIsVisible="False">
     <VerticalStackLayout>
@@ -17,7 +19,7 @@
             BackgroundColor="Transparent"
             HorizontalOptions="Start"
             VerticalOptions="Start"
-            Margin="10,10,0,10"
+            Margin="0,10,20,0"
             TextColor="{AppThemeBinding Light=Black, Dark=White}"
             Clicked="Exit_Clicked"/>
         <!--Page Title-->

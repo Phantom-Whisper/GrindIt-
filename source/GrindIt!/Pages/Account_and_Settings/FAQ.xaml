@@ -8,8 +8,7 @@
              x:DataType="local:FAQ"
              Title="FAQ"
              Shell.NavBarIsVisible="False">
-    <ScrollView
-        Padding="10">
+    <ScrollView>
         <VerticalStackLayout
             Spacing="15">
             <!--Return Button-->
@@ -23,13 +22,16 @@
                 VerticalOptions="Start"
                 HeightRequest="48"
                 WidthRequest="48"
+                Margin="0,10,20,0"
                 Clicked="Return_Clicked"/>
             <!--Text Helper-->
             <Label
                 Text="{ext:LocalizedString Key=FAQHelperText}"
-                TextColor="{AppThemeBinding Light=Black, Dark=White}"/>
+                TextColor="{StaticResource Gray400}"
+                Margin="10,0,0,10"/>
             <!--FAQ Section-->
-            <toolkit:Expander>
+            <toolkit:Expander
+                Margin="10,0,0,0">
                 <toolkit:Expander.Header>
                     <Label Text="What is this app about?" FontSize="18" FontAttributes="Bold" />
                 </toolkit:Expander.Header>
@@ -38,7 +40,8 @@
                        TextColor="Gray" />
             </toolkit:Expander>
 
-            <toolkit:Expander>
+            <toolkit:Expander
+                Margin="10,0,0,0">
                 <toolkit:Expander.Header>
                     <Label Text="How to reset my password?" FontSize="18" FontAttributes="Bold" />
                 </toolkit:Expander.Header>
@@ -47,7 +50,8 @@
                        TextColor="Gray" />
             </toolkit:Expander>
 
-            <toolkit:Expander>
+            <toolkit:Expander
+                Margin="10,0,0,0">
                 <toolkit:Expander.Header>
                     <Label Text="Is dark mode supported?" FontSize="18" FontAttributes="Bold" />
                 </toolkit:Expander.Header>

@@ -9,7 +9,7 @@ public partial class Login
 
     private void Button_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//RegistrationView");
+        Shell.Current.GoToAsync("//Registration");
     }
 
     private void Login_Clicked(object sender, EventArgs e)

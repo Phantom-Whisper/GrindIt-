@@ -17,7 +17,7 @@
             BackgroundColor="Transparent"
             HorizontalOptions="Start"
             VerticalOptions="Start" 
-            Margin="10,10,20,0"
+            Margin="0,10,20,0"
             HeightRequest="48"
             WidthRequest="48"
             Clicked="Return_Clicked"/>
@@ -25,20 +25,13 @@
         <!--Culture Picker-->
         <Label
             Text="{ext:LocalizedString Key=CulturePickerTitle}"
-            Margin="0,10,0,0"
+            HorizontalOptions="Center"
             FontSize="Medium"/>
         <Picker 
             x:Name="CulturePicker"
-            x:DataType="ext:LocalizationApp"
+            HorizontalOptions="Center"
             TextColor="{AppThemeBinding Light=Black, Dark=White}"
-            SelectedItem="{Binding Culture, Source={StaticResource Localization}}"
-            SelectedIndexChanged="CulturePicker_SelectedIndexChanged">
-            <Picker.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>en-EN</x:String>
-                    <x:String>fr-FR</x:String>
-                </x:Array>
-            </Picker.ItemsSource>
-        </Picker>
+            SelectedIndexChanged="CulturePicker_SelectedIndexChanged"
+            ItemDisplayBinding="{Binding Name}" />
     </VerticalStackLayout>
 </ContentPage>
