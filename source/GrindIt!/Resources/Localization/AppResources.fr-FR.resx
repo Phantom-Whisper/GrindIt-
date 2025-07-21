@@ -195,4 +195,10 @@
   <data name="FAQHelperText" xml:space="preserve">
     <value>Cliquez sur la question qui vous intéresse</value>
   </data>
+  <data name="WorkoutPageHeader" xml:space="preserve">
+    <value>Pousse ces poids !</value>
+  </data>
+  <data name="NutritionPageHeader" xml:space="preserve">
+    <value>Mange ces gains !</value>
+  </data>
 </root>

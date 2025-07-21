@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
              xmlns:views="clr-namespace:GrindIt_.Views"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
              x:Class="GrindIt_.Pages.Nutrition_Pages.Nutrition"
              x:DataType="local:Nutrition"
              Title="NutritionView"
@@ -10,7 +11,7 @@
     <ScrollView>        
         <VerticalStackLayout>
             <Label 
-                Text="Eat those gains!"
+                Text="{ext:LocalizedString Key=NutritionPageHeader}"
                 FontSize="Header"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center"

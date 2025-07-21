@@ -1,35 +1,21 @@
 ﻿namespace GrindIt_.Pages;
 
-public partial class Home : ContentPage
+public partial class Home
 {
-    int count = 0;
+    private int _count;
 
     public Home()
     {
         InitializeComponent();
     }
-
     
     private void OnCounterClicked(object sender, EventArgs e)
     {
-        count++;
+        _count++;
 
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
-        else
-            CounterBtn.Text = $"Clicked {count} times";
+        CounterBtn.Text = _count == 1 ? $"Clicked {_count} time" : $"Clicked {_count} times";
 
         SemanticScreenReader.Announce(CounterBtn.Text);
-    }
-
-    private void OnBorderTapped(object sender, TappedEventArgs e)
-    {
-        Shell.Current.GoToAsync("//AccountView");
-    }
-
-    private void TestLink_Clicked(object sender, EventArgs e)
-    {
-        Shell.Current.GoToAsync("//test");
     }
 }
 

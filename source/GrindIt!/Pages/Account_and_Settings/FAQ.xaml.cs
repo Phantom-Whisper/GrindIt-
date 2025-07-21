@@ -9,6 +9,6 @@ public partial class FAQ
 
     private void Return_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Menu");
+	    Navigation.PopAsync();
     }
 }

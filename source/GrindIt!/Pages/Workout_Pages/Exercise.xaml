@@ -8,8 +8,7 @@
              Shell.NavBarIsVisible="False">
     
     <VerticalStackLayout>
-        <Grid
-            ColumnDefinitions="*,*">
+        <Grid ColumnDefinitions="*,*">
             <!--Return Button-->
             <Button
                 Text=""
@@ -33,8 +32,7 @@
                 HorizontalOptions="End"/>
         </Grid>
         
-        <!--Circle with a picture maybe?-->
-        <!--or at least the first letter of the exercise name-->
+        <!--Exercise Header-->
         <Border
             HeightRequest="75"
             WidthRequest="75"
@@ -48,22 +46,44 @@
                 Source="gym_background.png"
                 Aspect="AspectFill"/>
         </Border>
-        <!--Will have to bind the name-->
+        
         <Label
-            Text="Exercise name"
-            Margin="30,0,0,10"/>
+            Text="Exercise Name"
+            Margin="30,0,0,10"
+            FontSize="18"
+            FontAttributes="Bold"/>
 
-        <Grid
-            ColumnDefinitions="*,*"
-            Margin="0,10,0,0">
-            <!--Shows stats-->
-            <Label
+        <!-- Custom Tab Headers -->
+        <Grid ColumnDefinitions="*,*" Margin="20,10,20,0">
+            <Button
+                x:Name="HistoryTabButton"
                 Text="History"
-                HorizontalOptions="Center"/>
-            <Label
+                HorizontalOptions="Fill"
+                BackgroundColor="{AppThemeBinding Light=#E0E0E0, Dark=#404040}"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                CornerRadius="0"
+                BorderWidth="0"
+                Clicked="HistoryTab_Clicked"/>
+            <Button
+                x:Name="StatsTabButton"
                 Text="Stats"
-                HorizontalOptions="Center"
-                Grid.Column="1"/>
+                Grid.Column="1"
+                HorizontalOptions="Fill"
+                BackgroundColor="Transparent"
+                TextColor="{AppThemeBinding Light=#666666, Dark=#AAAAAA}"
+                CornerRadius="0"
+                BorderWidth="0"
+                Clicked="StatsTab_Clicked"/>
         </Grid>
+    
+        <!-- Tab Content Container -->
+        <ContentView x:Name="TabContentView" VerticalOptions="FillAndExpand">
+            <!-- History Content (Default) -->
+            <ScrollView x:Name="HistoryContent">
+                <VerticalStackLayout Padding="20">
+                    <Label Text="Previous Sets" FontSize="16" FontAttributes="Bold" Margin="0,0,0,10"/>
+                </VerticalStackLayout>
+            </ScrollView>
+        </ContentView>
     </VerticalStackLayout>
 </ContentPage>

@@ -9,6 +9,6 @@ public partial class Account
 
     private void Menu_Clicked(object sender, EventArgs e)
     {
-        Shell.Current.GoToAsync("//Menu");
+        Navigation.PopAsync();
     }
 }

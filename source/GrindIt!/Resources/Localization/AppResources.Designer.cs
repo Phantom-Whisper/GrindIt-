@@ -159,6 +159,15 @@ namespace GrindIt_.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Eat those gains!.
+        /// </summary>
+        internal static string NutritionPageHeader {
+            get {
+                return ResourceManager.GetString("NutritionPageHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Preferences.
         /// </summary>
         internal static string Preferences {
@@ -290,6 +299,15 @@ namespace GrindIt_.Resources.Localization {
         internal static string ThemeRestoreDefault {
             get {
                 return ResourceManager.GetString("ThemeRestoreDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Push those weights !.
+        /// </summary>
+        internal static string WorkoutPageHeader {
+            get {
+                return ResourceManager.GetString("WorkoutPageHeader", resourceCulture);
             }
         }
     }

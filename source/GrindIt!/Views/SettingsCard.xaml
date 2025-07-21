@@ -17,17 +17,13 @@
                 StrokeThickness="0"
                 BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
                 HorizontalOptions="Start">
-                <Image 
+                <Label
+                    Text="{Binding Glyph}"
+                    FontFamily="AwesomeSolid"
+                    FontSize="20"
+                    TextColor="{AppThemeBinding Light=White, Dark=Black}"
                     HorizontalOptions="Center"
-                    VerticalOptions="Center">
-                    <Image.Source>
-                        <FontImageSource
-                            FontFamily="AwesomeSolid"
-                            Glyph="{Binding Glyph}"
-                            Size="20"
-                            Color="{AppThemeBinding Light=White, Dark=Black}"/>
-                    </Image.Source>
-                </Image>
+                    VerticalOptions="Center" />
             </Border>
             <Label
                 Grid.Column="1"
