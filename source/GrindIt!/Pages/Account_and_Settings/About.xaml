@@ -7,6 +7,7 @@
              x:DataType="local:About"
              Title="About"
              Shell.NavBarIsVisible="False">
+    <ScrollView>
         <VerticalStackLayout>
             <!--Return Button-->
             <Button
@@ -21,6 +22,7 @@
                 HeightRequest="48"
                 WidthRequest="48"
                 Clicked="Return_Clicked"/>
+            <!--Title-->
             <Label
                 Text="{ext:LocalizedString Key=About}"
                 FontSize="Medium"
@@ -29,16 +31,16 @@
                 HorizontalTextAlignment="Center"
                 FontAttributes="Bold"
                 Margin="0,0,0,30"/>
-            
+            <!--App Logo-->
             <Image 
                 Source="{AppThemeBinding Light=logo.png, Dark=logo_white.png}" 
                 MaximumWidthRequest="200"
                 MaximumHeightRequest="70"/>
-
+            <!--Version-->
             <Label
                 Text="Version: 1.0.0 (Beta)"
                 HorizontalOptions="Center"/>
-
+            <!--Text for the users-->
             <Label
                 Text="{ext:LocalizedString Key=AboutText}"
                 HorizontalOptions="Center"
@@ -46,14 +48,16 @@
                 Margin="0,15,0,30"/>
 
             <!--Links to the according pages-->
+            <!--Terms of Service-->
             <Label
                 Text="{ext:LocalizedString Key=AboutTerms}"
                 HorizontalOptions="Center"
                 Margin="0,15,0,30"/>
-
+            <!--Privacy Policy-->
             <Label
                 Text="{ext:LocalizedString Key=AboutPrivacy}"
                 HorizontalOptions="Center"/>
-            
         </VerticalStackLayout>
+    
+    </ScrollView>
 </ContentPage>

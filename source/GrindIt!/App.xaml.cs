@@ -4,6 +4,7 @@ namespace GrindIt_
 {
     public partial class App
     {
+        [Obsolete("Obsolete")]
         public App()
         {
             InitializeComponent();

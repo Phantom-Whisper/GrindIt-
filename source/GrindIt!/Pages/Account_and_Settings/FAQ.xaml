@@ -30,6 +30,7 @@
                 TextColor="{StaticResource Gray400}"
                 Margin="10,0,0,10"/>
             <!--FAQ Section-->
+            <!--Each toolkit expander correspond to a question-->
             <toolkit:Expander
                 Margin="10,0,0,0">
                 <toolkit:Expander.Header>

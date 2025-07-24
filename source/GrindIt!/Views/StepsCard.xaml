@@ -7,7 +7,7 @@
     <Border
         Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
         BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-        StrokeShape="RoundRectangle 30"
+        StrokeShape="30"
         Margin="10,10,10,5">
 
         <Grid ColumnDefinitions="*,*">

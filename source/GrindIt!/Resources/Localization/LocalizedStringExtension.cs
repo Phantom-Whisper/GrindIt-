@@ -17,6 +17,7 @@ public class LocalizationApp
     private string _culture = "en";
 }
 
+[AcceptEmptyServiceProvider]
 public class LocalizedStringExtension : IMarkupExtension<BindingBase>
 {
     public required string Key { get; set; }

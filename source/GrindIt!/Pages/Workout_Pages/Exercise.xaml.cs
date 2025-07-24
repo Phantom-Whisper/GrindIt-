@@ -1,11 +1,8 @@
-using System.Collections.ObjectModel;
-using GrindIt_.Models;
-
 namespace GrindIt_.Pages.Workout_Pages;
 
 public partial class Exercise
 {
-    private ScrollView _statsContent;
+    private ScrollView? _statsContent;
     
     public Exercise()
     {
@@ -87,7 +84,7 @@ public partial class Exercise
     private void HistoryTab_Clicked(object sender, EventArgs e)
     {
         // Update button styles
-        HistoryTabButton.BackgroundColor = Application.Current.RequestedTheme == AppTheme.Light 
+        HistoryTabButton.BackgroundColor = Application.Current!.RequestedTheme == AppTheme.Light 
             ? Color.FromArgb("#E0E0E0") : Color.FromArgb("#404040");
         HistoryTabButton.TextColor = Application.Current.RequestedTheme == AppTheme.Light 
             ? Colors.Black : Colors.White;
@@ -103,7 +100,7 @@ public partial class Exercise
     private void StatsTab_Clicked(object sender, EventArgs e)
     {
         // Update button styles
-        StatsTabButton.BackgroundColor = Application.Current.RequestedTheme == AppTheme.Light 
+        StatsTabButton.BackgroundColor = Application.Current!.RequestedTheme == AppTheme.Light 
             ? Color.FromArgb("#E0E0E0") : Color.FromArgb("#404040");
         StatsTabButton.TextColor = Application.Current.RequestedTheme == AppTheme.Light 
             ? Colors.Black : Colors.White;

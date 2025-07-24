@@ -8,66 +8,68 @@
              x:DataType="local:Menu"
              Title="Menu"
              Shell.NavBarIsVisible="False">
-    <VerticalStackLayout>
-        <!--Return Button-->
-        <Button
-            Text=""
-            FontFamily="AwesomeSolid"
-            FontSize="24"
-            HeightRequest="48"
-            WidthRequest="48"
-            BackgroundColor="Transparent"
-            HorizontalOptions="Start"
-            VerticalOptions="Start"
-            Margin="0,10,20,0"
-            TextColor="{AppThemeBinding Light=Black, Dark=White}"
-            Clicked="Exit_Clicked"/>
-        <!--Page Title-->
-        <Label
-            Text="{ext:LocalizedString Key=AppSettings}"
-            FontSize="Title"
-            FontAttributes="Bold"
-            HorizontalOptions="Center"
-            Margin="0,0,0,40"/>
-        <!--Profile-->
-        <views:SettingsCard
-            Glyph=""
-            Text="{ext:LocalizedString Key=Profile}">
-            <views:SettingsCard.GestureRecognizers>
-                <TapGestureRecognizer Tapped="Profile_Clicked"/>
-            </views:SettingsCard.GestureRecognizers>
-        </views:SettingsCard>
-        <!--Preferences-->
-        <views:SettingsCard
-            Glyph=""
-            Text="{ext:LocalizedString Key=Preferences}">
-            <views:SettingsCard.GestureRecognizers>
-                <TapGestureRecognizer Tapped="Preferences_Clicked"/>
-            </views:SettingsCard.GestureRecognizers>
-        </views:SettingsCard>
-        <!--Theme-->
-        <views:SettingsCard
-            Glyph=""
-            Text="{ext:LocalizedString Key=Theme}">
-            <views:SettingsCard.GestureRecognizers>
-                <TapGestureRecognizer Tapped="Theme_Clicked"/>
-            </views:SettingsCard.GestureRecognizers>
-        </views:SettingsCard>
-        <!--FAQ-->
-        <views:SettingsCard
-            Glyph=""
-            Text="{ext:LocalizedString Key=FAQ}">
-            <views:SettingsCard.GestureRecognizers>
-                <TapGestureRecognizer Tapped="FAQ_Clicked"/>
-            </views:SettingsCard.GestureRecognizers>
-        </views:SettingsCard>
-        <!--About-->
-        <views:SettingsCard
-            Glyph="?"
-            Text="{ext:LocalizedString Key=About}">
-            <views:SettingsCard.GestureRecognizers>
-                <TapGestureRecognizer Tapped="About_Clicked"/>
-            </views:SettingsCard.GestureRecognizers>
-        </views:SettingsCard>
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
+            <!--Return Button-->
+            <Button
+                Text=""
+                FontFamily="AwesomeSolid"
+                FontSize="24"
+                HeightRequest="48"
+                WidthRequest="48"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                Margin="0,10,20,0"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                Clicked="Exit_Clicked"/>
+            <!--Page Title-->
+            <Label
+                Text="{ext:LocalizedString Key=AppSettings}"
+                FontSize="Title"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Margin="0,0,0,40"/>
+            <!--Profile-->
+            <views:SettingsCard
+                Glyph=""
+                Text="{ext:LocalizedString Key=Profile}">
+                <views:SettingsCard.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Profile_Clicked"/>
+                </views:SettingsCard.GestureRecognizers>
+            </views:SettingsCard>
+            <!--Preferences-->
+            <views:SettingsCard
+                Glyph=""
+                Text="{ext:LocalizedString Key=Preferences}">
+                <views:SettingsCard.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Preferences_Clicked"/>
+                </views:SettingsCard.GestureRecognizers>
+            </views:SettingsCard>
+            <!--Theme-->
+            <views:SettingsCard
+                Glyph=""
+                Text="{ext:LocalizedString Key=Theme}">
+                <views:SettingsCard.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Theme_Clicked"/>
+                </views:SettingsCard.GestureRecognizers>
+            </views:SettingsCard>
+            <!--FAQ-->
+            <views:SettingsCard
+                Glyph=""
+                Text="{ext:LocalizedString Key=FAQ}">
+                <views:SettingsCard.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="FAQ_Clicked"/>
+                </views:SettingsCard.GestureRecognizers>
+            </views:SettingsCard>
+            <!--About-->
+            <views:SettingsCard
+                Glyph="?"
+                Text="{ext:LocalizedString Key=About}">
+                <views:SettingsCard.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="About_Clicked"/>
+                </views:SettingsCard.GestureRecognizers>
+            </views:SettingsCard>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

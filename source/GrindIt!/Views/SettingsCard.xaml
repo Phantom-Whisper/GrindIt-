@@ -13,7 +13,7 @@
             <Border
                 WidthRequest="34"
                 HeightRequest="34"
-                StrokeShape="RoundRectangle 50"
+                StrokeShape="50"
                 StrokeThickness="0"
                 BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
                 HorizontalOptions="Start">

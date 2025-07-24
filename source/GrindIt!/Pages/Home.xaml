@@ -9,26 +9,133 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            
-            <Image 
-                Source="{AppThemeBinding Light=logo.png, Dark=logo_white.png}"
-                MaximumWidthRequest="200"
-                MaximumHeightRequest="70"/>
-
-
-            <!-- Bind a motivation quote here -->
-            <Label
-                Text="Motivation Quote"
-                Style="{StaticResource SubHeadline}"/>
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me" 
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Fill" />
+            Padding="10,50, 10,20"
+            Spacing="20">
+            <!--WorkoutGraph inspired by the GitHub contribution graph-->
+            <Border
+                BackgroundColor="#1E1E1E"
+                Stroke="Transparent"
+                HeightRequest="150"
+                StrokeShape="15">
+                <Border.Shadow>
+                    <Shadow Brush="#000000"
+                            Offset="2,4"
+                            Radius="4"
+                            Opacity=".25"/>
+                </Border.Shadow>
+                <Label
+                    Text="Workout Contribution Chart"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </Border>
+            <!--Motivating Quote-->
+            <Border
+                BackgroundColor="#1E1E1E"
+                Stroke="Transparent"
+                HeightRequest="100"
+                StrokeShape="15">
+                <Border.Shadow>
+                    <Shadow Brush="#000000"
+                            Offset="2,4"
+                            Radius="4"
+                            Opacity=".25"/>
+                </Border.Shadow>
+                <Label
+                    Text="Motivating Quote"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </Border>
+            <!--Activity Ring-->
+            <Border
+                BackgroundColor="#1E1E1E"
+                Stroke="Transparent"
+                HeightRequest="100"
+                StrokeShape="15">
+                <Border.Shadow>
+                    <Shadow Brush="#000000"
+                            Offset="2,4"
+                            Radius="4"
+                            Opacity=".25"/>
+                </Border.Shadow>
+                <Label
+                    Text="Steps"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </Border>
+            <!--A 4-squared grid showing charts-->
+            <Grid
+                ColumnDefinitions="*, *"
+                ColumnSpacing="10"
+                RowDefinitions="auto, auto"
+                RowSpacing="10">
+                <Border
+                    BackgroundColor="#1E1E1E"
+                    Stroke="Transparent"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150"
+                    StrokeShape="15">
+                    <Border.Shadow>
+                        <Shadow Brush="#000000"
+                                Offset="2,4"
+                                Radius="4"
+                                Opacity=".25"/>
+                    </Border.Shadow>
+                </Border>
+                
+                <Border
+                    BackgroundColor="#1E1E1E"
+                    Stroke="Transparent"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150"
+                    StrokeShape="15"
+                    Grid.Column="1">
+                    <Border.Shadow>
+                        <Shadow Brush="#000000"
+                                Offset="2,4"
+                                Radius="4"
+                                Opacity=".25"/>
+                    </Border.Shadow>
+                </Border>
+                
+                <Border
+                    BackgroundColor="#1E1E1E"
+                    Stroke="Transparent"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150"
+                    StrokeShape="15"
+                    Grid.Row="1">
+                    <Border.Shadow>
+                        <Shadow Brush="#000000"
+                                Offset="2,4"
+                                Radius="4"
+                                Opacity=".25"/>
+                    </Border.Shadow>
+                </Border>
+                
+                <Border
+                    BackgroundColor="#1E1E1E"
+                    Stroke="Transparent"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150"
+                    StrokeShape="15"
+                    Grid.Column="1"
+                    Grid.Row="1">
+                    <Border.Shadow>
+                        <Shadow Brush="#000000"
+                                Offset="2,4"
+                                Radius="4"
+                                Opacity=".25"/>
+                    </Border.Shadow>
+                </Border>
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
