@@ -5,10 +5,17 @@
              x:DataType="local:StepsCard"
              x:Class="GrindIt_.Views.StepsCard">
     <Border
-        Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
-        BackgroundColor="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+        Stroke="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource CodGray}}"
+        BackgroundColor="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource CodGray}}"
         StrokeShape="30"
         Margin="10,10,10,5">
+        <Border.Shadow>
+            <Shadow
+                Brush="{StaticResource Black}"
+                Offset="4,4"
+                Radius="4"
+                Opacity=".25"/>
+        </Border.Shadow>
 
         <Grid ColumnDefinitions="*,*">
             <Grid
@@ -20,7 +27,7 @@
                 </Grid.ColumnDefinitions>
                 <Label 
                     Text="{Binding Value}"
-                    TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
                     FontSize="{OnIdiom Phone=20, Tablet=20}" 
                     Margin="5"
                     VerticalOptions="Center"
@@ -30,17 +37,17 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Text="{Binding TargetValue}"
-                    TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                    TextColor="{AppThemeBinding Light=Black, Dark=White}"
                     FontSize="{OnIdiom Phone=22, Tablet=22}"/>
             </Grid>
             <Border
                 HeightRequest="100"
                 WidthRequest="100"
-                Stroke="{AppThemeBinding Light=Gray, Dark=#C8C8C8}"
+                Stroke="Transparent"
                 HorizontalOptions="End"
                 Margin="10,0,20,0"
                 Grid.Column="1">
-                <Image />
+                    <Image />
             </Border>
         </Grid>
     </Border>

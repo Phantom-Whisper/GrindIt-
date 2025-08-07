@@ -8,8 +8,7 @@
         Stroke="Transparent">
         <Grid
             Margin="20,5,10,10"
-            ColumnDefinitions="20*,90*"
-            ColumnSpacing="10">
+            ColumnDefinitions="20*,80*">
             <Border
                 WidthRequest="34"
                 HeightRequest="34"

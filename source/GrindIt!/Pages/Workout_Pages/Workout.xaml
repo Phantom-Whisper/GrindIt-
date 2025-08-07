@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:GrindIt_.Pages.Workout_Pages"
              x:Class="GrindIt_.Pages.Workout_Pages.Workout"
              x:DataType="local:Workout"
-             Title="Workout"
-             Shell.NavBarIsVisible="False">
+             Title="Workout">
     <VerticalStackLayout>
         <Label 
             Text="{ext:LocalizedString Key=WorkoutPageHeader}"

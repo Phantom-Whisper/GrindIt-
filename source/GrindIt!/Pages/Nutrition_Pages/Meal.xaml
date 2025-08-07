@@ -4,8 +4,7 @@
              xmlns:local="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
              x:Class="GrindIt_.Pages.Nutrition_Pages.Meal"
              x:DataType="local:Meal"
-             Title="Meal"
-             Shell.NavBarIsVisible="False">
+             Title="Meal">
     <VerticalStackLayout>
         <!--Return Button-->
         <Button

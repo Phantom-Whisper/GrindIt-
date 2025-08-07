@@ -18,30 +18,26 @@
 
     <!-- Bottom Tab Bar -->
     <TabBar>
-        <Tab Icon="home.png" Route="Home">
+        <Tab Title="Home" Icon="home.png" Route="Home">
             <ShellContent
-                Title="Home"
                 ContentTemplate="{DataTemplate pages:Home}"
                 Route="Home" />
         </Tab>
 
-        <Tab Icon="food.png" Route="Nutrition">
+        <Tab Title="Nutrition" Icon="food.png" Route="Nutrition">
             <ShellContent
-                Title="Nutrition"
                 ContentTemplate="{DataTemplate nutrition:Nutrition}"
                 Route="Nutrition"/>
         </Tab>
 
-        <Tab Icon="dumbbell.png" Route="Workout">
+        <Tab Title="Workout" Icon="dumbbell.png" Route="Workout">
             <ShellContent
-                Title="Workout"
                 ContentTemplate="{DataTemplate workout:Workout}"
                 Route="Workout"/>
         </Tab>
 
-        <Tab Icon="account.png" Route="Account">
+        <Tab Title="Account" Icon="account.png" Route="Account">
             <ShellContent
-                Title="Account"
                 ContentTemplate="{DataTemplate accountSettings:Account}"
                 Route="AccountView"/>
         </Tab>

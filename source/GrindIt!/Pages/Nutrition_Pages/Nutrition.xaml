@@ -6,8 +6,7 @@
              xmlns:local="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
              x:Class="GrindIt_.Pages.Nutrition_Pages.Nutrition"
              x:DataType="local:Nutrition"
-             Title="NutritionView"
-             Shell.NavBarIsVisible="False">
+             Title="NutritionView">
     <ScrollView>        
         <VerticalStackLayout>
             <Label 

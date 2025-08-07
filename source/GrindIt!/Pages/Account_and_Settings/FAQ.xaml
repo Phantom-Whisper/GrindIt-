@@ -6,8 +6,7 @@
              xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
              x:Class="GrindIt_.Pages.Account_and_Settings.FAQ"
              x:DataType="local:FAQ"
-             Title="FAQ"
-             Shell.NavBarIsVisible="False">
+             Title="FAQ">
     <ScrollView>
         <VerticalStackLayout
             Spacing="15">
@@ -22,7 +21,7 @@
                 VerticalOptions="Start"
                 HeightRequest="48"
                 WidthRequest="48"
-                Margin="0,10,20,0"
+                Margin="0,10,0,0"
                 Clicked="Return_Clicked"/>
             <!--Text Helper-->
             <Label
@@ -31,34 +30,28 @@
                 Margin="10,0,0,10"/>
             <!--FAQ Section-->
             <!--Each toolkit expander correspond to a question-->
-            <toolkit:Expander
-                Margin="10,0,0,0">
+            <toolkit:Expander Style="{StaticResource ExpanderStyle}">
                 <toolkit:Expander.Header>
-                    <Label Text="What is this app about?" FontSize="18" FontAttributes="Bold" />
+                    <Label Text="What is this app about?" Style="{StaticResource ExpanderHeaderStyle}" />
                 </toolkit:Expander.Header>
                 <Label Text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-                       FontSize="16"
-                       TextColor="Gray" />
+                       Style="{StaticResource ExpanderContentStyle}" />
+            </toolkit:Expander>
+            
+            <toolkit:Expander Style="{StaticResource ExpanderStyle}">
+                <toolkit:Expander.Header>
+                    <Label Text="How to reset my password?" Style="{StaticResource ExpanderHeaderStyle}" />
+                </toolkit:Expander.Header>
+                <Label Text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
+                       Style="{StaticResource ExpanderContentStyle}" />
             </toolkit:Expander>
 
-            <toolkit:Expander
-                Margin="10,0,0,0">
+            <toolkit:Expander Style="{StaticResource ExpanderStyle}">
                 <toolkit:Expander.Header>
-                    <Label Text="How to reset my password?" FontSize="18" FontAttributes="Bold" />
+                    <Label Text="Is dark mode supported?" Style="{StaticResource ExpanderHeaderStyle}" />
                 </toolkit:Expander.Header>
                 <Label Text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-                       FontSize="16"
-                       TextColor="Gray" />
-            </toolkit:Expander>
-
-            <toolkit:Expander
-                Margin="10,0,0,0">
-                <toolkit:Expander.Header>
-                    <Label Text="Is dark mode supported?" FontSize="18" FontAttributes="Bold" />
-                </toolkit:Expander.Header>
-                <Label Text="Lorem ipsum dolor sit amet consectetur adipiscing elit."
-                       FontSize="16"
-                       TextColor="Gray" />
+                       Style="{StaticResource ExpanderContentStyle}" />
             </toolkit:Expander>
         </VerticalStackLayout>
     </ScrollView>

@@ -4,8 +4,7 @@
              xmlns:local="clr-namespace:GrindIt_.Pages.Account_and_Settings"
              x:Class="GrindIt_.Pages.Account_and_Settings.Account"
              x:DataType="local:Account"
-             Title="AccountView"
-             Shell.NavBarIsVisible="False">
+             Title="AccountView">
     <VerticalStackLayout>
         <!--Menu Button-->
         <Button

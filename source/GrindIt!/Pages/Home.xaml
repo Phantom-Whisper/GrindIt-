@@ -4,25 +4,16 @@
              xmlns:local="clr-namespace:GrindIt_.Pages"
              x:Class="GrindIt_.Pages.Home"
              x:DataType="local:Home"
-             Title="Home"
-             Shell.NavBarIsVisible="False">
+             Title="Home">
 
     <ScrollView>
         <VerticalStackLayout
-            Padding="10,50, 10,20"
+            Padding="10,30, 10,30"
             Spacing="20">
             <!--WorkoutGraph inspired by the GitHub contribution graph-->
             <Border
-                BackgroundColor="#1E1E1E"
-                Stroke="Transparent"
-                HeightRequest="150"
-                StrokeShape="15">
-                <Border.Shadow>
-                    <Shadow Brush="#000000"
-                            Offset="2,4"
-                            Radius="4"
-                            Opacity=".25"/>
-                </Border.Shadow>
+                Style="{StaticResource HomeBorder}"
+                HeightRequest="150">
                 <Label
                     Text="Workout Contribution Chart"
                     HorizontalOptions="Center"
@@ -30,16 +21,8 @@
             </Border>
             <!--Motivating Quote-->
             <Border
-                BackgroundColor="#1E1E1E"
-                Stroke="Transparent"
-                HeightRequest="100"
-                StrokeShape="15">
-                <Border.Shadow>
-                    <Shadow Brush="#000000"
-                            Offset="2,4"
-                            Radius="4"
-                            Opacity=".25"/>
-                </Border.Shadow>
+                Style="{StaticResource HomeBorder}"
+                HeightRequest="100">
                 <Label
                     Text="Motivating Quote"
                     HorizontalOptions="Center"
@@ -47,16 +30,8 @@
             </Border>
             <!--Activity Ring-->
             <Border
-                BackgroundColor="#1E1E1E"
-                Stroke="Transparent"
-                HeightRequest="100"
-                StrokeShape="15">
-                <Border.Shadow>
-                    <Shadow Brush="#000000"
-                            Offset="2,4"
-                            Radius="4"
-                            Opacity=".25"/>
-                </Border.Shadow>
+                Style="{StaticResource HomeBorder}"
+                HeightRequest="100">
                 <Label
                     Text="Steps"
                     HorizontalOptions="Center"
@@ -65,76 +40,45 @@
             <!--A 4-squared grid showing charts-->
             <Grid
                 ColumnDefinitions="*, *"
-                ColumnSpacing="10"
                 RowDefinitions="auto, auto"
-                RowSpacing="10">
+                RowSpacing="15">
                 <Border
-                    BackgroundColor="#1E1E1E"
-                    Stroke="Transparent"
+                    Style="{StaticResource HomeBorder}"
                     MinimumWidthRequest="120"
                     MaximumWidthRequest="180"
                     MinimumHeightRequest="100"
-                    HeightRequest="150"
-                    StrokeShape="15">
-                    <Border.Shadow>
-                        <Shadow Brush="#000000"
-                                Offset="2,4"
-                                Radius="4"
-                                Opacity=".25"/>
-                    </Border.Shadow>
+                    HeightRequest="150">
                 </Border>
                 
                 <Border
-                    BackgroundColor="#1E1E1E"
-                    Stroke="Transparent"
+                    Style="{StaticResource HomeBorder}"
                     MinimumWidthRequest="120"
                     MaximumWidthRequest="180"
                     MinimumHeightRequest="100"
                     HeightRequest="150"
-                    StrokeShape="15"
                     Grid.Column="1">
-                    <Border.Shadow>
-                        <Shadow Brush="#000000"
-                                Offset="2,4"
-                                Radius="4"
-                                Opacity=".25"/>
-                    </Border.Shadow>
+                    <Label
+                        Text="Workout Registered"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
                 </Border>
                 
                 <Border
-                    BackgroundColor="#1E1E1E"
-                    Stroke="Transparent"
+                    Style="{StaticResource HomeBorder}"
                     MinimumWidthRequest="120"
                     MaximumWidthRequest="180"
                     MinimumHeightRequest="100"
                     HeightRequest="150"
-                    StrokeShape="15"
-                    Grid.Row="1">
-                    <Border.Shadow>
-                        <Shadow Brush="#000000"
-                                Offset="2,4"
-                                Radius="4"
-                                Opacity=".25"/>
-                    </Border.Shadow>
-                </Border>
+                    Grid.Row="1"/>
                 
                 <Border
-                    BackgroundColor="#1E1E1E"
-                    Stroke="Transparent"
+                    Style="{StaticResource HomeBorder}"
                     MinimumWidthRequest="120"
                     MaximumWidthRequest="180"
                     MinimumHeightRequest="100"
                     HeightRequest="150"
-                    StrokeShape="15"
                     Grid.Column="1"
-                    Grid.Row="1">
-                    <Border.Shadow>
-                        <Shadow Brush="#000000"
-                                Offset="2,4"
-                                Radius="4"
-                                Opacity=".25"/>
-                    </Border.Shadow>
-                </Border>
+                    Grid.Row="1"/>
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

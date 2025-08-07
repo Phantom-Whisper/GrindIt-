@@ -4,8 +4,7 @@
              xmlns:local="clr-namespace:GrindIt_.Pages.Login_and_Registration"
              x:Class="GrindIt_.Pages.Login_and_Registration.Login"
              x:DataType="local:Login"
-             Title="LoginView"
-             Shell.NavBarIsVisible="False">
+             Title="LoginView">
 
     <Grid RowDefinitions=".3*, .7*">
         <Image Aspect="AspectFill" Source="gym_background.jpg" />

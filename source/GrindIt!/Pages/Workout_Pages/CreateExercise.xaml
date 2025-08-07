@@ -4,8 +4,7 @@
              xmlns:local="clr-namespace:GrindIt_.Pages.Workout_Pages"
              x:Class="GrindIt_.Pages.Workout_Pages.CreateExercise"
              x:DataType="local:CreateExercise"
-             Title="Create Exercise"
-             Shell.NavBarIsVisible="False">
+             Title="Create Exercise">
     <VerticalStackLayout Spacing="10">
         <Grid
             ColumnDefinitions="*,*">

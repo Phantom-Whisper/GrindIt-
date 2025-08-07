@@ -5,8 +5,7 @@
              xmlns:local="clr-namespace:GrindIt_.Pages.Account_and_Settings"
              x:Class="GrindIt_.Pages.Account_and_Settings.Theme"
              x:DataType="local:Theme"
-             Title="ThemeView"
-             Shell.NavBarIsVisible="False">
+             Title="ThemeView">
     <ScrollView>
         <VerticalStackLayout>
             <!--Return Button-->
@@ -18,7 +17,7 @@
                 BackgroundColor="Transparent"
                 HorizontalOptions="Start"
                 VerticalOptions="Start" 
-                Margin="10,10,20,0"
+                Margin="0,10,0,0"
                 HeightRequest="48"
                 WidthRequest="48"
                 Clicked="Return_Clicked"/>
