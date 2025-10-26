@@ -9,10 +9,10 @@ public partial class SettingsCard
     }
 
     public static readonly BindableProperty TextProperty =
-            BindableProperty.Create(nameof(Text), typeof(string), typeof(Card));
+            BindableProperty.Create(nameof(Text), typeof(string), typeof(SettingsCard));
 
     public static readonly BindableProperty GlyphProperty =
-            BindableProperty.Create(nameof(Glyph), typeof(string), typeof(Card));
+            BindableProperty.Create(nameof(Glyph), typeof(string), typeof(SettingsCard));
 
     public string Text
     {

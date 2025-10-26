@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:GrindIt_.Pages.Workout_Pages"
+             xmlns:views="clr-namespace:GrindIt_.Views"
              x:Class="GrindIt_.Pages.Workout_Pages.Exercises"
              x:DataType="local:Exercises"
              Title="Exercises">
@@ -30,15 +31,21 @@
                 HorizontalOptions="End"
                 Clicked="CreateExercise_Clicked"/>
         </Grid>
-
-
         <SearchBar
             Placeholder="Name of the exercise"
             Margin="10,0,30,10"/>
-
         <!--List of all the targeted muscle and their exercise-->
-        <Button
-            Text="Exercise"
-            Clicked="Exercise_Clicked"/>
+        <!--
+        <CollectionView
+            x:Name="ExercisesCollection"
+            ItemsSource="{Binding Exercises}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="">
+                    <views:ExercisesCard Name="" Initial=""/>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        -->
     </VerticalStackLayout>
 </ContentPage>

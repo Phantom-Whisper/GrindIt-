@@ -1,7 +1,10 @@
+//using System.Collections.ObjectModel;
 namespace GrindIt_.Pages.Workout_Pages;
 
 public partial class Exercises
 {
+    //public ObservableCollection<Exercises> Exercises { get; set; }
+    
     public Exercises()
     {
         InitializeComponent();
