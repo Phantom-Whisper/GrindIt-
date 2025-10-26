@@ -37,7 +37,7 @@
                 MaximumHeightRequest="70"/>
             <!--Version-->
             <Label
-                Text="Version: 1.0.0 (Beta)"
+                x:Name="AppVersioningLabel"
                 HorizontalOptions="Center"/>
             <!--Text for the users-->
             <Label

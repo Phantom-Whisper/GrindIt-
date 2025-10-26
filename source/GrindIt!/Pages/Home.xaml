@@ -9,7 +9,7 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="10,30, 10,30"
-            Spacing="20">
+            Spacing="15">
             <!--WorkoutGraph inspired by the GitHub contribution graph-->
             <Border
                 Style="{StaticResource HomeBorder}"
@@ -41,6 +41,7 @@
             <Grid
                 ColumnDefinitions="*, *"
                 RowDefinitions="auto, auto"
+                ColumnSpacing="15"
                 RowSpacing="15">
                 <Border
                     Style="{StaticResource HomeBorder}"
