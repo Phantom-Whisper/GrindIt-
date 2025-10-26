@@ -3,13 +3,116 @@
     x:Class="GrindIt_.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:GrindIt_"
-    Shell.FlyoutBehavior="Disabled"
+    xmlns:pages="clr-namespace:GrindIt_.Pages"
+    xmlns:accountSettings="clr-namespace:GrindIt_.Pages.Account_and_Settings"
+    xmlns:loginAndRegister="clr-namespace:GrindIt_.Pages.Login_and_Registration"
+    xmlns:nutrition="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
+    xmlns:workout="clr-namespace:GrindIt_.Pages.Workout_Pages"
+    FlyoutBehavior="Disabled"
     Title="GrindIt_">
+    
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate loginAndRegister:Login}"
+        Route="Login"/>
+
+    <!-- Bottom Tab Bar -->
+    <TabBar>
+        <Tab Title="Home" Icon="home.png" Route="Home">
+            <ShellContent
+                ContentTemplate="{DataTemplate pages:Home}"
+                Route="Home" />
+        </Tab>
+
+        <Tab Title="Nutrition" Icon="food.png" Route="Nutrition">
+            <ShellContent
+                ContentTemplate="{DataTemplate nutrition:Nutrition}"
+                Route="Nutrition"/>
+        </Tab>
+
+        <Tab Title="Workout" Icon="dumbbell.png" Route="Workout">
+            <ShellContent
+                ContentTemplate="{DataTemplate workout:Workout}"
+                Route="Workout"/>
+        </Tab>
+
+        <Tab Title="Account" Icon="account.png" Route="Account">
+            <ShellContent
+                ContentTemplate="{DataTemplate accountSettings:Account}"
+                Route="AccountView"/>
+        </Tab>
+    </TabBar>
+
+    <!-- Additional pages not in the Tab Bar -->
+    <ShellContent
+        Title="Exercises"
+        ContentTemplate="{DataTemplate workout:Exercises}"
+        Route="Exercises"/>
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Exercise"
+        ContentTemplate="{DataTemplate workout:Exercise}"
+        Route="Exercise"/>
 
+    <ShellContent
+        Title="Create Exercise"
+        ContentTemplate="{DataTemplate workout:CreateExercise}"
+        Route="CreateExercise"/>
+
+
+    <ShellContent
+        Title="Registration"
+        ContentTemplate="{DataTemplate loginAndRegister:Registration}"
+        Route="Registration"/>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:Theme}"
+        Route="Theme"/>
+
+    <ShellContent
+        Title="Water"
+        ContentTemplate="{DataTemplate nutrition:Water}"
+        Route="Water"/>
+
+    <ShellContent
+        Title="Menu"
+        ContentTemplate="{DataTemplate accountSettings:Menu}"
+        Route="Menu"/>
+
+    <ShellContent
+        Title="Sleep"
+        ContentTemplate="{DataTemplate nutrition:Sleep}"
+        Route="Sleep"/>
+
+    <ShellContent
+        Title="BodyComposition"
+        ContentTemplate="{DataTemplate nutrition:BodyComposition}"
+        Route="BodyComposition"/>
+
+    <ShellContent
+        Title="Meal"
+        ContentTemplate="{DataTemplate nutrition:Meal}"
+        Route="Meal"/>
+
+    <ShellContent
+        Title="Steps"
+        ContentTemplate="{DataTemplate nutrition:Steps}"
+        Route="Steps"/>
+    
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:About}"
+        Route="About"/>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:FAQ}"
+        Route="FAQ"/>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:PreferencesPage}"
+        Route="Preferences"/>
+
+    <ShellContent
+        ContentTemplate="{DataTemplate accountSettings:Profile}"
+        Route="Profile"/>
+    
 </Shell>

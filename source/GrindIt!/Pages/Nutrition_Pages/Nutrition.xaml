@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:GrindIt_.Views"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Nutrition_Pages"
+             x:Class="GrindIt_.Pages.Nutrition_Pages.Nutrition"
+             x:DataType="local:Nutrition"
+             Title="NutritionView">
+    <ScrollView>        
+        <VerticalStackLayout>
+            <Label 
+                Text="{ext:LocalizedString Key=NutritionPageHeader}"
+                FontSize="Header"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="0,5,0,5"/>
+            <!--Steps Card-->
+            <views:StepsCard
+                Value="0/"
+                TargetValue="6000"
+                Margin="0,5,0,5">
+                <views:StepsCard.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnStepsTapped"/>
+                </views:StepsCard.GestureRecognizers>
+            </views:StepsCard>
+            <!--Meal Card-->
+            <views:Card
+                Text="0/3,500 kcal"
+                Glyph="&#xf2e7;"
+                Value="Enter"
+                Margin="0,5,0,5">
+                <views:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnMealTapped" />
+                </views:Card.GestureRecognizers>
+            </views:Card>
+            <!--Sleep Card-->
+            <views:Card
+                Text="Sleep"
+                Glyph="&#xf236;"
+                Value="Enter"
+                Margin="0,5,0,5">
+                <views:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnSleepTapped" />
+                </views:Card.GestureRecognizers>            
+            </views:Card>
+            <!--Body Composition Card-->
+            <views:Card
+                Text="Body composition"
+                Glyph="&#xf496;;"
+                Value="Enter"
+                Margin="0,5,0,5">
+                <views:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBodyTapped" />
+                </views:Card.GestureRecognizers>
+            </views:Card>
+            <!--Water Card-->
+            <views:Card 
+                Text="0/2,000 ml"
+                Glyph="&#xf7a0;"
+                Value="+250 ml"
+                Margin="0,5,0,5">            
+                <views:Card.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnWaterTapped" />
+                </views:Card.GestureRecognizers>
+            </views:Card>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

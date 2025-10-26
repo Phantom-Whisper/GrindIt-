@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ext="clr-namespace:GrindIt_.Resources.Localization"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Account_and_Settings"
+             x:Class="GrindIt_.Pages.Account_and_Settings.Theme"
+             x:DataType="local:Theme"
+             Title="ThemeView">
+    <ScrollView>
+        <VerticalStackLayout>
+            <!--Return Button-->
+            <Button
+                Text=""
+                FontFamily="AwesomeSolid"
+                FontSize="24"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                VerticalOptions="Start" 
+                Margin="0,10,0,0"
+                HeightRequest="48"
+                WidthRequest="48"
+                Clicked="Return_Clicked"/>
+            <!--Page Title-->
+            <Label
+                Text="{ext:LocalizedString Key=ThemePreferences}"
+                Style="{StaticResource SubHeadline}"/>
+            <Grid
+                ColumnDefinitions="*,*"
+                Margin="20,10,20,0">
+                <!--Dark Mode Label-->
+                <Label
+                    Text="{ext:LocalizedString Key=DarkMode}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"/>
+                <!--Dark Mode Switch-->
+                <!--If toggled, Dark Mode is applied-->
+                <Switch
+                    x:Name="ThemeSwitch"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Toggled="Switch_Toggled"/>
+            </Grid>
+            <!--Main Colour-->
+            <Label
+                Text="{ext:LocalizedString Key=ThemeMainColour}"
+                HorizontalOptions="Center"/>
+            <!--Add grid with all the colors you can use for the app theme-->
+            <!--Restore to default-->
+            <Label
+                Text="{ext:LocalizedString Key=ThemeRestoreDefault}"
+                HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

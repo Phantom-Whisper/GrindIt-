@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Login_and_Registration"
+             x:Class="GrindIt_.Pages.Login_and_Registration.Registration"
+             x:DataType="local:Registration"
+             Title="RegistrationView">
+    
+    <Grid RowDefinitions=".3*, .7*">
+        <Image Aspect="AspectFill" Source="gym_background.jpg" />
+        <Grid BackgroundColor="DarkGrey" Opacity=".9"/>
+        <Grid ColumnDefinitions="*,*,*">
+            <Image Grid.Column="1"
+               Aspect="AspectFit"
+               HeightRequest="300"
+               Source="logo.png"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle
+                Margin="-5,-30,-5,-2"
+                CornerRadius="30,30,0,0"
+                Fill="{AppThemeBinding Light=AliceBlue, Dark={StaticResource PrimaryDarkText}}"/>
+            <VerticalStackLayout Margin="30,0,30,0">
+                <Label 
+                    FontAttributes="Bold"
+                    FontFamily="bold"
+                    FontSize="Medium"
+                    Text="Create your account!"
+                    TextColor="{AppThemeBinding Light=#2D2D2D, Dark={StaticResource Gray500}}"/>
+                <Grid 
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf007;"
+                                Size="44"
+                                Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        Placeholder="Name"/>
+                </Grid>
+                <Grid 
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf0e0;"
+                                Size="44"
+                                Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        Placeholder="Email"/>
+                </Grid>
+                <Grid
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf084;"
+                                Size="44"
+                                Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        IsPassword="True"
+                        Placeholder="Password"/>
+                </Grid>
+                <Grid
+                    Margin="0,30,0,0"
+                    ColumnDefinitions=".2*,.8*">
+                    <Image HorizontalOptions="Center">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="AwesomeSolid"
+                                Glyph="&#xf084;"
+                                Size="44"
+                                Color="#ffbe0b"/>
+                        </Image.Source>
+                    </Image>
+                    <Entry 
+                        Grid.Column="1"
+                        IsPassword="True"
+                        Placeholder="Confirm password"/>
+                </Grid>
+                <Button
+                    Margin="0,25,0,0"
+                    BackgroundColor="LightGrey"
+                    HeightRequest="60"
+                    Text="Create account"
+                    TextColor="#4F3F9b"
+                    Clicked="Button_Clicked"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

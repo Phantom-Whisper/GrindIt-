@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Pages"
+             x:Class="GrindIt_.Pages.Home"
+             x:DataType="local:Home"
+             Title="Home">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="10,30, 10,30"
+            Spacing="15">
+            <!--WorkoutGraph inspired by the GitHub contribution graph-->
+            <Border
+                Style="{StaticResource HomeBorder}"
+                HeightRequest="150">
+                <Label
+                    Text="Workout Contribution Chart"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </Border>
+            <!--Motivating Quote-->
+            <Border
+                Style="{StaticResource HomeBorder}"
+                HeightRequest="100">
+                <Label
+                    Text="Motivating Quote"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </Border>
+            <!--Activity Ring-->
+            <Border
+                Style="{StaticResource HomeBorder}"
+                HeightRequest="100">
+                <Label
+                    Text="Steps"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+            </Border>
+            <!--A 4-squared grid showing charts-->
+            <Grid
+                ColumnDefinitions="*, *"
+                RowDefinitions="auto, auto"
+                ColumnSpacing="15"
+                RowSpacing="15">
+                <Border
+                    Style="{StaticResource HomeBorder}"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150">
+                </Border>
+                
+                <Border
+                    Style="{StaticResource HomeBorder}"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150"
+                    Grid.Column="1">
+                    <Label
+                        Text="Workout Registered"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                </Border>
+                
+                <Border
+                    Style="{StaticResource HomeBorder}"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150"
+                    Grid.Row="1"/>
+                
+                <Border
+                    Style="{StaticResource HomeBorder}"
+                    MinimumWidthRequest="120"
+                    MaximumWidthRequest="180"
+                    MinimumHeightRequest="100"
+                    HeightRequest="150"
+                    Grid.Column="1"
+                    Grid.Row="1"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

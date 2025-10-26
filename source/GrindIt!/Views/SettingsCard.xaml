@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Views"
+             x:DataType="local:SettingsCard"
+             x:Class="GrindIt_.Views.SettingsCard">
+    <Border
+        Stroke="Transparent">
+        <Grid
+            Margin="20,5,10,10"
+            ColumnDefinitions="20*,80*">
+            <Border
+                WidthRequest="34"
+                HeightRequest="34"
+                StrokeShape="50"
+                StrokeThickness="0"
+                BackgroundColor="{AppThemeBinding Light=Black, Dark=White}"
+                HorizontalOptions="Start">
+                <Label
+                    Text="{Binding Glyph}"
+                    FontFamily="AwesomeSolid"
+                    FontSize="20"
+                    TextColor="{AppThemeBinding Light=White, Dark=Black}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center" />
+            </Border>
+            <Label
+                Grid.Column="1"
+                Text="{Binding Text}"
+                FontSize="Medium"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                VerticalOptions="Center"/>
+        </Grid>
+    </Border>
+</ContentView>

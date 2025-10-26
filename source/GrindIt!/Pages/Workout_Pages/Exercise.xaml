@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GrindIt_.Pages.Workout_Pages"
+             x:Class="GrindIt_.Pages.Workout_Pages.Exercise"
+             x:DataType="local:Exercise"
+             Title="Exercise">
+    
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="*,*">
+            <!--Return Button-->
+            <Button
+                Text=""
+                FontFamily="AwesomeSolid"
+                FontSize="24"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                HeightRequest="48"
+                WidthRequest="48"
+                Clicked="Return_Clicked"/>
+            <!--Transfer Stats-->
+            <Button
+                Grid.Column="1"
+                Text="Transfer stats"
+                HeightRequest="40"
+                CornerRadius="30"
+                WidthRequest="120"
+                Margin="0,10,20,20"
+                HorizontalOptions="End"/>
+        </Grid>
+        
+        <!--Exercise Header-->
+        <Border
+            HeightRequest="75"
+            WidthRequest="75"
+            StrokeThickness="2"
+            HorizontalOptions="Start"
+            Margin="20,0,0,10">
+            <Border.StrokeShape>
+                <Ellipse/>
+            </Border.StrokeShape>
+            <Image
+                Source="gym_background.png"
+                Aspect="AspectFill"/>
+        </Border>
+        
+        <Label
+            Text="Exercise Name"
+            Margin="30,0,0,10"
+            FontSize="18"
+            FontAttributes="Bold"/>
+
+        <!-- Custom Tab Headers -->
+        <Grid ColumnDefinitions="*,*" Margin="20,10,20,0">
+            <Button
+                x:Name="HistoryTabButton"
+                Text="History"
+                HorizontalOptions="Fill"
+                BackgroundColor="{AppThemeBinding Light=#E0E0E0, Dark=#404040}"
+                TextColor="{AppThemeBinding Light=Black, Dark=White}"
+                CornerRadius="0"
+                BorderWidth="0"
+                Clicked="HistoryTab_Clicked"/>
+            <Button
+                x:Name="StatsTabButton"
+                Text="Stats"
+                Grid.Column="1"
+                HorizontalOptions="Fill"
+                BackgroundColor="Transparent"
+                TextColor="{AppThemeBinding Light=#666666, Dark=#AAAAAA}"
+                CornerRadius="0"
+                BorderWidth="0"
+                Clicked="StatsTab_Clicked"/>
+        </Grid>
+    
+        <!-- Tab Content Container -->
+        <ContentView x:Name="TabContentView" VerticalOptions="FillAndExpand">
+            <!-- History Content (Default) -->
+            <ScrollView x:Name="HistoryContent">
+                <VerticalStackLayout Padding="20">
+                    <Label Text="Previous Sets" FontSize="16" FontAttributes="Bold" Margin="0,0,0,10"/>
+                </VerticalStackLayout>
+            </ScrollView>
+        </ContentView>
+    </VerticalStackLayout>
+</ContentPage>
