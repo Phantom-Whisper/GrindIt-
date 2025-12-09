@@ -3,7 +3,7 @@
 ## Overview
 **GrindIt! is a university project.** The objective is to develop a mobile application for Android and IOS that will allow sports enthusiasts (and particularly gym-goers) to track their eating habits, sleep patterns and the progress of their sessions.
 > [!NOTE]
-> This project is still in early developpement
+> This project is temporarily on hold
 ## Getting Started
 For now, you on need an IDE for creating modern applications for Android and iOS (like Visual Studio Community).
 ## 🚦What have we now ?
